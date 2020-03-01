@@ -515,7 +515,7 @@ var app = (function () {
           category: "Me",
           name: "Github",
           keys: ["github", "git"],
-          url: "https://github.com/ylor?tab=repositories",
+          url: "https://github.com/",
           search: "https://github.com/search?q={}"
         },
         {
@@ -1108,21 +1108,21 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			section = element("section");
-    			t0 = text("[\r\n  ");
+    			t0 = text("[\n  ");
     			span0 = element("span");
     			span0.textContent = "roly";
-    			t2 = text("\r\n  @\r\n  ");
+    			t2 = text("\n  @\n  ");
     			span1 = element("span");
     			span1.textContent = `${/*location*/ ctx[0]}`;
-    			t4 = text("\r\n  ]\r\n  ");
+    			t4 = text("\n  ]\n  ");
     			br = element("br");
     			set_style(span0, "color", "cyan");
-    			add_location(span0, file, 13, 2, 225);
+    			add_location(span0, file, 13, 2, 212);
     			set_style(span1, "color", "cyan");
-    			add_location(span1, file, 15, 2, 271);
-    			add_location(br, file, 17, 2, 323);
-    			attr_dev(section, "class", "svelte-kpc8tb");
-    			add_location(section, file, 11, 0, 207);
+    			add_location(span1, file, 15, 2, 256);
+    			add_location(br, file, 17, 2, 306);
+    			attr_dev(section, "class", "svelte-mb6bct");
+    			add_location(section, file, 11, 0, 196);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1211,7 +1211,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (219:14) {#each sites.filter(command => command.category === category && command.hidden !== true) as site}
+    // (221:14) {#each sites.filter(command => command.category === category && command.hidden !== true) as site}
     function create_each_block_2(ctx) {
     	let li;
     	let a;
@@ -1229,10 +1229,10 @@ var app = (function () {
     			t1 = space();
     			attr_dev(a, "href", a_href_value = /*site*/ ctx[20].url);
     			attr_dev(a, "class", "svelte-nd0pwg");
-    			add_location(a, file$1, 220, 18, 4462);
+    			add_location(a, file$1, 222, 18, 4506);
     			attr_dev(li, "title", li_title_value = /*site*/ ctx[20].keys.toString().replace(",", ", "));
     			attr_dev(li, "class", "svelte-nd0pwg");
-    			add_location(li, file$1, 219, 16, 4391);
+    			add_location(li, file$1, 221, 16, 4435);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1250,14 +1250,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(219:14) {#each sites.filter(command => command.category === category && command.hidden !== true) as site}",
+    		source: "(221:14) {#each sites.filter(command => command.category === category && command.hidden !== true) as site}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:8) {#each distinctCategories as category}
+    // (214:8) {#each distinctCategories as category}
     function create_each_block_1(ctx) {
     	let li;
     	let h1;
@@ -1294,11 +1294,11 @@ var app = (function () {
 
     			t2 = space();
     			attr_dev(h1, "class", "svelte-nd0pwg");
-    			add_location(h1, file$1, 213, 12, 4115);
+    			add_location(h1, file$1, 215, 12, 4159);
     			attr_dev(ul, "class", "svelte-nd0pwg");
-    			add_location(ul, file$1, 217, 12, 4258);
+    			add_location(ul, file$1, 219, 12, 4302);
     			attr_dev(li, "class", "hideChildren svelte-nd0pwg");
-    			add_location(li, file$1, 212, 10, 4077);
+    			add_location(li, file$1, 214, 10, 4121);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1352,14 +1352,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(212:8) {#each distinctCategories as category}",
+    		source: "(214:8) {#each distinctCategories as category}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (248:4) {#if suggestions.length > 0}
+    // (250:4) {#if suggestions.length > 0}
     function create_if_block(ctx) {
     	let aside;
     	let ul;
@@ -1382,9 +1382,9 @@ var app = (function () {
 
     			attr_dev(ul, "id", "list");
     			attr_dev(ul, "class", "svelte-nd0pwg");
-    			add_location(ul, file$1, 249, 8, 5186);
+    			add_location(ul, file$1, 251, 8, 5230);
     			attr_dev(aside, "class", "tree svelte-nd0pwg");
-    			add_location(aside, file$1, 248, 6, 5157);
+    			add_location(aside, file$1, 250, 6, 5201);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, aside, anchor);
@@ -1429,18 +1429,18 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(248:4) {#if suggestions.length > 0}",
+    		source: "(250:4) {#if suggestions.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:10) {#each suggestions as suggestion, i}
+    // (253:10) {#each suggestions as suggestion, i}
     function create_each_block(ctx) {
     	let li;
     	let a;
-    	let raw_value = /*suggestion*/ ctx[14].replace(/*search*/ ctx[0].replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), `<b style=color:red;>${/*search*/ ctx[0]}</b>`) + "";
+    	let raw_value = /*suggestion*/ ctx[14].replace(/*search*/ ctx[0].match(/\b.+\b/), `<b style='text-decoration:underline';>${/*search*/ ctx[0].trimEnd()}</b>`) + "";
     	let a_href_value;
     	let t;
     	let li_id_value;
@@ -1457,10 +1457,10 @@ var app = (function () {
     			t = space();
     			attr_dev(a, "href", a_href_value = parseInput(/*suggestion*/ ctx[14]));
     			attr_dev(a, "class", "svelte-nd0pwg");
-    			add_location(a, file$1, 252, 14, 5335);
+    			add_location(a, file$1, 254, 14, 5379);
     			attr_dev(li, "id", li_id_value = "search-suggestion-" + /*i*/ ctx[16]);
     			attr_dev(li, "class", "search-suggestion svelte-nd0pwg");
-    			add_location(li, file$1, 251, 12, 5260);
+    			add_location(li, file$1, 253, 12, 5304);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1475,7 +1475,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*suggestions, search*/ 3 && raw_value !== (raw_value = /*suggestion*/ ctx[14].replace(/*search*/ ctx[0].replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), `<b style=color:red;>${/*search*/ ctx[0]}</b>`) + "")) a.innerHTML = raw_value;
+    			if (dirty & /*suggestions, search*/ 3 && raw_value !== (raw_value = /*suggestion*/ ctx[14].replace(/*search*/ ctx[0].match(/\b.+\b/), `<b style='text-decoration:underline';>${/*search*/ ctx[0].trimEnd()}</b>`) + "")) a.innerHTML = raw_value;
     			if (dirty & /*suggestions*/ 2 && a_href_value !== (a_href_value = parseInput(/*suggestion*/ ctx[14]))) {
     				attr_dev(a, "href", a_href_value);
     			}
@@ -1490,7 +1490,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(251:10) {#each suggestions as suggestion, i}",
+    		source: "(253:10) {#each suggestions as suggestion, i}",
     		ctx
     	});
 
@@ -1561,19 +1561,19 @@ var app = (function () {
     			if (if_block) if_block.c();
     			set_style(span0, "color", "green");
     			attr_dev(span0, "class", "svelte-nd0pwg");
-    			add_location(span0, file$1, 206, 4, 3912);
+    			add_location(span0, file$1, 208, 4, 3956);
     			attr_dev(h1, "class", "svelte-nd0pwg");
-    			add_location(h1, file$1, 209, 6, 3988);
+    			add_location(h1, file$1, 211, 6, 4032);
     			attr_dev(ul, "id", "list");
     			attr_dev(ul, "class", "svelte-nd0pwg");
-    			add_location(ul, file$1, 210, 6, 4005);
+    			add_location(ul, file$1, 212, 6, 4049);
     			attr_dev(aside, "class", "tree svelte-nd0pwg");
-    			add_location(aside, file$1, 208, 4, 3961);
+    			add_location(aside, file$1, 210, 4, 4005);
     			attr_dev(section0, "class", "svelte-nd0pwg");
-    			add_location(section0, file$1, 204, 2, 3883);
+    			add_location(section0, file$1, 206, 2, 3927);
     			set_style(span1, "color", "green");
     			attr_dev(span1, "class", "svelte-nd0pwg");
-    			add_location(span1, file$1, 232, 4, 4661);
+    			add_location(span1, file$1, 234, 4, 4705);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "autocapitalize", "none");
     			attr_dev(input, "autocomplete", "off");
@@ -1581,14 +1581,14 @@ var app = (function () {
     			attr_dev(input, "spellcheck", "false");
     			attr_dev(input, "id", "search-input");
     			attr_dev(input, "class", "svelte-nd0pwg");
-    			add_location(input, file$1, 237, 6, 4876);
+    			add_location(input, file$1, 239, 6, 4920);
     			attr_dev(form, "autocomplete", "off");
     			attr_dev(form, "class", "svelte-nd0pwg");
-    			add_location(form, file$1, 234, 4, 4716);
+    			add_location(form, file$1, 236, 4, 4760);
     			attr_dev(section1, "class", "svelte-nd0pwg");
-    			add_location(section1, file$1, 230, 2, 4632);
+    			add_location(section1, file$1, 232, 2, 4676);
     			attr_dev(main, "class", "svelte-nd0pwg");
-    			add_location(main, file$1, 203, 0, 3874);
+    			add_location(main, file$1, 205, 0, 3918);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1734,6 +1734,8 @@ var app = (function () {
     			const json = await response.json();
     			$$invalidate(1, suggestions = json[1].slice(0, 6));
     		}
+
+    		console.log(search.match(/\b.+\b/gi));
     	}
 
     	function escHandler(event) {
