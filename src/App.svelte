@@ -38,8 +38,6 @@
       const json = await response.json();
       suggestions = json[1].slice(0, 6);
     }
-
-    console.log(search.match(/\b.+\b/gi));
   }
 
   function escHandler(event) {
