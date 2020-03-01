@@ -209,7 +209,7 @@
     <aside class="tree">
       <h1>.</h1>
       <ul id="list">
-        {#each distinctCategories as category}
+        {#each categories as category}
           <li class="hideChildren">
             <h1
               on:click={e => e.target.parentNode.classList.toggle('hideChildren')}>
