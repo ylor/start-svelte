@@ -25,7 +25,7 @@
   let search = "";
 
   let apiURL =
-    "http://suggestqueries.google.com/complete/search?client=firefox&q=";
+    "https://suggestqueries.google.com/complete/search?client=firefox&q=";
   let suggestions = [];
 
   async function fetchSuggestions() {
