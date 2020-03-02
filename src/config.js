@@ -20,8 +20,7 @@ export const config = {
       category: "👨🏽‍🦲 Me",
       name: "About",
       keys: ["about"],
-      url: "https://about.rolyreyes.com",
-      hidden: true
+      url: "https://about.rolyreyes.com"
     },
     {
       category: "👨🏽‍🦲 Me",
@@ -95,7 +94,7 @@ export const config = {
       category: "👨🏽‍💻 Server",
 
       name: "Transmission",
-      keys: ["transmission", "bt", "bit"],
+      keys: ["transmission", "bt"],
       url: "http://docker.local:9091"
     },
     {
@@ -113,27 +112,7 @@ export const config = {
     },
     {
       category: "🎓 MDC",
-      name: "CNS Service Requests",
-      keys: ["sr"],
-      url: "http://k353077/"
-    },
-    {
-      category: "🎓 MDC",
-      name: "CNS Sharepoint",
-      keys: ["cns", "sharepoint"],
-      url:
-        "https://miamidadecollegeprod.sharepoint.com/teams/MDC_Kendall_CampusNetworkServices/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx"
-    },
-    {
-      category: "🎓 MDC",
-      name: "CNS Sharepoint-old",
-      keys: ["cns-old", "sharepoint-old"],
-      url:
-        "https://sharepoint.mdc.edu/kendall/departments/cns/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx"
-    },
-    {
-      category: "🎓 MDC",
-      name: "CNS Forms",
+      name: "Forms",
       keys: ["form", "forms"],
       url:
         "https://forms.office.com/Pages/ResponsePage.aspx?id=BmhisP_Ok0OCHvmj5maJOxTM7A6YzXlAmKCvVMMrgsFUMzJaTFhGOEY0STlLWkVMR1JKMU4zMThFTC4u"
@@ -142,14 +121,7 @@ export const config = {
       category: "🎓 MDC",
       name: "Fusion",
       keys: ["fusion", "kfusion"],
-      url:
-        "http://kfusion1.kendall.mdcc.edu/Fusion/WebClient/monitoring/pages/Default.html?sp=&rr=15"
-    },
-    {
-      category: "🎓 MDC",
-      name: "CNS Kaseya",
-      keys: ["kaseya"],
-      url: "https://kaseya.mdc.edu/"
+      url: "http://kfusion1.kendall.mdcc.edu/"
     },
     {
       category: "🎓 MDC",
@@ -159,26 +131,33 @@ export const config = {
     },
     {
       category: "🎓 MDC",
-      name: "Miami Dade College",
-      keys: ["🎓 MDC"],
-      url: "http://www.mdc.edu"
+      name: "Kaseya",
+      keys: ["kaseya"],
+      url: "https://kaseya.mdc.edu/"
     },
     {
       category: "🎓 MDC",
-      name: "Miami Dade College - NTAuth",
+      name: "Miami Dade College",
+      keys: ["🎓 MDC"],
+      url: "http://www.mdc.edu",
+      hidden: true
+    },
+    {
+      category: "🎓 MDC",
+      name: "NTAuth",
       keys: ["ntauth"],
       url: "http://ntauth.mdc.edu"
     },
     {
       category: "🎓 MDC",
-      name: "MDC - Employee",
+      name: "NTAuth - Employee",
       keys: ["emp"],
       url: "https://wapi.mdc.edu/NTAuth/account_admin.asp",
       search: "https://wapi.mdc.edu/NTAuth/user_data.asp?UserID={}"
     },
     {
       category: "🎓 MDC",
-      name: "MDC - Student",
+      name: "NTAuth - Student",
       keys: ["stu"],
       url: "https://mdcwapi.mdc.edu:8001/ntauthstudent",
       search:
@@ -186,26 +165,169 @@ export const config = {
     },
     {
       category: "🎓 MDC",
+      name: "Service Requests",
+      keys: ["sr"],
+      url: "http://k353077/"
+    },
+    {
+      category: "🎓 MDC",
+      name: "Sharepoint",
+      keys: ["cns", "sharepoint"],
+      url:
+        "https://miamidadecollegeprod.sharepoint.com/teams/MDC_Kendall_CampusNetworkServices/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx"
+    },
+    {
+      category: "🎓 MDC",
+      name: "Sharepoint-old",
+      keys: ["cns-old", "sharepoint-old"],
+      url:
+        "https://sharepoint.mdc.edu/kendall/departments/cns/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx",
+      hidden: true
+    },
+    {
+      category: "🎓 MDC",
       name: "Timeclock",
       keys: ["timeclock", "tc"],
       url: "https://timeclock.mdc.edu"
     },
-    // Internet
+    // Media
     {
-      name: "1Password Password Generator",
-      keys: ["pw"],
-      url: "https://1password.com/password-generator"
+      category: "🎞️ Media",
+      name: "Giant Bomb",
+      keys: ["giant bomb", "gb"],
+      url: "https://www.giantbomb.com/",
+      search: "https://www.giantbomb.com/search/?i=&q={}"
     },
     {
-      name: "Amazon",
-      keys: ["amazon", "a"],
-      url: "https://www.amazon.com",
-      search: "https://www.amazon.com/s?k={}"
+      category: "🎞️ Media",
+      name: "Giant Bomb Infinite",
+      keys: ["giant bomb infinite", "gb8"],
+      url: "https://www.giantbomb.com/infinite"
+    },
+    {
+      category: "🎞️ Media",
+      name: "Netflix",
+      keys: ["netflix"],
+      url: "https://www.netflix.com",
+      search: "https://www.netflix.com/search?q={}"
+    },
+    {
+      category: "🎞️ Media",
+      name: "Plex",
+      keys: ["plexapp", "plextv"],
+      url: "https://app.plex.tv/desktop"
+    },
+    {
+      category: "🎞️ Media",
+      name: "Spotify",
+      keys: ["spotify"],
+      url: "https://open.spotify.com"
+    },
+    {
+      category: "🎞️ Media",
+      name: "Twitch",
+      keys: ["twitch"],
+      url: "https://twitch.tv/directory"
+    },
+    {
+      category: "🎞️ Media",
+      name: "YouTube",
+      keys: ["youtube", "yt"],
+      url: "https://youtube.com",
+      search: "https://youtube.com/results?search_query={}"
+    },
+    // Destiny
+    {
+      category: "🎮 Destiny",
+      name: "Braytech",
+      keys: ["braytech"],
+      url: "https://braytech.org"
+    },
+    {
+      category: "🎮 Destiny",
+      name: "D2Checklist",
+      keys: ["d2checklist", "d2c"],
+      url: "https://www.d2checklist.com"
+    },
+    {
+      category: "🎮 Destiny",
+      name: "Destiny Item Manager",
+      keys: ["destiny item manager", "dim"],
+      url: "https://app.destinyitemmanager.com"
+    },
+    {
+      category: "🎮 Destiny",
+      name: "Destiny Sets",
+      keys: ["destiny sets", "sets"],
+      url: "https://destinysets.com"
+    },
+    {
+      category: "🎮 Destiny",
+      name: "Guardian.gg",
+      keys: ["guardian", "ggg"],
+      url: "https://guardian.gg"
+    },
+    {
+      category: "🎮 Destiny",
+      name: "Light.gg",
+      keys: ["lightgg", "light"],
+      url: "https://light.gg"
+    },
+    // Reddit
+    {
+      category: "💩 Reddit",
+      name: "/r/Battlestations",
+      keys: ["r/battlestations", "r/bs", "rbs", "bs"],
+      url: "https://www.reddit.com/r/battlestations",
+      search:
+        "https://www.reddit.com/r/battlestations/search?q={}&restrict_sr=1"
+    },
+    {
+      category: "💩 Reddit",
+      name: "/r/DestinyTheGame",
+      keys: ["r/destinythegame", "r/dtg", "rdtg", "dtg"],
+      url: "https://www.reddit.com/r/destinythegame",
+      search:
+        "https://www.reddit.com/r/destinythegame/search?q={}&restrict_sr=1"
+    },
+    {
+      category: "💩 Reddit",
+      name: "/r/HipHopHeads",
+      keys: ["r/hiphopheads", "r/hhh", "rhhh", "hhh"],
+      url: "https://www.reddit.com/r/hiphopheads",
+      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1"
+    },
+    {
+      category: "💩 Reddit",
+      name: "/r/PathOfExile",
+      keys: ["r/pathofexile", "r/poe", "rpoe"],
+      url: "https://www.reddit.com/r/hiphopheads",
+      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1"
+    },
+    {
+      category: "💩 Reddit",
+      name: "/r/SquaredCircle",
+      keys: ["r/squaredcircle", "r/sc", "rsc"],
+      url: "https://www.reddit.com/r/hiphopheads",
+      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1"
+    },
+    // Infosec
+    {
+      name: "1Password Generator",
+      keys: ["pw"],
+      url: "https://1password.com/password-generator"
     },
     {
       name: "Bitwarden",
       keys: ["bitwarden", "bw"],
       url: "https://vault.bitwarden.com"
+    },
+    // Internet
+    {
+      name: "Amazon",
+      keys: ["amazon", "a"],
+      url: "https://www.amazon.com",
+      search: "https://www.amazon.com/s?k={}"
     },
     {
       name: "CamelCamelCamel",
@@ -228,17 +350,6 @@ export const config = {
       keys: ["epic game store", "egs"],
       url: "https://www.epicgames.com/store",
       search: "https://www.epicgames.com/store/store-search/?q={}"
-    },
-    {
-      name: "Giant Bomb",
-      keys: ["giant bomb", "gb"],
-      url: "https://www.giantbomb.com/",
-      search: "https://www.giantbomb.com/search/?i=&q={}"
-    },
-    {
-      name: "Giant Bomb Infinite",
-      keys: ["giant bomb infinite", "gb8"],
-      url: "https://www.giantbomb.com/infinite"
     },
     {
       name: "Giphy",
@@ -290,12 +401,6 @@ export const config = {
       search: "https://myanimelist.net/search/all?q={}"
     },
     {
-      name: "Netflix",
-      keys: ["netflix"],
-      url: "https://www.netflix.com",
-      search: "https://www.netflix.com/search?q={}"
-    },
-    {
       name: "Netlify",
       keys: ["netlify"],
       url: "https://app.netlify.com"
@@ -318,11 +423,6 @@ export const config = {
       url: "https://onedrive.live.com"
     },
     {
-      name: "Plex.tv",
-      keys: ["plexapp", "plextv", "plex.app", "plex.tv"],
-      url: "https://app.plex.tv/desktop"
-    },
-    {
       name: "RARBG",
       keys: ["rarbg"],
       url: "https://rarbg.to/torrents",
@@ -340,16 +440,10 @@ export const config = {
       url: "https://app.simplenote.com"
     },
     {
-      name: "Spotify",
-      keys: ["spotify"],
-      url: "https://open.spotify.com"
-    },
-    {
       name: "ResetERA",
       keys: ["resetera", "reset", "era", "re"],
       url: "https://www.resetera.com"
     },
-
     {
       name: "Steam",
       keys: ["steam"],
@@ -374,11 +468,6 @@ export const config = {
       search: "https://thetvdb.com/search?query={}"
     },
     {
-      name: "Twitch",
-      keys: ["twitch"],
-      url: "https://twitch.tv/directory"
-    },
-    {
       name: "Twitter",
       keys: ["twitter"],
       url: "https://twitter.com",
@@ -400,80 +489,24 @@ export const config = {
       url: "https://yarnpkg.com",
       search: "https://yarnpkg.com//en/packages?q={}"
     },
-    {
-      name: "YouTube",
-      keys: ["youtube", "yt"],
-      url: "https://youtube.com",
-      search: "https://youtube.com/results?search_query={}"
-    },
-    // Destiny
-    {
-      category: "🎮 Destiny",
-      name: "Braytech",
-      keys: ["braytech"],
-      url: "https://braytech.org"
-    },
-    {
-      category: "🎮 Destiny",
-      name: "D2Checklist",
-      keys: ["d2checklist", "d2c"],
-      url: "https://www.d2checklist.com"
-    },
-    {
-      category: "🎮 Destiny",
-      name: "Destiny Item Manager",
-      keys: ["destiny item manager", "dim"],
-      url: "https://app.destinyitemmanager.com"
-    },
-    {
-      category: "🎮 Destiny",
-      name: "Guardian.gg",
-      keys: ["guardian", "ggg"],
-      url: "https://guardian.gg"
-    },
-    {
-      category: "🎮 Destiny",
-      name: "Destiny Sets",
-      keys: ["destiny sets", "sets"],
-      url: "https://destinysets.com"
-    },
-    {
-      category: "🎮 Destiny",
-      name: "Light.gg",
-      keys: ["lightgg", "light"],
-      url: "https://light.gg"
-    },
-    // Reddit
-    {
-      category: "💩 Reddit",
-      name: "/r/DestinyTheGame",
-      keys: ["r/destinythegame", "r/dtg", "dtg"],
-      url: "https://www.reddit.com/r/destinythegame",
-      search:
-        "https://www.reddit.com/r/destinythegame/search?q={}&restrict_sr=1"
-    },
-    {
-      category: "💩 Reddit",
-      name: "/r/HipHopHeads",
-      keys: ["r/hiphopheads", "r/hhh"],
-      url: "https://www.reddit.com/r/hiphopheads",
-      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1"
-    },
     // Ugh
     {
       name: "/g/ - Technology",
       keys: ["g"],
-      url: "https://boards.4chan.org/g/catalog"
+      url: "https://boards.4chan.org/g/catalog",
+      hidden: true
     },
     {
       name: "/w/ - Wallpapers",
       keys: ["w"],
-      url: "https://boards.4chan.org/w/catalog"
+      url: "https://boards.4chan.org/w/catalog",
+      hidden: true
     },
     {
       name: "/wg/ - Wallpapers General",
       keys: ["wg"],
-      url: "https://boards.4chan.org/wg/catalog"
+      url: "https://boards.4chan.org/wg/catalog",
+      hidden: true
     }
   ]
 };

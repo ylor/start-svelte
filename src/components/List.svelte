@@ -2,15 +2,20 @@
   import Prompt from "./Prompt.svelte";
 
   import { config } from "../config.js";
-  const { sites } = config;
+  let { sites } = config;
 
-  const categoriesRaw = sites.map(site => site.category);
+  sites = sites.map(p =>
+    p.category === undefined ? { ...p, category: "🤷🏽 ..." } : p
+  );
+  console.log(sites);
+
+  const categoriesRaw = sites.map(p => p.category);
 
   const distinctCategories = [...new Set(categoriesRaw)];
   //console.log(distinctCategories);
 
-  const categories = distinctCategories;
-  //console.log(categories);
+  const categories = distinctCategories.concat(distinctCategories.shift());
+  console.log(categories);
 </script>
 
 <section>
@@ -26,7 +31,13 @@
               {category}
             </h1>
             <ul>
-              {#each sites.filter(site => site.category === category && site.hidden !== true) as site}
+              {#each sites
+                .sort((a, b) =>
+                  a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1
+                )
+                .filter(
+                  site => site.category === category && site.hidden !== true
+                ) as site}
                 <li title={site.keys.toString().replace(',', ', ')}>
                   <a href={site.url}>{site.name}</a>
                 </li>
