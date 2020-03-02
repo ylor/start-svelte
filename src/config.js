@@ -298,7 +298,7 @@ export const config = {
     {
       name: "Netlify",
       keys: ["netlify"],
-      url: "https://www.netlify.com"
+      url: "https://app.netlify.com"
     },
     {
       name: "Node Package Manager",
