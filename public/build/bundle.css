@@ -1,6 +1,6 @@
 :root{--font:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
       monospace;--background:#0f0e17;--foreground:#f8f8f2;--black:;--red:#ff5555;--green:#50fa7b;--yellow:#f1fa8c;--blue:#6272a4;--magenta:#bd93f9;--cyan:#8be9fd;--white:#f8f8f2;--pink:#ff79c6;--orange:#ff8906;--branch:1px solid #a7a9be}html{font-size:24px}body{background:var(--background);font-family:var(--font);color:var(--foreground);display:flex;justify-content:center}h1{display:inline;font-family:var(--font);font-size:1rem;font-weight:normal;color:var(--red)}a, a:visited{font-family:var(--font);font-size:1rem;color:var(--foreground);text-decoration:none;outline:none}a:hover, a:focus{color:var(--background);background:var(--orange);text-decoration:none}ul{list-style:none;padding-left:2.5rem}ul h1{cursor:pointer}.tree > ul{margin:0;padding-left:1rem}li{position:relative}li.hideChildren > ul{display:none}li::before, li::after{content:"";position:absolute;left:-0.75rem}li::before{border-top:var(--branch);top:0.75rem;width:0.5rem}li::after{border-left:var(--branch);height:100%;top:0.25rem}li:last-child::after{height:0.5rem}
-section.svelte-mb6bct{padding:1.5rem 0 0.3125rem}
 form.svelte-5ay4fv{display:inline}input.svelte-5ay4fv{font-family:var(--font);font-size:1rem;color:var(--foreground);background-color:var(--background);border:none}
+section.svelte-mb6bct{padding:1.5rem 0 0.3125rem}
 
 /*# sourceMappingURL=bundle.css.map */

@@ -959,6 +959,11 @@ var app = (function () {
           search: "https://www.netflix.com/search?q={}"
         },
         {
+          name: "Netlify",
+          keys: ["netlify"],
+          url: "https://www.netlify.com"
+        },
+        {
           name: "Node Package Manager",
           keys: ["npm"],
           url: "https://www.npmjs.com",
@@ -1882,10 +1887,10 @@ var app = (function () {
     			attr_dev(input, "spellcheck", "false");
     			attr_dev(input, "id", "search-input");
     			attr_dev(input, "class", "svelte-5ay4fv");
-    			add_location(input, file$3, 59, 6, 1441);
+    			add_location(input, file$3, 59, 6, 1453);
     			attr_dev(form, "autocomplete", "off");
     			attr_dev(form, "class", "svelte-5ay4fv");
-    			add_location(form, file$3, 56, 4, 1278);
+    			add_location(form, file$3, 56, 4, 1290);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, form, anchor);
@@ -1942,9 +1947,9 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "id", "list");
-    			add_location(ul, file$3, 72, 6, 1770);
+    			add_location(ul, file$3, 72, 6, 1782);
     			attr_dev(aside, "class", "tree");
-    			add_location(aside, file$3, 71, 4, 1742);
+    			add_location(aside, file$3, 71, 4, 1754);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, aside, anchor);
@@ -2016,10 +2021,10 @@ var app = (function () {
     			a = element("a");
     			t = space();
     			attr_dev(a, "href", a_href_value = parseInput(/*suggestion*/ ctx[8]));
-    			add_location(a, file$3, 75, 12, 1916);
+    			add_location(a, file$3, 75, 12, 1928);
     			attr_dev(li, "id", li_id_value = "search-suggestion-" + /*i*/ ctx[10]);
     			attr_dev(li, "class", "search-suggestion");
-    			add_location(li, file$3, 74, 10, 1842);
+    			add_location(li, file$3, 74, 10, 1854);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2078,7 +2083,7 @@ var app = (function () {
     			create_component(prompt.$$.fragment);
     			t = space();
     			if (if_block) if_block.c();
-    			add_location(section, file$3, 54, 0, 1251);
+    			add_location(section, file$3, 54, 0, 1263);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2156,7 +2161,7 @@ var app = (function () {
     		} else if (search.length > 0) {
     			const response = await fetchJsonp(apiURL + query);
     			const json = await response.json();
-    			$$invalidate(1, suggestions = json[1]);
+    			$$invalidate(1, suggestions = json[1].slice(0, 8));
     		}
     	}
 

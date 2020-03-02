@@ -21,7 +21,7 @@
     } else if (search.length > 0) {
       const response = await fetchJsonp(apiURL + query);
       const json = await response.json();
-      suggestions = json[1];
+      suggestions = json[1].slice(0, 8);
     }
   }
 
