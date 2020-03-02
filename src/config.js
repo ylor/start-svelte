@@ -12,37 +12,38 @@ export const config = {
       name: "Google",
       keys: "*",
       url: "https://google.com",
-      search: "https://google.com/search?q={}"
+      search: "https://google.com/search?q={}",
+      hidden: true
     },
     // Me
     {
-      category: "Me",
+      category: "👨🏽‍🦲 Me",
       name: "About",
       keys: ["about"],
       url: "https://about.rolyreyes.com",
       hidden: true
     },
     {
-      category: "Me",
+      category: "👨🏽‍🦲 Me",
       name: "Blog",
       keys: ["blog"],
       url: "https://rolyreyes.com"
     },
     {
-      category: "Me",
+      category: "👨🏽‍🦲 Me",
       name: "Dotfiles",
       keys: ["dot"],
       url: "https://github.com/ylor/dotfiles"
     },
     {
-      category: "Me",
+      category: "👨🏽‍🦲 Me",
       name: "Github",
       keys: ["github", "git"],
       url: "https://github.com/",
       search: "https://github.com/search?q={}"
     },
     {
-      category: "Me",
+      category: "👨🏽‍🦲 Me",
       name: "Start",
       keys: ["start"],
       url: "https://start.rolyreyes.com"
@@ -50,133 +51,133 @@ export const config = {
 
     // Server
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
       name: "Pi-hole",
       keys: ["pihole", "pi"],
       url: "http://pi.hole/admin"
     },
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
 
       name: "Homebridge",
       keys: ["homebridge", "hb"],
       url: "http://docker.local:8181"
     },
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
 
       name: "Plex",
       keys: ["plex"],
       url: "http://server.local:32400/web"
     },
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
 
       name: "Portainer",
       keys: ["portainer", "port"],
       url: "http://docker.local:9000"
     },
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
 
       name: "Radarr",
       keys: ["radarr", "movies"],
       url: "http://docker.local:7878"
     },
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
 
       name: "Sonarr",
       keys: ["sonarr", "tv"],
       url: "http://docker.local:8989"
     },
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
 
       name: "Transmission",
       keys: ["transmission", "bt", "bit"],
       url: "http://docker.local:9091"
     },
     {
-      category: "Server",
+      category: "👨🏽‍💻 Server",
       name: "UniFi Controller",
       keys: ["unifi"],
       url: "http://docker.local:8080"
     },
     //Work
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "Apple School Manager",
       keys: ["apple school manager", "asm"],
       url: "http://school.apple.com"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "CNS Service Requests",
       keys: ["sr"],
       url: "http://k353077/"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "CNS Sharepoint",
       keys: ["cns", "sharepoint"],
       url:
         "https://miamidadecollegeprod.sharepoint.com/teams/MDC_Kendall_CampusNetworkServices/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "CNS Sharepoint-old",
       keys: ["cns-old", "sharepoint-old"],
       url:
         "https://sharepoint.mdc.edu/kendall/departments/cns/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "CNS Forms",
       keys: ["form", "forms"],
       url:
         "https://forms.office.com/Pages/ResponsePage.aspx?id=BmhisP_Ok0OCHvmj5maJOxTM7A6YzXlAmKCvVMMrgsFUMzJaTFhGOEY0STlLWkVMR1JKMU4zMThFTC4u"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "Fusion",
       keys: ["fusion", "kfusion"],
       url:
         "http://kfusion1.kendall.mdcc.edu/Fusion/WebClient/monitoring/pages/Default.html?sp=&rr=15"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "CNS Kaseya",
       keys: ["kaseya"],
       url: "https://kaseya.mdc.edu/"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "JAMF",
       keys: ["jamf"],
       url: "https://kmacdep.kendall.mdcc.edu:8443"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "Miami Dade College",
-      keys: ["mdc"],
+      keys: ["🎓 MDC"],
       url: "http://www.mdc.edu"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "Miami Dade College - NTAuth",
       keys: ["ntauth"],
       url: "http://ntauth.mdc.edu"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "MDC - Employee",
       keys: ["emp"],
       url: "https://wapi.mdc.edu/NTAuth/account_admin.asp",
       search: "https://wapi.mdc.edu/NTAuth/user_data.asp?UserID={}"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "MDC - Student",
       keys: ["stu"],
       url: "https://mdcwapi.mdc.edu:8001/ntauthstudent",
@@ -184,7 +185,7 @@ export const config = {
         "https://mdcwapi.mdc.edu:8001/ntauthstudent/StudentData.aspx?AcctNm={}"
     },
     {
-      category: "MDC",
+      category: "🎓 MDC",
       name: "Timeclock",
       keys: ["timeclock", "tc"],
       url: "https://timeclock.mdc.edu"
@@ -407,44 +408,44 @@ export const config = {
     },
     // Destiny
     {
-      category: "Destiny",
+      category: "🎮 Destiny",
       name: "Braytech",
       keys: ["braytech"],
       url: "https://braytech.org"
     },
     {
-      category: "Destiny",
+      category: "🎮 Destiny",
       name: "D2Checklist",
       keys: ["d2checklist", "d2c"],
       url: "https://www.d2checklist.com"
     },
     {
-      category: "Destiny",
+      category: "🎮 Destiny",
       name: "Destiny Item Manager",
       keys: ["destiny item manager", "dim"],
       url: "https://app.destinyitemmanager.com"
     },
     {
-      category: "Destiny",
+      category: "🎮 Destiny",
       name: "Guardian.gg",
       keys: ["guardian", "ggg"],
       url: "https://guardian.gg"
     },
     {
-      category: "Destiny",
+      category: "🎮 Destiny",
       name: "Destiny Sets",
       keys: ["destiny sets", "sets"],
       url: "https://destinysets.com"
     },
     {
-      category: "Destiny",
+      category: "🎮 Destiny",
       name: "Light.gg",
       keys: ["lightgg", "light"],
       url: "https://light.gg"
     },
     // Reddit
     {
-      category: "Reddit",
+      category: "💩 Reddit",
       name: "/r/DestinyTheGame",
       keys: ["r/destinythegame", "r/dtg", "dtg"],
       url: "https://www.reddit.com/r/destinythegame",
@@ -452,7 +453,7 @@ export const config = {
         "https://www.reddit.com/r/destinythegame/search?q={}&restrict_sr=1"
     },
     {
-      category: "Reddit",
+      category: "💩 Reddit",
       name: "/r/HipHopHeads",
       keys: ["r/hiphopheads", "r/hhh"],
       url: "https://www.reddit.com/r/hiphopheads",

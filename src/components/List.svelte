@@ -3,9 +3,8 @@
 
   import { config } from "../config.js";
   const { sites } = config;
-  //console.log(sites);
 
-  const categoriesRaw = sites.map(command => command.category).filter(Boolean);
+  const categoriesRaw = sites.map(site => site.category);
 
   const distinctCategories = [...new Set(categoriesRaw)];
   //console.log(distinctCategories);
@@ -19,7 +18,7 @@
     tree
     <aside class="tree">
       <h1>.</h1>
-      <ul id="list">
+      <ul class="list">
         {#each categories as category}
           <li class="hideChildren">
             <h1
@@ -27,7 +26,7 @@
               {category}
             </h1>
             <ul>
-              {#each sites.filter(command => command.category === category && command.hidden !== true) as site}
+              {#each sites.filter(site => site.category === category && site.hidden !== true) as site}
                 <li title={site.keys.toString().replace(',', ', ')}>
                   <a href={site.url}>{site.name}</a>
                 </li>

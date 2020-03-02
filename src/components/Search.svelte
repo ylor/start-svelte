@@ -8,9 +8,6 @@
   import parseInput from "../js/parseInput.js";
 
   let search = "";
-
-  let apiURL =
-    "https://suggestqueries.google.com/complete/search?client=firefox&q=";
   let suggestions = [];
 
   async function fetchSuggestions() {
@@ -18,8 +15,11 @@
 
     if (search.length === 0) {
       suggestions = [];
-    } else if (search.length > 0) {
-      const response = await fetchJsonp(apiURL + query);
+    } else {
+      const response = await fetchJsonp(
+        "https://suggestqueries.google.com/complete/search?client=firefox&q=" +
+          query
+      );
       const json = await response.json();
       suggestions = json[1].slice(0, 8);
     }
@@ -55,32 +55,31 @@
 <section>
   <Prompt>
     <form
+      autocapitalize="none"
       autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
       on:submit|preventDefault={() => (window.location.href = parseInput(document.getElementById('search-input').value))}>
       <input
         on:keyup={fetchSuggestions}
         bind:value={search}
         type="text"
-        autocapitalize="none"
-        autocomplete="off"
-        autocorrect="off"
-        spellcheck="false"
         id="search-input" />
     </form>
   </Prompt>
   {#if suggestions.length > 0}
     <aside class="tree">
-      <ul id="list">
-        {#each suggestions as suggestion, i}
-          <li id={'search-suggestion-' + i} class="search-suggestion">
+      <ul id="search-suggestions">
+        {#each suggestions as suggestion}
+          <li class="search-suggestion">
             <a
               href={parseInput(suggestion)}
-              on:focus={() => (search = suggestion)}
+              on:focus={(document.getElementById('search-input').value = suggestion)}
               on:mouseover={event => event.target.addEventListener(
                   'mousemove',
                   event => event.target.focus()
                 )}>
-              {@html suggestion.replace(search.match(/\b.+\b/), `<b>${search.trimEnd()}</b>`)}
+              {@html suggestion.replace(search.match(/\b.+\b/), `<b style="text-decoration:underline;">${search.trim()}</b>`)}
             </a>
           </li>
         {/each}

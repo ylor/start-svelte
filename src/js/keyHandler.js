@@ -6,19 +6,20 @@ export default function keyHandler(event) {
   const suggestionClass = document.getElementsByClassName("search-suggestion");
   // Change focus as if ArrowUp === Shitf+Tab & Change focus as if ArrowDown === Tab
   if (event.key === "ArrowUp") {
+    event.preventDefault();
     if (document.activeElement === searchInput) {
-      suggestionClass[suggestionClass.length - 1].focus();
+      suggestionClass[suggestionClass.length - 1].firstElementChild.focus();
     } else {
-      document.activeElement.previousElementSibling
-        ? document.activeElement.previousElementSibling.focus()
+      document.activeElement.parentElement.previousElementSibling
+        ? document.activeElement.parentElement.previousElementSibling.firstElementChild.focus()
         : searchInput.focus();
     }
   } else if (event.key === "ArrowDown") {
     if (document.activeElement === searchInput) {
-      suggestionClass[0].focus();
+      suggestionClass[0].firstElementChild.focus();
     } else {
-      document.activeElement.nextElementSibling
-        ? document.activeElement.nextElementSibling.focus()
+      document.activeElement.parentElement.nextElementSibling
+        ? document.activeElement.parentElement.nextElementSibling.firstElementChild.focus()
         : searchInput.focus();
     }
   }
@@ -41,12 +42,12 @@ export default function keyHandler(event) {
 
   // Listen for space
   // In Safari on macOS there doesn't seem to be an equivalent for event.key === "Spacebar" so I had to use event.code
-  else if (event.key === "Spacebar" || event.code === "Space") {
-    if (document.activeElement.id !== "search-input") {
-      setSearch(document.activeElement.textContent);
-      changeFocus("search-input");
-    }
-  }
+  // else if (event.key === "Spacebar" || event.code === "Space") {
+  //   if (document.activeElement.id !== "search-input") {
+  //     setSearch(document.activeElement.textContent);
+  //     changeFocus("search-input");
+  //   }
+  // }
 
   // Listen for backspace
   else if (event.key === "Backspace") {

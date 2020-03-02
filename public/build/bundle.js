@@ -518,13 +518,11 @@ var app = (function () {
     	let t2;
     	let span1;
     	let t4;
-    	let span2;
-    	let t6;
     	let br;
+    	let t5;
+    	let span2;
     	let t7;
-    	let span3;
-    	let t9;
-    	let t10;
+    	let t8;
     	let current;
     	const default_slot_template = /*$$slots*/ ctx[1].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[0], null);
@@ -537,19 +535,16 @@ var app = (function () {
     			span0.textContent = "roly";
     			t2 = text("\n  @\n  ");
     			span1 = element("span");
-    			span1.textContent = "start";
-    			t4 = text("\n  on\n  ");
-    			span2 = element("span");
-    			span2.textContent = `${browser()}`;
-    			t6 = text("\n  ]\n  ");
+    			span1.textContent = `${browser()}`;
+    			t4 = text("\n  ]\n  ");
     			br = element("br");
+    			t5 = space();
+    			span2 = element("span");
+    			span2.textContent = "➜";
     			t7 = space();
-    			span3 = element("span");
-    			span3.textContent = "➜";
-    			t9 = space();
 
     			if (!default_slot) {
-    				t10 = text("command");
+    				t8 = text("command");
     			}
 
     			if (default_slot) default_slot.c();
@@ -557,11 +552,9 @@ var app = (function () {
     			add_location(span0, file, 42, 2, 987);
     			set_style(span1, "color", "cyan");
     			add_location(span1, file, 44, 2, 1031);
-    			set_style(span2, "color", "cyan");
-    			add_location(span2, file, 46, 2, 1077);
-    			add_location(br, file, 48, 2, 1128);
-    			set_style(span3, "color", "green");
-    			add_location(span3, file, 49, 2, 1137);
+    			add_location(br, file, 46, 2, 1082);
+    			set_style(span2, "color", "green");
+    			add_location(span2, file, 47, 2, 1091);
     			attr_dev(section, "class", "svelte-mb6bct");
     			add_location(section, file, 40, 0, 971);
     		},
@@ -575,15 +568,13 @@ var app = (function () {
     			append_dev(section, t2);
     			append_dev(section, span1);
     			append_dev(section, t4);
-    			append_dev(section, span2);
-    			append_dev(section, t6);
     			append_dev(section, br);
+    			append_dev(section, t5);
+    			append_dev(section, span2);
     			append_dev(section, t7);
-    			append_dev(section, span3);
-    			append_dev(section, t9);
 
     			if (!default_slot) {
-    				append_dev(section, t10);
+    				append_dev(section, t8);
     			}
 
     			if (default_slot) {
@@ -676,37 +667,38 @@ var app = (function () {
           name: "Google",
           keys: "*",
           url: "https://google.com",
-          search: "https://google.com/search?q={}"
+          search: "https://google.com/search?q={}",
+          hidden: true
         },
         // Me
         {
-          category: "Me",
+          category: "👨🏽‍🦲 Me",
           name: "About",
           keys: ["about"],
           url: "https://about.rolyreyes.com",
           hidden: true
         },
         {
-          category: "Me",
+          category: "👨🏽‍🦲 Me",
           name: "Blog",
           keys: ["blog"],
           url: "https://rolyreyes.com"
         },
         {
-          category: "Me",
+          category: "👨🏽‍🦲 Me",
           name: "Dotfiles",
           keys: ["dot"],
           url: "https://github.com/ylor/dotfiles"
         },
         {
-          category: "Me",
+          category: "👨🏽‍🦲 Me",
           name: "Github",
           keys: ["github", "git"],
           url: "https://github.com/",
           search: "https://github.com/search?q={}"
         },
         {
-          category: "Me",
+          category: "👨🏽‍🦲 Me",
           name: "Start",
           keys: ["start"],
           url: "https://start.rolyreyes.com"
@@ -714,133 +706,133 @@ var app = (function () {
 
         // Server
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
           name: "Pi-hole",
           keys: ["pihole", "pi"],
           url: "http://pi.hole/admin"
         },
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
 
           name: "Homebridge",
           keys: ["homebridge", "hb"],
           url: "http://docker.local:8181"
         },
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
 
           name: "Plex",
           keys: ["plex"],
           url: "http://server.local:32400/web"
         },
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
 
           name: "Portainer",
           keys: ["portainer", "port"],
           url: "http://docker.local:9000"
         },
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
 
           name: "Radarr",
           keys: ["radarr", "movies"],
           url: "http://docker.local:7878"
         },
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
 
           name: "Sonarr",
           keys: ["sonarr", "tv"],
           url: "http://docker.local:8989"
         },
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
 
           name: "Transmission",
           keys: ["transmission", "bt", "bit"],
           url: "http://docker.local:9091"
         },
         {
-          category: "Server",
+          category: "👨🏽‍💻 Server",
           name: "UniFi Controller",
           keys: ["unifi"],
           url: "http://docker.local:8080"
         },
         //Work
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "Apple School Manager",
           keys: ["apple school manager", "asm"],
           url: "http://school.apple.com"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "CNS Service Requests",
           keys: ["sr"],
           url: "http://k353077/"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "CNS Sharepoint",
           keys: ["cns", "sharepoint"],
           url:
             "https://miamidadecollegeprod.sharepoint.com/teams/MDC_Kendall_CampusNetworkServices/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "CNS Sharepoint-old",
           keys: ["cns-old", "sharepoint-old"],
           url:
             "https://sharepoint.mdc.edu/kendall/departments/cns/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "CNS Forms",
           keys: ["form", "forms"],
           url:
             "https://forms.office.com/Pages/ResponsePage.aspx?id=BmhisP_Ok0OCHvmj5maJOxTM7A6YzXlAmKCvVMMrgsFUMzJaTFhGOEY0STlLWkVMR1JKMU4zMThFTC4u"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "Fusion",
           keys: ["fusion", "kfusion"],
           url:
             "http://kfusion1.kendall.mdcc.edu/Fusion/WebClient/monitoring/pages/Default.html?sp=&rr=15"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "CNS Kaseya",
           keys: ["kaseya"],
           url: "https://kaseya.mdc.edu/"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "JAMF",
           keys: ["jamf"],
           url: "https://kmacdep.kendall.mdcc.edu:8443"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "Miami Dade College",
-          keys: ["mdc"],
+          keys: ["🎓 MDC"],
           url: "http://www.mdc.edu"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "Miami Dade College - NTAuth",
           keys: ["ntauth"],
           url: "http://ntauth.mdc.edu"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "MDC - Employee",
           keys: ["emp"],
           url: "https://wapi.mdc.edu/NTAuth/account_admin.asp",
           search: "https://wapi.mdc.edu/NTAuth/user_data.asp?UserID={}"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "MDC - Student",
           keys: ["stu"],
           url: "https://mdcwapi.mdc.edu:8001/ntauthstudent",
@@ -848,7 +840,7 @@ var app = (function () {
             "https://mdcwapi.mdc.edu:8001/ntauthstudent/StudentData.aspx?AcctNm={}"
         },
         {
-          category: "MDC",
+          category: "🎓 MDC",
           name: "Timeclock",
           keys: ["timeclock", "tc"],
           url: "https://timeclock.mdc.edu"
@@ -1071,44 +1063,44 @@ var app = (function () {
         },
         // Destiny
         {
-          category: "Destiny",
+          category: "🎮 Destiny",
           name: "Braytech",
           keys: ["braytech"],
           url: "https://braytech.org"
         },
         {
-          category: "Destiny",
+          category: "🎮 Destiny",
           name: "D2Checklist",
           keys: ["d2checklist", "d2c"],
           url: "https://www.d2checklist.com"
         },
         {
-          category: "Destiny",
+          category: "🎮 Destiny",
           name: "Destiny Item Manager",
           keys: ["destiny item manager", "dim"],
           url: "https://app.destinyitemmanager.com"
         },
         {
-          category: "Destiny",
+          category: "🎮 Destiny",
           name: "Guardian.gg",
           keys: ["guardian", "ggg"],
           url: "https://guardian.gg"
         },
         {
-          category: "Destiny",
+          category: "🎮 Destiny",
           name: "Destiny Sets",
           keys: ["destiny sets", "sets"],
           url: "https://destinysets.com"
         },
         {
-          category: "Destiny",
+          category: "🎮 Destiny",
           name: "Light.gg",
           keys: ["lightgg", "light"],
           url: "https://light.gg"
         },
         // Reddit
         {
-          category: "Reddit",
+          category: "💩 Reddit",
           name: "/r/DestinyTheGame",
           keys: ["r/destinythegame", "r/dtg", "dtg"],
           url: "https://www.reddit.com/r/destinythegame",
@@ -1116,7 +1108,7 @@ var app = (function () {
             "https://www.reddit.com/r/destinythegame/search?q={}&restrict_sr=1"
         },
         {
-          category: "Reddit",
+          category: "💩 Reddit",
           name: "/r/HipHopHeads",
           keys: ["r/hiphopheads", "r/hhh"],
           url: "https://www.reddit.com/r/hiphopheads",
@@ -1156,7 +1148,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (30:14) {#each sites.filter(command => command.category === category && command.hidden !== true) as site}
+    // (29:14) {#each sites.filter(site => site.category === category && site.hidden !== true) as site}
     function create_each_block_1(ctx) {
     	let li;
     	let a;
@@ -1173,9 +1165,9 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(a, "href", a_href_value = /*site*/ ctx[8].url);
-    			add_location(a, file$1, 31, 18, 960);
+    			add_location(a, file$1, 30, 18, 907);
     			attr_dev(li, "title", li_title_value = /*site*/ ctx[8].keys.toString().replace(",", ", "));
-    			add_location(li, file$1, 30, 16, 888);
+    			add_location(li, file$1, 29, 16, 835);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1193,14 +1185,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(30:14) {#each sites.filter(command => command.category === category && command.hidden !== true) as site}",
+    		source: "(29:14) {#each sites.filter(site => site.category === category && site.hidden !== true) as site}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (23:8) {#each categories as category}
+    // (22:8) {#each categories as category}
     function create_each_block(ctx) {
     	let li;
     	let h1;
@@ -1236,10 +1228,10 @@ var app = (function () {
     			}
 
     			t2 = space();
-    			add_location(h1, file$1, 24, 12, 606);
-    			add_location(ul, file$1, 28, 12, 753);
+    			add_location(h1, file$1, 23, 12, 562);
+    			add_location(ul, file$1, 27, 12, 709);
     			attr_dev(li, "class", "hideChildren");
-    			add_location(li, file$1, 23, 10, 567);
+    			add_location(li, file$1, 22, 10, 523);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1293,14 +1285,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(23:8) {#each categories as category}",
+    		source: "(22:8) {#each categories as category}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (18:2) <Prompt>
+    // (17:2) <Prompt>
     function create_default_slot(ctx) {
     	let t0;
     	let aside;
@@ -1328,11 +1320,11 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(h1, file$1, 20, 6, 483);
-    			attr_dev(ul, "id", "list");
-    			add_location(ul, file$1, 21, 6, 501);
+    			add_location(h1, file$1, 19, 6, 436);
+    			attr_dev(ul, "class", "list");
+    			add_location(ul, file$1, 20, 6, 454);
     			attr_dev(aside, "class", "tree");
-    			add_location(aside, file$1, 19, 4, 455);
+    			add_location(aside, file$1, 18, 4, 408);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1381,7 +1373,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(18:2) <Prompt>",
+    		source: "(17:2) <Prompt>",
     		ctx
     	});
 
@@ -1404,7 +1396,7 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			create_component(prompt.$$.fragment);
-    			add_location(section, file$1, 16, 0, 418);
+    			add_location(section, file$1, 15, 0, 371);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1453,16 +1445,13 @@ var app = (function () {
 
     function instance$1($$self, $$props, $$invalidate) {
     	const { sites } = config;
-
-    	//console.log(sites);
-    	const categoriesRaw = sites.map(command => command.category).filter(Boolean);
-
+    	const categoriesRaw = sites.map(site => site.category);
     	const distinctCategories = [...new Set(categoriesRaw)];
 
     	//console.log(distinctCategories);
     	const categories = distinctCategories;
 
-    	const func = (category, command) => command.category === category && command.hidden !== true;
+    	const func = (category, site) => site.category === category && site.hidden !== true;
 
     	$$self.$capture_state = () => ({
     		Prompt,
@@ -1471,7 +1460,6 @@ var app = (function () {
     		categoriesRaw,
     		distinctCategories,
     		categories,
-    		Boolean,
     		Set
     	});
 
@@ -1787,19 +1775,20 @@ var app = (function () {
       const suggestionClass = document.getElementsByClassName("search-suggestion");
       // Change focus as if ArrowUp === Shitf+Tab & Change focus as if ArrowDown === Tab
       if (event.key === "ArrowUp") {
+        event.preventDefault();
         if (document.activeElement === searchInput) {
-          suggestionClass[suggestionClass.length - 1].focus();
+          suggestionClass[suggestionClass.length - 1].firstElementChild.focus();
         } else {
-          document.activeElement.previousElementSibling
-            ? document.activeElement.previousElementSibling.focus()
+          document.activeElement.parentElement.previousElementSibling
+            ? document.activeElement.parentElement.previousElementSibling.firstElementChild.focus()
             : searchInput.focus();
         }
       } else if (event.key === "ArrowDown") {
         if (document.activeElement === searchInput) {
-          suggestionClass[0].focus();
+          suggestionClass[0].firstElementChild.focus();
         } else {
-          document.activeElement.nextElementSibling
-            ? document.activeElement.nextElementSibling.focus()
+          document.activeElement.parentElement.nextElementSibling
+            ? document.activeElement.parentElement.nextElementSibling.firstElementChild.focus()
             : searchInput.focus();
         }
       }
@@ -1822,12 +1811,12 @@ var app = (function () {
 
       // Listen for space
       // In Safari on macOS there doesn't seem to be an equivalent for event.key === "Spacebar" so I had to use event.code
-      else if (event.key === "Spacebar" || event.code === "Space") {
-        if (document.activeElement.id !== "search-input") {
-          setSearch(document.activeElement.textContent);
-          changeFocus("search-input");
-        }
-      }
+      // else if (event.key === "Spacebar" || event.code === "Space") {
+      //   if (document.activeElement.id !== "search-input") {
+      //     setSearch(document.activeElement.textContent);
+      //     changeFocus("search-input");
+      //   }
+      // }
 
       // Listen for backspace
       else if (event.key === "Backspace") {
@@ -1865,8 +1854,7 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
-    	child_ctx[10] = i;
+    	child_ctx[6] = list[i];
     	return child_ctx;
     }
 
@@ -1881,16 +1869,15 @@ var app = (function () {
     			form = element("form");
     			input = element("input");
     			attr_dev(input, "type", "text");
-    			attr_dev(input, "autocapitalize", "none");
-    			attr_dev(input, "autocomplete", "off");
-    			attr_dev(input, "autocorrect", "off");
-    			attr_dev(input, "spellcheck", "false");
     			attr_dev(input, "id", "search-input");
     			attr_dev(input, "class", "svelte-5ay4fv");
-    			add_location(input, file$3, 59, 6, 1453);
+    			add_location(input, file$3, 62, 6, 1508);
+    			attr_dev(form, "autocapitalize", "none");
     			attr_dev(form, "autocomplete", "off");
+    			attr_dev(form, "autocorrect", "off");
+    			attr_dev(form, "spellcheck", "false");
     			attr_dev(form, "class", "svelte-5ay4fv");
-    			add_location(form, file$3, 56, 4, 1290);
+    			add_location(form, file$3, 56, 4, 1265);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, form, anchor);
@@ -1899,8 +1886,8 @@ var app = (function () {
 
     			dispose = [
     				listen_dev(input, "keyup", /*fetchSuggestions*/ ctx[2], false, false, false),
-    				listen_dev(input, "input", /*input_input_handler*/ ctx[5]),
-    				listen_dev(form, "submit", prevent_default(/*submit_handler*/ ctx[6]), false, true, false)
+    				listen_dev(input, "input", /*input_input_handler*/ ctx[4]),
+    				listen_dev(form, "submit", prevent_default(/*submit_handler*/ ctx[5]), false, true, false)
     			];
     		},
     		p: function update(ctx, dirty) {
@@ -1925,7 +1912,7 @@ var app = (function () {
     	return block;
     }
 
-    // (71:2) {#if suggestions.length > 0}
+    // (70:2) {#if suggestions.length > 0}
     function create_if_block(ctx) {
     	let aside;
     	let ul;
@@ -1946,10 +1933,10 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(ul, "id", "list");
-    			add_location(ul, file$3, 72, 6, 1782);
+    			attr_dev(ul, "id", "search-suggestions");
+    			add_location(ul, file$3, 71, 6, 1723);
     			attr_dev(aside, "class", "tree");
-    			add_location(aside, file$3, 71, 4, 1754);
+    			add_location(aside, file$3, 70, 4, 1695);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, aside, anchor);
@@ -1960,7 +1947,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*parseInput, suggestions, search*/ 3) {
+    			if (dirty & /*parseInput, suggestions, document, search*/ 3) {
     				each_value = /*suggestions*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -1994,37 +1981,31 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(71:2) {#if suggestions.length > 0}",
+    		source: "(70:2) {#if suggestions.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:8) {#each suggestions as suggestion, i}
+    // (73:8) {#each suggestions as suggestion}
     function create_each_block$2(ctx) {
     	let li;
     	let a;
-    	let raw_value = /*suggestion*/ ctx[8].replace(/*search*/ ctx[0].match(/\b.+\b/), `<b>${/*search*/ ctx[0].trimEnd()}</b>`) + "";
+    	let raw_value = /*suggestion*/ ctx[6].replace(/*search*/ ctx[0].match(/\b.+\b/), `<b style="text-decoration:underline;">${/*search*/ ctx[0].trim()}</b>`) + "";
     	let a_href_value;
     	let t;
-    	let li_id_value;
     	let dispose;
-
-    	function focus_handler(...args) {
-    		return /*focus_handler*/ ctx[7](/*suggestion*/ ctx[8], ...args);
-    	}
 
     	const block = {
     		c: function create() {
     			li = element("li");
     			a = element("a");
     			t = space();
-    			attr_dev(a, "href", a_href_value = parseInput(/*suggestion*/ ctx[8]));
-    			add_location(a, file$3, 75, 12, 1928);
-    			attr_dev(li, "id", li_id_value = "search-suggestion-" + /*i*/ ctx[10]);
+    			attr_dev(a, "href", a_href_value = parseInput(/*suggestion*/ ctx[6]));
+    			add_location(a, file$3, 74, 12, 1850);
     			attr_dev(li, "class", "search-suggestion");
-    			add_location(li, file$3, 74, 10, 1854);
+    			add_location(li, file$3, 73, 10, 1806);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2033,14 +2014,23 @@ var app = (function () {
     			append_dev(li, t);
 
     			dispose = [
-    				listen_dev(a, "focus", focus_handler, false, false, false),
+    				listen_dev(
+    					a,
+    					"focus",
+    					function () {
+    						if (is_function(document.getElementById("search-input").value = /*suggestion*/ ctx[6])) (document.getElementById("search-input").value = /*suggestion*/ ctx[6]).apply(this, arguments);
+    					},
+    					false,
+    					false,
+    					false
+    				),
     				listen_dev(a, "mouseover", mouseover_handler$1, false, false, false)
     			];
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*suggestions, search*/ 3 && raw_value !== (raw_value = /*suggestion*/ ctx[8].replace(/*search*/ ctx[0].match(/\b.+\b/), `<b>${/*search*/ ctx[0].trimEnd()}</b>`) + "")) a.innerHTML = raw_value;
-    			if (dirty & /*suggestions*/ 2 && a_href_value !== (a_href_value = parseInput(/*suggestion*/ ctx[8]))) {
+    			if (dirty & /*suggestions, search*/ 3 && raw_value !== (raw_value = /*suggestion*/ ctx[6].replace(/*search*/ ctx[0].match(/\b.+\b/), `<b style="text-decoration:underline;">${/*search*/ ctx[0].trim()}</b>`) + "")) a.innerHTML = raw_value;
+    			if (dirty & /*suggestions*/ 2 && a_href_value !== (a_href_value = parseInput(/*suggestion*/ ctx[6]))) {
     				attr_dev(a, "href", a_href_value);
     			}
     		},
@@ -2054,7 +2044,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(74:8) {#each suggestions as suggestion, i}",
+    		source: "(73:8) {#each suggestions as suggestion}",
     		ctx
     	});
 
@@ -2083,7 +2073,7 @@ var app = (function () {
     			create_component(prompt.$$.fragment);
     			t = space();
     			if (if_block) if_block.c();
-    			add_location(section, file$3, 54, 0, 1263);
+    			add_location(section, file$3, 54, 0, 1238);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2099,7 +2089,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const prompt_changes = {};
 
-    			if (dirty & /*$$scope, search*/ 2049) {
+    			if (dirty & /*$$scope, search*/ 513) {
     				prompt_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2150,7 +2140,6 @@ var app = (function () {
 
     function instance$3($$self, $$props, $$invalidate) {
     	let search = "";
-    	let apiURL = "https://suggestqueries.google.com/complete/search?client=firefox&q=";
     	let suggestions = [];
 
     	async function fetchSuggestions() {
@@ -2158,8 +2147,8 @@ var app = (function () {
 
     		if (search.length === 0) {
     			$$invalidate(1, suggestions = []);
-    		} else if (search.length > 0) {
-    			const response = await fetchJsonp(apiURL + query);
+    		} else {
+    			const response = await fetchJsonp("https://suggestqueries.google.com/complete/search?client=firefox&q=" + query);
     			const json = await response.json();
     			$$invalidate(1, suggestions = json[1].slice(0, 8));
     		}
@@ -2181,7 +2170,6 @@ var app = (function () {
     	}
 
     	const submit_handler = () => window.location.href = parseInput(document.getElementById("search-input").value);
-    	const focus_handler = suggestion => $$invalidate(0, search = suggestion);
 
     	$$self.$capture_state = () => ({
     		fetchJsonp,
@@ -2190,7 +2178,6 @@ var app = (function () {
     		keyHandler,
     		parseInput,
     		search,
-    		apiURL,
     		suggestions,
     		fetchSuggestions,
     		escHandler
@@ -2198,7 +2185,6 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ("search" in $$props) $$invalidate(0, search = $$props.search);
-    		if ("apiURL" in $$props) apiURL = $$props.apiURL;
     		if ("suggestions" in $$props) $$invalidate(1, suggestions = $$props.suggestions);
     	};
 
@@ -2211,10 +2197,8 @@ var app = (function () {
     		suggestions,
     		fetchSuggestions,
     		escHandler,
-    		apiURL,
     		input_input_handler,
-    		submit_handler,
-    		focus_handler
+    		submit_handler
     	];
     }
 

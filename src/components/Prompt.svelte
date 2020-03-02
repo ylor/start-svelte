@@ -42,8 +42,6 @@
   [
   <span style="color:cyan;">roly</span>
   @
-  <span style="color:cyan;">start</span>
-  on
   <span style="color:cyan;">{browser()}</span>
   ]
   <br />
