@@ -295,6 +295,11 @@ export const config = {
       search: "https://www.netflix.com/search?q={}"
     },
     {
+      name: "Netlify",
+      keys: ["netlify"],
+      url: "https://www.netlify.com"
+    },
+    {
       name: "Node Package Manager",
       keys: ["npm"],
       url: "https://www.npmjs.com",
