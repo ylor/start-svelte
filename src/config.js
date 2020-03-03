@@ -301,15 +301,15 @@ export const config = {
       category: "💩 Reddit",
       name: "/r/PathOfExile",
       keys: ["r/pathofexile", "r/poe", "rpoe"],
-      url: "https://www.reddit.com/r/hiphopheads",
-      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1"
+      url: "https://www.reddit.com/r/pathofexile",
+      search: "https://www.reddit.com/r/pathofexile/search?q={}&restrict_sr=1"
     },
     {
       category: "💩 Reddit",
       name: "/r/SquaredCircle",
       keys: ["r/squaredcircle", "r/sc", "rsc"],
-      url: "https://www.reddit.com/r/hiphopheads",
-      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1"
+      url: "https://www.reddit.com/r/squaredcircle",
+      search: "https://www.reddit.com/r/squaredcircle/search?q={}&restrict_sr=1"
     },
     // Infosec
     {
