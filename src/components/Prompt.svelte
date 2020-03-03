@@ -20,7 +20,7 @@
   }
 
   span {
-    font-weight: 400;
+    font-weight: 600;
   }
 </style>
 
@@ -29,6 +29,8 @@
   <span style="color:var(--cyan);">roly</span>
   @
   <span style="color:var(--cyan);">{browser()}</span>
+  in
+  <span style="color:var(--cyan);">~/start</span>
   ]
   <br />
   <span style="color:var(--green);">➜</span>

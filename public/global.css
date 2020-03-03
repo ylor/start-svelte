@@ -3,6 +3,10 @@
   --background: #0f0e17;
   --foreground: #f8f8f2;
 
+  --light: 200;
+  --normal: 400;
+  --heavy: 600;
+
   --black: ;
   --red: #ff5555;
   --green: #50fa7b;
@@ -40,18 +44,18 @@ body {
   font-family: var(--font);
   display: flex;
   justify-content: center;
-  font-weight: 200;
+  font-weight: var(--light);
 }
 
 strong {
-  font-weight: 500;
+  font-weight: var(--heavy);
 }
 
 h1 {
   display: inline;
   font-family: var(--font);
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: var(--normal);
   color: var(--red);
 }
 

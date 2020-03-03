@@ -46,7 +46,7 @@
     color: var(--foreground);
     background-color: var(--background);
     border: none;
-    font-weight: 200;
+    font-weight: var(--normal);
   }
 </style>
 
