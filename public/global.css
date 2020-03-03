@@ -1,30 +1,5 @@
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/iosevka-aile/Iosevka-Aile.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/iosevka-aile/Iosevka-Aile-Extralight.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-  src: url("/fonts/iosevka-aile/Iosevka-Aile-Light.woff2") format("woff2");
-}
-
 :root {
-  --font: "Iosevka Aile", "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
-    Courier, monospace;
+  --font: "Iosevka Aile Web", "SFMono-Regular", Consolas, Menlo, monospace;
   --background: #0f0e17;
   --foreground: #f8f8f2;
 
@@ -58,7 +33,11 @@ body {
   font-family: var(--font);
   display: flex;
   justify-content: center;
-  font-weight: 100;
+  font-weight: 200;
+}
+
+strong {
+  font-weight: 500;
 }
 
 h1 {

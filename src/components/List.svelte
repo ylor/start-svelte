@@ -32,9 +32,7 @@
             </h1>
             <ul>
               {#each sites
-                .sort((a, b) =>
-                  a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1
-                )
+                .sort((a, b) => a.name.toLowerCase() - b.name.toLowerCase())
                 .filter(
                   site => site.category === category && site.hidden !== true
                 ) as site}

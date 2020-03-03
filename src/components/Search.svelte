@@ -78,7 +78,7 @@
                   'mousemove',
                   event => event.target.focus()
                 )}>
-              {@html suggestion.replace(search.match(/\b.+\b/), `<b style="text-decoration:underline;">${search.trim()}</b>`)}
+              {@html suggestion.replace(search.match(/\b.+\b/), `<strong>${search.trim()}</strong>`)}
             </a>
           </li>
         {/each}
