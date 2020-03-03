@@ -72,13 +72,33 @@
         {#each suggestions as suggestion}
           <li class="search-suggestion">
             <a
-              href={parseInput(suggestion)}
-              on:focus={(document.getElementById('search-input').value = suggestion)}
+              href={parseInput(document
+                  .getElementById('search-input')
+                  .value.includes(
+                    ':'
+                  ) ? document
+                      .getElementById('search-input')
+                      .value.split(':')[0] + ':' + suggestion : suggestion)}
+              on:focus={document
+                .getElementById('search-input')
+                .value.includes(
+                  ':'
+                ) ? (document.getElementById('search-input').value = document
+                      .getElementById('search-input')
+                      .value.split(
+                        ':'
+                      )[0] + ':' + suggestion) : (document.getElementById('search-input').value = suggestion)}
               on:mouseover={event => event.target.addEventListener(
                   'mousemove',
                   event => event.target.focus()
                 )}>
-              {@html suggestion.replace(search.match(/\b.+\b/), `<strong>${search.trim()}</strong>`)}
+              {@html suggestion.replace(search
+                  .substring(search.indexOf(':') + 1)
+                  .match(
+                    /\b.+\b/
+                  ), `<strong>${search
+                  .substring(search.indexOf(':') + 1)
+                  .trim()}</strong>`)}
             </a>
           </li>
         {/each}
