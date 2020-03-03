@@ -5,7 +5,7 @@
   let { sites } = config;
 
   sites = sites.map(p =>
-    p.category === undefined ? { ...p, category: "🤷🏽 ..." } : p
+    p.category === undefined ? { ...p, category: "🤷🏽 …" } : p
   );
   console.log(sites);
 

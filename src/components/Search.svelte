@@ -2,7 +2,6 @@
   import fetchJsonp from "fetch-jsonp";
 
   import Prompt from "./Prompt.svelte";
-  import Suggestions from "./Suggestions.svelte";
 
   import keyHandler from "../js/keyHandler.js";
   import parseInput from "../js/parseInput.js";
@@ -13,7 +12,7 @@
   async function fetchSuggestions() {
     const query = search.includes(":") ? search.split(":")[1] : search;
 
-    if (search.length === 0) {
+    if (query.length === 0) {
       suggestions = [];
     } else {
       const response = await fetchJsonp(
@@ -59,10 +58,10 @@
       autocomplete="off"
       autocorrect="off"
       spellcheck="false"
-      on:submit|preventDefault={() => (window.location.href = parseInput(document.getElementById('search-input').value))}>
+      on:submit|preventDefault={() => (window.location.href = parseInput(search))}>
       <input
-        on:keyup={fetchSuggestions}
         bind:value={search}
+        on:input={fetchSuggestions}
         type="text"
         id="search-input" />
     </form>
