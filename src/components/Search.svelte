@@ -20,7 +20,7 @@
           query
       );
       const json = await response.json();
-      suggestions = json[1].slice(0, 8);
+      suggestions = json[1].slice(0, 6);
     }
   }
 
@@ -66,7 +66,7 @@
         id="search-input" />
     </form>
   </Prompt>
-  {#if suggestions.length > 0}
+  {#if search.length > 0}
     <aside class="tree">
       <ul id="search-suggestions">
         {#each suggestions as suggestion}

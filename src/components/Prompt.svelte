@@ -26,11 +26,11 @@
 
 <section>
   [
-  <span style="color:cyan;">roly</span>
+  <span style="color:var(--cyan);">roly</span>
   @
-  <span style="color:cyan;">{browser()}</span>
+  <span style="color:var(--cyan);">{browser()}</span>
   ]
   <br />
-  <span style="color:green;">➜</span>
+  <span style="color:var(--green);">➜</span>
   <slot>command</slot>
 </section>
