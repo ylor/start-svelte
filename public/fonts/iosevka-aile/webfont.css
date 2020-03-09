@@ -2,7 +2,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 100;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-thin.woff2") format("woff2");
 }
 
@@ -10,7 +10,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 100;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-thinoblique.woff2") format("woff2");
 }
 
@@ -24,7 +24,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 100;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-thinitalic.woff2") format("woff2");
 }
 
@@ -32,7 +32,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 200;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-extralight.woff2") format("woff2");
 }
 
@@ -40,7 +40,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 200;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-extralightoblique.woff2") format("woff2");
 }
 
@@ -54,7 +54,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 200;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-extralightitalic.woff2") format("woff2");
 }
 
@@ -62,7 +62,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 300;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-light.woff2") format("woff2");
 }
 
@@ -70,7 +70,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 300;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-lightoblique.woff2") format("woff2");
 }
 
@@ -84,7 +84,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 300;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-lightitalic.woff2") format("woff2");
 }
 
@@ -92,7 +92,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 400;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-regular.woff2") format("woff2");
 }
 
@@ -100,7 +100,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 400;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-oblique.woff2") format("woff2");
 }
 
@@ -114,7 +114,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 400;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-italic.woff2") format("woff2");
 }
 
@@ -122,7 +122,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 500;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-medium.woff2") format("woff2");
 }
 
@@ -130,7 +130,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 500;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-mediumoblique.woff2") format("woff2");
 }
 
@@ -144,7 +144,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 500;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-mediumitalic.woff2") format("woff2");
 }
 
@@ -152,7 +152,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 600;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-semibold.woff2") format("woff2");
 }
 
@@ -160,7 +160,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 600;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-semiboldoblique.woff2") format("woff2");
 }
 
@@ -174,7 +174,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 600;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-semibolditalic.woff2") format("woff2");
 }
 
@@ -182,7 +182,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 700;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-bold.woff2") format("woff2");
 }
 
@@ -190,7 +190,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 700;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-boldoblique.woff2") format("woff2");
 }
 
@@ -204,7 +204,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 700;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-bolditalic.woff2") format("woff2");
 }
 
@@ -212,7 +212,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 800;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-extrabold.woff2") format("woff2");
 }
 
@@ -220,7 +220,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 800;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-extraboldoblique.woff2") format("woff2");
 }
 
@@ -234,7 +234,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 800;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-extrabolditalic.woff2") format("woff2");
 }
 
@@ -242,7 +242,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 900;
   font-style: normal;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-heavy.woff2") format("woff2");
 }
 
@@ -250,7 +250,7 @@
   font-family: "Iosevka Aile Web";
   font-weight: 900;
   font-style: oblique;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-heavyoblique.woff2") format("woff2");
 }
 
@@ -264,6 +264,6 @@
   font-family: "Iosevka Aile Web";
   font-weight: 900;
   font-style: italic;
-  font-display: auto;
+  font-display: fallback;
   src: url("iosevka-aile-heavyitalic.woff2") format("woff2");
 }
