@@ -1,12 +1,12 @@
 [[headers]]
-    for = "/*.css"
+    for = "*.css"
     [headers.values]
         Cache-Control = "public, s-max-age=604800"
 [[headers]]
-    for = "/*.js"
+    for = "*.js"
     [headers.values]
         Cache-Control = "public, s-max-age=604800"
 [[headers]]
-    for = "/*.woff2"
+    for = "*.woff2"
     [headers.values]
         Cache-Control = "public, s-max-age=604800"
