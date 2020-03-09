@@ -20,7 +20,7 @@
   }
 
   span {
-    font-weight: 600;
+    font-weight: var(--heavy);
   }
 </style>
 
