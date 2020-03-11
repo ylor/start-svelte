@@ -166,8 +166,8 @@ export const config = {
     {
       category: "🎓 MDC",
       name: "Service Requests",
-      keys: ["sr"],
-      url: "http://k353077/"
+      keys: ["kloadbal", "lb", "sr"],
+      url: "http://kloadbal.kendall.mdcc.edu/"
     },
     {
       category: "🎓 MDC",
@@ -344,6 +344,12 @@ export const config = {
       name: "Drive",
       keys: ["drive", "gdrive"],
       url: "https://drive.google.com"
+    },
+    {
+      name: "DuckDuckGo",
+      keys: ["duckduckgo", "ddg"],
+      url: "https://duckduckgo.com",
+      search: "https://duckduckgo.com/?q={}"
     },
     {
       name: "Epic Game Store",
