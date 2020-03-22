@@ -47,20 +47,19 @@ export const config = {
       keys: ["start"],
       url: "https://start.rolyreyes.com"
     },
-
     // Server
-    {
-      category: "👨🏽‍💻 Server",
-      name: "Pi-hole",
-      keys: ["pihole", "pi"],
-      url: "http://pi.hole/admin"
-    },
     {
       category: "👨🏽‍💻 Server",
 
       name: "Homebridge",
       keys: ["homebridge", "hb"],
       url: "http://docker.local:8181"
+    },
+    {
+      category: "👨🏽‍💻 Server",
+      name: "Pi-hole",
+      keys: ["pihole", "pi", "dns"],
+      url: "http://pi.hole/admin"
     },
     {
       category: "👨🏽‍💻 Server",
