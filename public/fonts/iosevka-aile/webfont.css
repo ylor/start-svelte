@@ -3,7 +3,7 @@
   font-weight: 100;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-thin.woff2") format("woff2");
+  src: url("Iosevka-Aile-Thin.woff2") format("woff2");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: 200;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-extralight.woff2") format("woff2");
+  src: url("Iosevka-Aile-Extralight.woff2") format("woff2");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-light.woff2") format("woff2");
+  src: url("Iosevka-Aile-Light.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-regular.woff2") format("woff2");
+  src: url("Iosevka-Aile-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-weight: 500;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-medium.woff2") format("woff2");
+  src: url("Iosevka-Aile-Medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-semibold.woff2") format("woff2");
+  src: url("Iosevka-Aile-Semibold.woff2") format("woff2");
 }
 
 @font-face {
@@ -51,7 +51,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-bold.woff2") format("woff2");
+  src: url("Iosevka-Aile-Bold.woff2") format("woff2");
 }
 
 @font-face {
@@ -59,7 +59,7 @@
   font-weight: 800;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-extrabold.woff2") format("woff2");
+  src: url("Iosevka-Aile-Extrabold.woff2") format("woff2");
 }
 
 @font-face {
@@ -67,5 +67,5 @@
   font-weight: 900;
   font-style: normal;
   font-display: auto;
-  src: url("iosevka-aile-heavy.woff2") format("woff2");
+  src: url("Iosevka-Aile-Heavy.woff2") format("woff2");
 }
