@@ -167,7 +167,7 @@ a:focus {
 
 ul {
   list-style: none;
-  padding-left: 2.5rem;
+  padding-left: 3ch;
 
   display: flex;
   justify-content: flex-end;
