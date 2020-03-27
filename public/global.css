@@ -1,8 +1,80 @@
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 100;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 200;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Extralight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Extrabold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+  src: url("fonts/iosevka-aile/Iosevka-Aile-Heavy.woff2") format("woff2");
+}
+
 :root {
-  --font: "Iosevka Aile Web", "SFMono-Regular", Consolas, Menlo, monospace;
   --background: #0f0e17;
   --foreground: #f8f8f2;
 
+  --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo, monospace;
   --light: 200;
   --normal: 400;
   --heavy: 400;
@@ -18,14 +90,22 @@
 
   --pink: #ff79c6;
   --orange: #ff8906;
+
   --branch: 1px solid #a7a9be;
+}
+
+html {
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 html,
 body {
-  position: relative;
-  width: 100%;
-  height: 100%;
   font-size: 24px;
 }
 
@@ -37,14 +117,22 @@ body {
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  box-sizing: border-box;
+
   background: var(--background);
+  box-sizing: border-box;
   color: var(--foreground);
   font-family: var(--font);
-  display: flex;
-  justify-content: center;
   font-weight: var(--light);
+  /* width: 100vw;
+  min-height: 100vh; */
+}
+
+main {
+  margin: 2.5vh 0;
 }
 
 strong {
@@ -57,6 +145,8 @@ h1 {
   font-size: 1rem;
   font-weight: var(--normal);
   color: var(--red);
+  user-select: none;
+  cursor: pointer;
 }
 
 a,
@@ -78,19 +168,21 @@ a:focus {
 ul {
   list-style: none;
   padding-left: 2.5rem;
-}
 
-ul h1 {
-  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .tree > ul {
   margin: 0;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
 }
 
 li {
   position: relative;
+  max-width: 25ch;
+  word-wrap: break-word;
 }
 
 li.hideChildren > ul {
@@ -101,13 +193,13 @@ li::before,
 li::after {
   content: "";
   position: absolute;
-  left: -0.75rem;
+  left: -1rem;
 }
 
 li::before {
   border-top: var(--branch);
   top: 0.75rem;
-  width: 0.5rem;
+  width: 0.75rem;
 }
 
 li::after {
@@ -118,43 +210,4 @@ li::after {
 
 li:last-child::after {
   height: 0.5rem;
-}
-
-label {
-  display: block;
-}
-
-input,
-button,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  padding: 0.4em;
-  margin: 0 0 0.5em 0;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-}
-
-input[type="range"] {
-  height: 0;
-}
-
-button {
-  color: #333;
-  background-color: #f4f4f4;
-  outline: none;
-}
-
-button:disabled {
-  color: #999;
-}
-
-button:not(:disabled):active {
-  background-color: #ddd;
-}
-
-button:focus {
-  border-color: #666;
 }

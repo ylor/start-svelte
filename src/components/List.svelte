@@ -10,10 +10,7 @@
   console.log(sites);
 
   const categoriesRaw = sites.map(p => p.category);
-
   const distinctCategories = [...new Set(categoriesRaw)];
-  //console.log(distinctCategories);
-
   const categories = distinctCategories.concat(distinctCategories.shift());
   console.log(categories);
 </script>
@@ -32,7 +29,7 @@
             </h1>
             <ul>
               {#each sites
-                .sort((a, b) => a.name.toLowerCase() - b.name.toLowerCase())
+                .sort((a, b) => a.name.localeCompare(b.name))
                 .filter(
                   site => site.category === category && site.hidden !== true
                 ) as site}

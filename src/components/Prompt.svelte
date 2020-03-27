@@ -1,17 +1,7 @@
 <script>
-  function browser() {
-    if (navigator.userAgent.includes("Edg")) {
-      return "edge";
-    } else if (navigator.userAgent.includes("Chrome")) {
-      return "chrome";
-    } else if (navigator.userAgent.includes("Safari")) {
-      return "safari";
-    } else if (navigator.userAgent.includes("Firefox")) {
-      return "firefox";
-    } else {
-      return "internet";
-    }
-  }
+  import browserIdentifier from "../js/browserIdentifier.js";
+
+  const browser = browserIdentifier();
 </script>
 
 <style>
@@ -28,7 +18,7 @@
   [
   <span style="color:var(--cyan);">roly</span>
   @
-  <span style="color:var(--cyan);">{browser()}</span>
+  <span style="color:var(--cyan);">{browser}</span>
   in
   <span style="color:var(--cyan);">~/start</span>
   ]

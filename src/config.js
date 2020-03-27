@@ -17,32 +17,32 @@ export const config = {
     },
     // Me
     {
-      category: "👨🏽‍🦲 Me",
+      category: "🤓 Me",
       name: "About",
       keys: ["about"],
       url: "https://about.rolyreyes.com"
     },
     {
-      category: "👨🏽‍🦲 Me",
+      category: "🤓 Me",
       name: "Blog",
       keys: ["blog"],
       url: "https://rolyreyes.com"
     },
     {
-      category: "👨🏽‍🦲 Me",
+      category: "🤓 Me",
       name: "Dotfiles",
       keys: ["dot"],
       url: "https://github.com/ylor/dotfiles"
     },
     {
-      category: "👨🏽‍🦲 Me",
+      category: "🤓 Me",
       name: "Github",
       keys: ["github", "git"],
       url: "https://github.com/",
       search: "https://github.com/search?q={}"
     },
     {
-      category: "👨🏽‍🦲 Me",
+      category: "🤓 Me",
       name: "Start",
       keys: ["start"],
       url: "https://start.rolyreyes.com"
@@ -191,45 +191,45 @@ export const config = {
     },
     // Media
     {
-      category: "🎞️ Media",
+      category: "📼 Media",
       name: "Giant Bomb",
       keys: ["giant bomb", "gb"],
       url: "https://www.giantbomb.com/",
       search: "https://www.giantbomb.com/search/?i=&q={}"
     },
     {
-      category: "🎞️ Media",
+      category: "📼 Media",
       name: "Giant Bomb Infinite",
       keys: ["giant bomb infinite", "gb8"],
       url: "https://www.giantbomb.com/infinite"
     },
     {
-      category: "🎞️ Media",
+      category: "📼 Media",
       name: "Netflix",
       keys: ["netflix"],
       url: "https://www.netflix.com",
       search: "https://www.netflix.com/search?q={}"
     },
     {
-      category: "🎞️ Media",
+      category: "📼 Media",
       name: "Plex",
       keys: ["plexapp", "plextv"],
       url: "https://app.plex.tv/desktop"
     },
     {
-      category: "🎞️ Media",
+      category: "📼 Media",
       name: "Spotify",
       keys: ["spotify"],
       url: "https://open.spotify.com"
     },
     {
-      category: "🎞️ Media",
+      category: "📼 Media",
       name: "Twitch",
       keys: ["twitch"],
       url: "https://twitch.tv/directory"
     },
     {
-      category: "🎞️ Media",
+      category: "📼 Media",
       name: "YouTube",
       keys: ["youtube", "yt"],
       url: "https://youtube.com",
@@ -428,12 +428,6 @@ export const config = {
       url: "https://onedrive.live.com"
     },
     {
-      name: "RARBG",
-      keys: ["rarbg"],
-      url: "https://rarbg.to/torrents",
-      search: "https://rarbg.to/torrents?search={}"
-    },
-    {
       name: "Reddit",
       keys: ["reddit", "r"],
       url: "https://www.reddit.com/r",
@@ -492,9 +486,22 @@ export const config = {
       name: "Yarn",
       keys: ["yarn"],
       url: "https://yarnpkg.com",
-      search: "https://yarnpkg.com//en/packages?q={}"
+      search: "https://classic.yarnpkg.com/en/packages?q={}&p=1"
     },
-    // Ugh
+    // 🏴‍☠️
+    {
+      name: "RARBG",
+      keys: ["rarbg"],
+      url: "https://rarbg.to/torrents",
+      search: "https://rarbg.to/torrents?search={}"
+    },
+    {
+      name: "1337x",
+      keys: ["1337x", "1337"],
+      url: "https://www.1377x.to/",
+      search: "https://www.1377x.to/sort-search/{}/seeders/desc/1/"
+    },
+    // 🗑️
     {
       name: "/g/ - Technology",
       keys: ["g"],
