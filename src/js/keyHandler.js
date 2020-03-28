@@ -24,31 +24,6 @@ export default function keyHandler(event) {
     }
   }
 
-  // listen for equals key to do some math inline
-  //   else if (event.key === "=") {
-  //     if (searchInput.value.match(mathPattern)) {
-  //       try {
-  //         event.preventDefault();
-  //         const expression = searchInput.value;
-  //         // disabling eslint for line containing `eval` because I'm prevalidating the input with mathPattern
-  //         // eslint-disable-next-line
-  //         const answer = eval(searchInput.value);
-  //         searchInput.value = expression + "=" + answer.toString();
-  //       } catch {
-  //         // Cases where this fails includes incomplete expressions like `2+=`
-  //       }
-  //     }
-  //   }
-
-  // Listen for space
-  // In Safari on macOS there doesn't seem to be an equivalent for event.key === "Spacebar" so I had to use event.code
-  // else if (event.key === "Spacebar" || event.code === "Space") {
-  //   if (document.activeElement.id !== "search-input") {
-  //     setSearch(document.activeElement.textContent);
-  //     changeFocus("search-input");
-  //   }
-  // }
-
   // Listen for backspace
   else if (event.key === "Backspace") {
     if (document.activeElement.id !== "search-input") {

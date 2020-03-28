@@ -80,14 +80,16 @@ export const config = {
 
       name: "Radarr",
       keys: ["radarr", "movies"],
-      url: "http://docker.local:7878"
+      url: "http://docker.local:7878",
+      search: "http://docker.local:7878/add/new?term={}"
     },
     {
       category: "👨🏽‍💻 Server",
 
       name: "Sonarr",
       keys: ["sonarr", "tv"],
-      url: "http://docker.local:8989"
+      url: "http://docker.local:8989",
+      search: "http://docker.local:8989/add/new?term={}"
     },
     {
       category: "👨🏽‍💻 Server",

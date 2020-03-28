@@ -5,7 +5,7 @@ export default function parseInput(rawInput) {
 
   const input = rawInput.toLowerCase();
   const keysList = sites.map(site => site.keys).flat();
-  const ipPattern = new RegExp(/^((2(?!5?[6-9])|1|(?!0\B))\d\d?\.?\b){4}$/g);
+  const ipPattern = new RegExp(/^((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}$/g);
   const urlPattern = new RegExp(
     /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/gi
   );
@@ -18,26 +18,18 @@ export default function parseInput(rawInput) {
 
   // handle urls
   if (
-    input.match(urlPattern) ||
     input.match(ipPattern) ||
+    input.match(urlPattern) ||
+    input.includes(".local") ||
     input.includes("localhost")
   ) {
-    if (
-      input.match(ipPattern) ||
-      input.includes(".local") ||
-      input.includes("localhost")
-    ) {
-      return input.startsWith("http") ? rawInput : "http://" + rawInput;
-    } else {
-      return input.startsWith("http") ? rawInput : "https://" + rawInput;
-    }
+    return input.startsWith("http") ? rawInput : "http://" + rawInput;
   }
 
   // handle search with a matched key
   if (input.includes(":") && keysList.includes(input.split(":")[0])) {
     const key = input.split(":")[0];
     const query = rawInput.split(":")[1].trimStart();
-    console.log(sites.find(site => site.keys.includes(key)).search);
 
     if (sites.find(site => site.keys.includes(key)).search) {
       return sites
