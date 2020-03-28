@@ -50,8 +50,9 @@ export default function parseInput(rawInput) {
   }
 
   // search google
-  else
+  else {
     return sites
       .find(site => site.keys === "*")
       .search.replace("{}", encodeURIComponent(rawInput));
+  }
 }
