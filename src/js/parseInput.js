@@ -42,6 +42,7 @@ export default function parseInput(rawInput) {
   if (input.includes("/") && keysList.includes(input.split("/")[0])) {
     const key = input.split("/")[0];
     const path = rawInput.split("/")[1];
+    
     return (
       sites.find(site => site.keys.includes(key)).url.replace(/\/$/, "") +
       "/" +
