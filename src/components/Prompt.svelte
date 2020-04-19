@@ -1,7 +1,7 @@
 <script>
-  import browserIdentifier from "../js/browserIdentifier.js";
+  import identifyBrowser from "../js/identifyBrowser.js";
 
-  const browser = browserIdentifier();
+  const browser = identifyBrowser();
 </script>
 
 <style>

@@ -1,4 +1,4 @@
-export default function browserIdentifier() {
+export default function identifyBrowser() {
   if (navigator.userAgent.includes("Edg")) {
     return "edge";
   } else if (navigator.userAgent.includes("Chrome")) {

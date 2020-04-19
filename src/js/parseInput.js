@@ -21,6 +21,8 @@ export default function parseInput(rawInput) {
     input.match(ipPattern) ||
     input.match(urlPattern) ||
     input.includes(".local") ||
+    input.includes(".lan") ||
+    input.includes(".iot") ||
     input.includes("localhost")
   ) {
     return input.startsWith("http") ? rawInput : "http://" + rawInput;
