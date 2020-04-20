@@ -74,7 +74,8 @@
   --background: #0f0e17;
   --foreground: #f8f8f2;
 
-  --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo, monospace;
+  --font: "Apple Color Emoji", "Iosevka Aile", "SFMono-Regular", Consolas, Menlo,
+    monospace;
   --light: 200;
   --normal: 400;
   --heavy: 400;
