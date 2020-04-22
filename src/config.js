@@ -66,7 +66,7 @@ export const config = {
 
       name: "Plex",
       keys: ["plex"],
-      url: "http://server.lan:32400/web",
+      url: "http://server.local:32400/web",
     },
     {
       category: "👨🏽‍💻 Server",
