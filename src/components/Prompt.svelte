@@ -16,9 +16,11 @@
 
 <section>
   [
-  <span style="color:var(--cyan);">roly</span>
-  @
-  <span style="color:var(--cyan);">{browser}</span>
+  <span style="color:var(--red);">roly</span>
+  on
+  <span style="color:var(--{browser === 'firefox' ? 'orange' : 'blue'});">
+    {browser}
+  </span>
   in
   <span style="color:var(--cyan);">~/start</span>
   ]

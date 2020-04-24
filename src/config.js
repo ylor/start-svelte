@@ -66,7 +66,8 @@ export const config = {
 
       name: "Plex",
       keys: ["plex"],
-      url: "http://server.local:32400/web",
+      url: "http://server.local:32400/web/index.html",
+      search: "http://server.local:32400/web/index.html#!/search?query={}",
     },
     {
       category: "👨🏽‍💻 Server",
@@ -215,8 +216,9 @@ export const config = {
     {
       category: "📼 Media",
       name: "Plex",
-      keys: ["plexapp", "plextv"],
+      keys: ["plexapp", "plextv", "plexr"],
       url: "https://app.plex.tv/desktop",
+      search: "https://app.plex.tv/desktop#!/search?query={}",
     },
     {
       category: "📼 Media",
