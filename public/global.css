@@ -71,8 +71,7 @@
 }
 
 :root {
-  --background: #0f0e17;
-  --background: #14151b;
+  --background: #161616;
   --foreground: #d8dee9;
 
   --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo, monospace,
