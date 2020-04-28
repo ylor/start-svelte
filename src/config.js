@@ -216,7 +216,7 @@ export const config = {
     {
       category: "📼 Media",
       name: "Netflix",
-      keys: ["netflix"],
+      keys: ["netflix", "nf"],
       url: "https://www.netflix.com",
       search: "https://www.netflix.com/search?q={}",
     },
