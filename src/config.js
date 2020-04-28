@@ -208,6 +208,13 @@ export const config = {
     },
     {
       category: "📼 Media",
+      name: "Letterboxd",
+      keys: ["letterboxd", "lb"],
+      url: "https://www.letterboxd.com/",
+      search: "https://letterboxd.com/search/films/{}/",
+    },
+    {
+      category: "📼 Media",
       name: "Netflix",
       keys: ["netflix"],
       url: "https://www.netflix.com",
