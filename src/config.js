@@ -168,7 +168,7 @@ export const config = {
     {
       category: "🎓 MDC",
       name: "Service Requests",
-      keys: ["kloadbal", "lb", "sr"],
+      keys: ["kloadbal", "sr"],
       url: "http://kloadbal.kendall.mdcc.edu/",
     },
     {
