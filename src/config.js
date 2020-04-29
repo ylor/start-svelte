@@ -72,32 +72,25 @@ export const config = {
     {
       category: "👨🏽‍💻 Server",
 
-      name: "Portainer",
-      keys: ["portainer", "port"],
-      url: "http://docker.lan:9000",
-    },
-    {
-      category: "👨🏽‍💻 Server",
-
       name: "Radarr",
-      keys: ["radarr", "movies"],
-      url: "http://docker.lan:7878",
-      search: "http://docker.lan:7878/add/new?term={}",
+      keys: ["radarr", "movies", "m"],
+      url: "http://server.lan:7878",
+      search: "http://server.lan:7878/add/new?term={}",
     },
     {
       category: "👨🏽‍💻 Server",
 
       name: "Sonarr",
       keys: ["sonarr", "tv"],
-      url: "http://docker.lan:8989",
-      search: "http://docker.lan:8989/add/new?term={}",
+      url: "http://server.lan:8989",
+      search: "http://server.lan:8989/add/new?term={}",
     },
     {
       category: "👨🏽‍💻 Server",
 
       name: "Transmission",
       keys: ["transmission", "bt"],
-      url: "http://docker.lan:9091",
+      url: "http://server.lan:9091",
     },
     {
       category: "👨🏽‍💻 Server",
