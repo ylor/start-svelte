@@ -8,13 +8,6 @@
 export const config = {
   user: "roly",
   sites: [
-    {
-      name: "Google",
-      keys: "*",
-      url: "https://google.com",
-      search: "https://google.com/search?q={}",
-      hidden: true,
-    },
     // Me
     {
       category: "🤓 Me",
@@ -351,7 +344,7 @@ export const config = {
     },
     {
       name: "DuckDuckGo",
-      keys: ["duckduckgo", "ddg"],
+      keys: ["duckduckgo", "duck", "ddg", "d", "*"],
       url: "https://duckduckgo.com",
       search: "https://duckduckgo.com/?q={}",
     },
@@ -366,6 +359,13 @@ export const config = {
       keys: ["giphy", "gif"],
       url: "https://giphy.com",
       search: "https://giphy.com/search/{}",
+    },
+    {
+      name: "Google",
+      keys: ["google", "g"],
+      url: "https://google.com",
+      search: "https://google.com/search?q={}",
+      hidden: true,
     },
     {
       name: "Guess My Word",

@@ -4,7 +4,7 @@ export default function parseInput(rawInput) {
   const { sites } = config;
 
   const input = rawInput.toLowerCase();
-  const keysList = sites.map(site => site.keys).flat();
+  const keysList = sites.map((site) => site.keys).flat();
   const ipPattern = new RegExp(/^((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}$/g);
   const urlPattern = new RegExp(
     /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/gi
@@ -13,7 +13,7 @@ export default function parseInput(rawInput) {
   // begin conditionals for the parser
   // handle match to key in config
   if (keysList.includes(input)) {
-    return sites.find(v => v.keys.includes(input)).url;
+    return sites.find((v) => v.keys.includes(input)).url;
   }
 
   // handle urls
@@ -33,9 +33,9 @@ export default function parseInput(rawInput) {
     const key = input.split(":")[0];
     const query = rawInput.split(":")[1].trimStart();
 
-    if (sites.find(site => site.keys.includes(key)).search) {
+    if (sites.find((site) => site.keys.includes(key)).search) {
       return sites
-        .find(site => site.keys.includes(key))
+        .find((site) => site.keys.includes(key))
         .search.replace("{}", query);
     }
   }
@@ -44,9 +44,9 @@ export default function parseInput(rawInput) {
   if (input.includes("/") && keysList.includes(input.split("/")[0])) {
     const key = input.split("/")[0];
     const path = rawInput.split("/")[1];
-    
+
     return (
-      sites.find(site => site.keys.includes(key)).url.replace(/\/$/, "") +
+      sites.find((site) => site.keys.includes(key)).url.replace(/\/$/, "") +
       "/" +
       path
     );
@@ -55,7 +55,7 @@ export default function parseInput(rawInput) {
   // search google
   else {
     return sites
-      .find(site => site.keys === "*")
+      .find((site) => site.keys.includes("*"))
       .search.replace("{}", encodeURIComponent(rawInput));
   }
 }
