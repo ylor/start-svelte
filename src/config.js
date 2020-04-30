@@ -8,6 +8,21 @@
 export const config = {
   user: "roly",
   sites: [
+    // Search
+    {
+      name: "Google",
+      keys: ["google", "g", "*"],
+      url: "https://google.com",
+      search: "https://google.com/search?q={}",
+      hidden: true,
+    },
+    {
+      name: "DuckDuckGo",
+      keys: ["duckduckgo", "duck", "ddg", "d"],
+      url: "https://duckduckgo.com",
+      search: "https://duckduckgo.com/?q={}",
+      hidden: true,
+    },
     // Me
     {
       category: "🤓 Me",
@@ -97,6 +112,12 @@ export const config = {
       name: "Apple School Manager",
       keys: ["apple school manager", "asm"],
       url: "http://school.apple.com",
+    },
+    {
+      category: "🎓 MDC",
+      name: "Duo",
+      keys: ["duo"],
+      url: "http://admin.duosecurity.com",
     },
     {
       category: "🎓 MDC",
@@ -343,12 +364,6 @@ export const config = {
       url: "https://drive.google.com",
     },
     {
-      name: "DuckDuckGo",
-      keys: ["duckduckgo", "duck", "ddg", "d", "*"],
-      url: "https://duckduckgo.com",
-      search: "https://duckduckgo.com/?q={}",
-    },
-    {
       name: "Epic Game Store",
       keys: ["epic game store", "egs"],
       url: "https://www.epicgames.com/store",
@@ -359,13 +374,6 @@ export const config = {
       keys: ["giphy", "gif"],
       url: "https://giphy.com",
       search: "https://giphy.com/search/{}",
-    },
-    {
-      name: "Google",
-      keys: ["google", "g"],
-      url: "https://google.com",
-      search: "https://google.com/search?q={}",
-      hidden: true,
     },
     {
       name: "Guess My Word",
