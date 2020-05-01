@@ -147,7 +147,7 @@ export const config = {
     {
       category: "🎓 MDC",
       name: "Miami Dade College",
-      keys: ["🎓 MDC"],
+      keys: ["mdc"],
       url: "http://www.mdc.edu",
       hidden: true,
     },
