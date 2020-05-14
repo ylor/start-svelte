@@ -7,7 +7,7 @@ export default function parseInput(rawInput) {
   const keysList = sites.map((site) => site.keys).flat();
   const ipPattern = new RegExp(/^((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}$/g);
   const urlPattern = new RegExp(
-    /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/gi
+    /^https?:\/\/(-\.)?([^\s/?\.#-]+\.?)+(\/[^\s]*)?$/gi
   );
 
   // begin conditionals for the parser
@@ -20,10 +20,8 @@ export default function parseInput(rawInput) {
   if (
     input.match(ipPattern) ||
     input.match(urlPattern) ||
-    input.includes(".local") ||
-    input.includes(".lan") ||
-    input.includes(".iot") ||
-    input.includes("localhost")
+    input.match(/[.](local|lan|iot)/gi) ||
+    (input.includes("localhost") && !input.includes(" "))
   ) {
     return input.startsWith("http") ? rawInput : "http://" + rawInput;
   }

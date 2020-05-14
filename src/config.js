@@ -1,6 +1,6 @@
 /*
   At minimum each entry requires `url` & `keys` properties.
-  If you want it to show in the 
+  If you want it to show in the
   `url` must be a string
   `keys` must be an array, even if it's a single entry
  */
@@ -494,6 +494,12 @@ export const config = {
       name: "Wirecutter",
       keys: ["wirecutter", "wc"],
       url: "https://thewirecutter.com/",
+    },
+    {
+      name: "Wikipedia",
+      keys: ["wikipedia", "w"],
+      url: "https://www.wikipedia.org/",
+      url: "https://en.wikipedia.org/wiki/{}",
     },
     {
       name: "Yarn",
