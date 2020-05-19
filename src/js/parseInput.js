@@ -6,21 +6,15 @@ export default function parseInput(rawInput) {
   const input = rawInput.toLowerCase();
   const keysList = sites.map((site) => site.keys).flat();
   const ipPattern = new RegExp(
-    /^((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}(\:\d+)?$/g
+    /^(https?:\/\/)?((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}(\:\d+)?$/g
   );
-  const urlPattern = new RegExp(/^.+\.\w\w+$/gi);
+  const urlPattern = new RegExp(/^.+\.\w\w+(\:\d+)?$/gi);
 
   // begin conditionals for the parser
   // handle match to key in config
   if (keysList.includes(input)) {
     return sites.find((v) => v.keys.includes(input)).url;
   }
-
-  // if (input.includes(" ")) {
-  //   return sites
-  //     .find((site) => site.keys.includes("*"))
-  //     .search.replace("{}", encodeURIComponent(rawInput));
-  // }
 
   // handle urls
   if (
