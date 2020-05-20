@@ -16,7 +16,7 @@ export default function parseInput(rawInput) {
     return sites.find((v) => v.keys.includes(input)).url;
   }
 
-  // handle urls
+  // handle ip addresses, localhost, local domains, and urls
   if (
     input.match(ipPattern) ||
     input.match(urlPattern) ||
@@ -50,7 +50,7 @@ export default function parseInput(rawInput) {
     );
   }
 
-  // search google
+  // send query to search engine
   else {
     return sites
       .find((site) => site.keys.includes("*"))

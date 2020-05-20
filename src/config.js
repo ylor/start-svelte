@@ -497,7 +497,7 @@ export const config = {
     },
     {
       name: "Wikipedia",
-      keys: ["wikipedia", "w"],
+      keys: ["wikipedia", "wiki"],
       url: "https://www.wikipedia.org/",
       url: "https://en.wikipedia.org/wiki/{}",
     },
