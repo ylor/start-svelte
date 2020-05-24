@@ -11,7 +11,7 @@ export const config = {
     // Search
     {
       name: "Google",
-      keys: ["google", "g", "*"],
+      keys: ["google", "*"],
       url: "https://google.com",
       search: "https://google.com/search?q={}",
       hidden: true,
