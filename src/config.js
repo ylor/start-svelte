@@ -161,16 +161,17 @@ export const config = {
       category: "🎓 MDC",
       name: "NTAuth - Employee",
       keys: ["emp"],
-      url: "https://wapi.mdc.edu/NTAuth/account_admin.asp",
-      search: "https://wapi.mdc.edu/NTAuth/user_data.asp?UserID={}",
+      url: "https://mdcwapi.mdc.edu:8001/ntauth_hd/",
+      search:
+        "https://mdcwapi.mdc.edu:8001/ntauth_hd/ManageAccount?domainValue=MDCC&personnelID={}",
     },
     {
       category: "🎓 MDC",
       name: "NTAuth - Student",
       keys: ["stu"],
-      url: "https://mdcwapi.mdc.edu:8001/ntauthstudent",
+      url: "https://mdcwapi.mdc.edu:8001/ntauth_hd/",
       search:
-        "https://mdcwapi.mdc.edu:8001/ntauthstudent/StudentData.aspx?AcctNm={}",
+        "https://mdcwapi.mdc.edu:8001/ntauth_hd/ManageAccount?domainValue=MYMDC&personnelID={}",
     },
     {
       category: "🎓 MDC",
