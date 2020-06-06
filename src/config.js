@@ -295,7 +295,7 @@ export const config = {
     {
       category: "💩 Reddit",
       name: "/r/Battlestations",
-      keys: ["r/battlestations", "r/bs", "rbs", "bs"],
+      keys: ["r/battlestations", "r/bs"],
       url: "https://www.reddit.com/r/battlestations",
       search:
         "https://www.reddit.com/r/battlestations/search?q={}&restrict_sr=1",
@@ -303,29 +303,37 @@ export const config = {
     {
       category: "💩 Reddit",
       name: "/r/DestinyTheGame",
-      keys: ["r/destinythegame", "r/dtg", "rdtg", "dtg"],
+      keys: ["r/destinythegame", "r/dtg", "dtg"],
       url: "https://www.reddit.com/r/destinythegame",
       search:
         "https://www.reddit.com/r/destinythegame/search?q={}&restrict_sr=1",
     },
     {
       category: "💩 Reddit",
+      name: "/r/RaidSecrets",
+      keys: ["r/raidsecrets", "r/rs", "rs"],
+      url: "https://www.reddit.com/r/raidsecrets",
+      search:
+        "https://www.reddit.com/r/raidsecrets/search?q={}&restrict_sr=1",
+    },
+    {
+      category: "💩 Reddit",
       name: "/r/HipHopHeads",
-      keys: ["r/hiphopheads", "r/hhh", "rhhh", "hhh"],
+      keys: ["r/hiphopheads", "r/hhh", "hhh"],
       url: "https://www.reddit.com/r/hiphopheads",
       search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1",
     },
     {
       category: "💩 Reddit",
       name: "/r/PathOfExile",
-      keys: ["r/pathofexile", "r/poe", "rpoe"],
+      keys: ["r/pathofexile", "r/poe"],
       url: "https://www.reddit.com/r/pathofexile",
       search: "https://www.reddit.com/r/pathofexile/search?q={}&restrict_sr=1",
     },
     {
       category: "💩 Reddit",
       name: "/r/SquaredCircle",
-      keys: ["r/squaredcircle", "r/sc", "rsc"],
+      keys: ["r/squaredcircle", "r/sc"],
       url: "https://www.reddit.com/r/squaredcircle",
       search:
         "https://www.reddit.com/r/squaredcircle/search?q={}&restrict_sr=1",
