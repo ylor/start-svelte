@@ -5,10 +5,13 @@ export default function parseInput(rawInput) {
 
   const input = rawInput.toLowerCase();
   const keysList = sites.map((site) => site.keys).flat();
-  const ipPattern = new RegExp(
+  //const ipPattern = new RegExp(
     /^(https?:\/\/)?((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}(\:\d+)?$/g
   );
-  const urlPattern = new RegExp(/^.+\.\w\w+(\/.+|\:\d+)?$/gi);
+  //const urlPattern = new RegExp(/^.+\.\w\w+(\/.+|\:\d+)?$/gi);
+  const uriPattern = new RegExp(
+    /^(.*?:\/\/)?([^\s/?\.#-]+\..+)+(\/[^\s]*)?$/gi
+  );
 
   // begin conditionals for the parser
   // handle match to key in config
@@ -17,12 +20,7 @@ export default function parseInput(rawInput) {
   }
 
   // handle ip addresses, localhost, local domains, and urls
-  if (
-    input.match(ipPattern) ||
-    input.match(urlPattern) ||
-    input.match(/[.](local|lan|iot)/gi) ||
-    (input.includes("localhost") && !input.includes(" "))
-  ) {
+  if (input.match(uriPattern)) {
     return input.startsWith("http") ? rawInput : "http://" + rawInput;
   }
 
