@@ -291,6 +291,12 @@ export const config = {
       keys: ["lightgg", "light"],
       url: "https://light.gg",
     },
+    {
+      category: "🎮 Destiny",
+      name: "Today in Destiny",
+      keys: ["todayindestiny", "tid"],
+      url: "https://www.todayindestiny.com/",
+    },
     // Reddit
     {
       category: "💩 Reddit",
@@ -313,8 +319,7 @@ export const config = {
       name: "/r/RaidSecrets",
       keys: ["r/raidsecrets", "r/rs", "rs"],
       url: "https://www.reddit.com/r/raidsecrets",
-      search:
-        "https://www.reddit.com/r/raidsecrets/search?q={}&restrict_sr=1",
+      search: "https://www.reddit.com/r/raidsecrets/search?q={}&restrict_sr=1",
     },
     {
       category: "💩 Reddit",
