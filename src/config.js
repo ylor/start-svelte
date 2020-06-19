@@ -290,6 +290,7 @@ export const config = {
       name: "Light.gg",
       keys: ["lightgg", "light"],
       url: "https://light.gg",
+      search: "https://www.light.gg/db/search/?q={}",
     },
     {
       category: "🎮 Destiny",
