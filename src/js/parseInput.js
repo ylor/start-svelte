@@ -8,7 +8,7 @@ export default function parseInput(rawInput) {
   //const ipPattern = new RegExp(/^(https?:\/\/)?((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}(\:\d+)?$/g);
   //const urlPattern = new RegExp(/^.+\.\w\w+(\/.+|\:\d+)?$/gi);
   const uriPattern = new RegExp(
-    /^(.*?:\/\/)?([^\s/?\.#-]+\..+)+(\/[^\s]*)?$/gi
+    /^(.*?:\/\/)?([^\s\/?\.#-:]+\.[^\s]+)+(\/[^\s]*)?$/gi
   );
 
   // begin conditionals for the parser
