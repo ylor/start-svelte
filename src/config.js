@@ -333,8 +333,9 @@ export const config = {
       category: "💩 Reddit",
       name: "/r/MechanicalKeyboards",
       keys: ["r/mechanicalkeyboards", "r/mk", "rmk"],
-      url: "https://www.reddit.com/r/hiphopheads",
-      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1",
+      url: "https://www.reddit.com/r/mechanicalkeyboards",
+      search:
+        "https://www.reddit.com/r/mechanicalkeyboards/search?q={}&restrict_sr=1",
     },
     {
       category: "💩 Reddit",
