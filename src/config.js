@@ -331,10 +331,10 @@ export const config = {
     },
     {
       category: "💩 Reddit",
-      name: "/r/PathOfExile",
-      keys: ["r/pathofexile", "r/poe"],
-      url: "https://www.reddit.com/r/pathofexile",
-      search: "https://www.reddit.com/r/pathofexile/search?q={}&restrict_sr=1",
+      name: "/r/MechanicalKeyboards",
+      keys: ["r/mechanicalkeyboards", "r/mk", "rmk"],
+      url: "https://www.reddit.com/r/hiphopheads",
+      search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1",
     },
     {
       category: "💩 Reddit",
