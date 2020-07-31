@@ -61,7 +61,9 @@
       autocorrect="off"
       spellcheck="false"
       on:submit|preventDefault={() => (window.location.href = parseInput(search))}>
+      <!-- svelte-ignore a11y-autofocus -->
       <input
+        autofocus
         bind:value={search}
         on:input={fetchSuggestions}
         type="text"
