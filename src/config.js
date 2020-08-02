@@ -339,6 +339,13 @@ export const config = {
     },
     {
       category: "💩 Reddit",
+      name: "/r/MechMarket",
+      keys: ["r/mechmarket", "r/mm", "mm"],
+      url: "https://www.reddit.com/r/mechmarket",
+      search: "https://www.reddit.com/r/mechmarket/search?q={}&restrict_sr=1",
+    },
+    {
+      category: "💩 Reddit",
       name: "/r/SquaredCircle",
       keys: ["r/squaredcircle", "r/sc"],
       url: "https://www.reddit.com/r/squaredcircle",
@@ -386,10 +393,26 @@ export const config = {
       search: "https://www.epicgames.com/store/store-search/?q={}",
     },
     {
+      name: "Geekhack",
+      keys: ["geekhack", "gh"],
+      url: "https://geekhack.org/",
+    },
+    {
+      name: "Geekhack - Interest Check",
+      keys: ["ghic"],
+      url: "https://geekhack.org/index.php?board=132.0",
+    },
+    {
+      name: "Geekhack - Group Buys and Preorders",
+      keys: ["ghgb"],
+      url: "https://geekhack.org/index.php?board=70.0",
+    },
+    {
       name: "Giphy",
       keys: ["giphy", "gif"],
       url: "https://giphy.com",
       search: "https://giphy.com/search/{}",
+      hidden: true,
     },
     {
       name: "Guess My Word",
@@ -429,6 +452,11 @@ export const config = {
       url: "https://jsfiddle.net",
     },
     {
+      name: "Keebtalk",
+      keys: ["keebtalk", "kt"],
+      url: "https://www.keebtalk.com/",
+    },
+    {
       name: "MyAnimeList",
       keys: ["myanimelist", "mal"],
       url: "https://myanimelist.net",
@@ -460,7 +488,14 @@ export const config = {
       name: "Reddit",
       keys: ["reddit", "r"],
       url: "https://www.reddit.com/r",
-      search: "https://www.reddit.com/r/search?q={}",
+      search: "https://www.reddit.com/search?q={}",
+    },
+    {
+      name: "Reddit User",
+      keys: ["u"],
+      url: "https://www.reddit.com/u",
+      search: "https://www.reddit.com/u/search?q={}",
+      hidden: true,
     },
     {
       name: "Simplenote",
