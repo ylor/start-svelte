@@ -18,7 +18,7 @@
   [
   <span style="color:var(--red);">roly</span>
   on
-  <span style="color:var(--{browser === 'firefox' ? 'orange' : 'blue'});">
+  <span style="color:var(--{browser === 'firefox' ? 'firefox' : 'blue'});">
     {browser}
   </span>
   in
