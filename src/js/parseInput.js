@@ -5,45 +5,63 @@ export default function parseInput(rawInput) {
 
   const input = rawInput.toLowerCase();
   const keysList = sites.map((site) => site.keys).flat();
-  //const ipPattern = new RegExp(/^(https?:\/\/)?((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4}(\:\d+)?$/g);
-  //const urlPattern = new RegExp(/^.+\.\w\w+(\/.+|\:\d+)?$/gi);
+
+  const ipPattern = new RegExp(
+    /^(.*?:\/\/)?((localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?$/g
+  );
+  const urlPattern = new RegExp(/^.+\.\w\w+(\/.+)?([^\s]+)?$/gi);
   const uriPattern = new RegExp(
     /^(.*?:\/\/)?([^\s\/?\.#-:]+\.[^\s]+)+(\/[^\s]*)?$/gi
   );
 
   // begin conditionals for the parser
-  // handle match to key in config
-  if (keysList.includes(input)) {
-    return sites.find((v) => v.keys.includes(input)).url;
+  // handle ip addresses, localhost, local domains, and urls
+  if (input.match(ipPattern) || input.match(urlPattern)) {
+    let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;
+    websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
+    return websiteUrl;
   }
 
-  // handle ip addresses, localhost, local domains, and urls
-  if (input.match(uriPattern)) {
-    return input.startsWith("http") ? rawInput : "http://" + rawInput;
+  // handle match to key in config
+  if (keysList.includes(input)) {
+    let websiteUrl = sites.find((v) => v.keys.includes(input)).url;
+    websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
+    console.log(websiteUrl);
+    return websiteUrl;
+  }
+
+  // handle shortened reddit paths, not happy with this
+  //ex r/mm/new => r/mechmarket/new
+  if (
+    input.includes("r/") &&
+    keysList.includes(input.split("/").splice(0, 2).join("/"))
+  ) {
+    const key = input.split("/").splice(0, 2).join("/");
+    let path = rawInput.split("/").slice(2).join("/");
+    path = path.endsWith("/") ? path : path + "/";
+
+    return sites.find((site) => site.keys.includes(key)).url + "/" + path;
+  }
+
+  // handle paths with a matched key
+  if (input.includes("/") && keysList.includes(input.split("/")[0])) {
+    const key = input.split("/")[0];
+    let path = rawInput.split("/").slice(1).join("/");
+    path = path.endsWith("/") ? path : path + "/";
+
+    return sites.find((site) => site.keys.includes(key)).url + path;
   }
 
   // handle search with a matched key
   if (input.includes(":") && keysList.includes(input.split(":")[0])) {
     const key = input.split(":")[0];
-    const query = rawInput.split(":")[1].trimStart();
+    const query = rawInput.split(":")[1].trimStart().trimEnd();
 
     if (sites.find((site) => site.keys.includes(key)).search) {
       return sites
         .find((site) => site.keys.includes(key))
         .search.replace("{}", query);
     }
-  }
-
-  // handle paths with a matched key
-  if (input.includes("/") && keysList.includes(input.split("/")[0])) {
-    const key = input.split("/")[0];
-    const path = rawInput.split("/")[1];
-
-    return (
-      sites.find((site) => site.keys.includes(key)).url.replace(/\/$/, "") +
-      "/" +
-      path
-    );
   }
 
   // send query to search engine
