@@ -18,27 +18,27 @@ export default function parseInput(rawInput) {
   // handle ip addresses, localhost, local domains, and urls
   if (input.match(ipPattern) || input.match(urlPattern)) {
     let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;
-    websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
+    //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
     return websiteUrl;
   }
 
   // handle match to key in config
   if (keysList.includes(input)) {
     let websiteUrl = sites.find((v) => v.keys.includes(input)).url;
-    websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
-    console.log(websiteUrl);
+    //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
+    //console.log(websiteUrl);
     return websiteUrl;
   }
 
   // handle shortened reddit paths, not happy with this
   //ex r/mm/new => r/mechmarket/new
   if (
-    input.startsWith("r/") &&
+    input.includes("/") &&
     keysList.includes(input.split("/").splice(0, 2).join("/"))
   ) {
     const key = input.split("/").splice(0, 2).join("/");
     let path = rawInput.split("/").slice(2).join("/");
-    path = path.endsWith("/") ? path : path + "/";
+    //path = path.endsWith("/") ? path : path + "/";
 
     return sites.find((site) => site.keys.includes(key)).url + "/" + path;
   }
@@ -47,12 +47,10 @@ export default function parseInput(rawInput) {
   if (input.includes("/") && keysList.includes(input.split("/")[0])) {
     const key = input.split("/")[0];
     let path = rawInput.split("/").slice(1).join("/");
-    path = path.endsWith("/") ? path : path + "/";
-    console.log(key);
-    console.log(path);
+    //path = path.endsWith("/") ? path : path + "/";
 
     let websiteUrl = sites.find((site) => site.keys.includes(key)).url;
-    websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
+    //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
 
     return websiteUrl + path;
   }
