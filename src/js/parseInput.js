@@ -33,7 +33,7 @@ export default function parseInput(rawInput) {
   // handle shortened reddit paths, not happy with this
   //ex r/mm/new => r/mechmarket/new
   if (
-    input.includes("/") &&
+    input.match(new RegExp(/^r\/.+/g)) &&
     keysList.includes(input.split("/").splice(0, 2).join("/"))
   ) {
     const key = input.split("/").splice(0, 2).join("/");
@@ -45,6 +45,7 @@ export default function parseInput(rawInput) {
 
   // handle paths with a matched key
   if (input.includes("/") && keysList.includes(input.split("/")[0])) {
+    console.log("here");
     const key = input.split("/")[0];
     let path = rawInput.split("/").slice(1).join("/");
     //path = path.endsWith("/") ? path : path + "/";
@@ -52,7 +53,7 @@ export default function parseInput(rawInput) {
     let websiteUrl = sites.find((site) => site.keys.includes(key)).url;
     //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
 
-    return websiteUrl + path;
+    return websiteUrl + "/" + path;
   }
 
   // handle search with a matched key
