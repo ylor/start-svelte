@@ -218,7 +218,7 @@ export const config = {
       category: "📼 Media",
       name: "Letterboxd",
       keys: ["letterboxd", "lb"],
-      url: "https://www.letterboxd.com/",
+      url: "https://letterboxd.com/films/popular/this/week/",
       search: "https://letterboxd.com/search/films/{}/",
     },
     {

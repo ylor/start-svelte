@@ -26,7 +26,6 @@ export default function parseInput(rawInput) {
   if (keysList.includes(input)) {
     let websiteUrl = sites.find((v) => v.keys.includes(input)).url;
     //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
-    //console.log(websiteUrl);
     return websiteUrl;
   }
 
@@ -45,7 +44,6 @@ export default function parseInput(rawInput) {
 
   // handle paths with a matched key
   if (input.includes("/") && keysList.includes(input.split("/")[0])) {
-    console.log("here");
     const key = input.split("/")[0];
     let path = rawInput.split("/").slice(1).join("/");
     //path = path.endsWith("/") ? path : path + "/";
