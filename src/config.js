@@ -399,12 +399,12 @@ export const config = {
     },
     {
       name: "Geekhack - Interest Check",
-      keys: ["ghic"],
+      keys: ["ghic", "ghi"],
       url: "https://geekhack.org/index.php?board=132.0",
     },
     {
       name: "Geekhack - Group Buys and Preorders",
-      keys: ["ghgb"],
+      keys: ["ghgb", "ghb"],
       url: "https://geekhack.org/index.php?board=70.0",
     },
     {
