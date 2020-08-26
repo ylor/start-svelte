@@ -377,6 +377,12 @@ export const config = {
       search: "https://camelcamelcamel.com/search?sq={}",
     },
     {
+      name: "ComicVine",
+      keys: ["comicvine", "cv"]
+      url: "https://comicvine.gamespot.com/",
+      search: "https://comicvine.gamespot.com/search/?i=volume&q={}"
+    }
+    {
       name: "Discord",
       keys: ["discord"],
       url: "https://discordapp.com/activity",
