@@ -378,10 +378,10 @@ export const config = {
     },
     {
       name: "ComicVine",
-      keys: ["comicvine", "cv"]
+      keys: ["comicvine", "cv"],
       url: "https://comicvine.gamespot.com/",
       search: "https://comicvine.gamespot.com/search/?i=volume&q={}"
-    }
+    },
     {
       name: "Discord",
       keys: ["discord"],
