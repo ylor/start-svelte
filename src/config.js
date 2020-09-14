@@ -109,6 +109,12 @@ export const config = {
     //Work
     {
       category: "🎓 MDC",
+      name: "Classroom Inventory",
+      keys: ["ci", "inv"],
+      url: "https://apps.powerapps.com/play/7639b6b6-1edb-4d5d-bec8-832a864ee4fd?tenantId=b0626806-ceff-4393-821e-f9a3e666893b",
+    },
+    {
+      category: "🎓 MDC",
       name: "Apple School Manager",
       keys: ["apple school manager", "asm"],
       url: "http://school.apple.com",
