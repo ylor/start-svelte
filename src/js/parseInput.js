@@ -11,12 +11,12 @@ export default function parseInput(rawInput) {
   );
   const urlPattern = new RegExp(/^.+\.\w\w+(\/.+)?([^\s]+)?$/gi);
   const uriPattern = new RegExp(
-    /^(.*?:\/\/)?([^\s\/?\.#-:]+\.[^\s]+)+(\/[^\s]*)?$/gi
+    /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)$/gi
   );
 
   // begin conditionals for the parser
   // handle ip addresses, localhost, local domains, and urls
-  if (input.match(ipPattern) || input.match(urlPattern)) {
+  if (input.match(ipPattern) || input.match(uriPattern)) {
     let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;
     //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
     return websiteUrl;
