@@ -3,7 +3,7 @@
   font-weight: 100;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-thin.woff2") format("woff2");
+  src: local("Iosevka Aile Thin"), url("font/iosevka-aile-thin.woff2") format("woff2");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: 200;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-extralight.woff2") format("woff2");
+  src: local("Iosevka Aile ExtraLight"), url("font/iosevka-aile-extralight.woff2") format("woff2");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-light.woff2") format("woff2");
+  src: local("Iosevka Aile Light"), url("font/iosevka-aile-light.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-regular.woff2") format("woff2");
+  src: local("Iosevka Aile"), url("font/iosevka-aile-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-weight: 500;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-medium.woff2") format("woff2");
+  src: local("Iosevka Aile Medium"), url("font/iosevka-aile-medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -43,7 +43,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-semibold.woff2") format("woff2");
+  src: local("Iosevka Aile SemiBold"), url("font/iosevka-aile-semibold.woff2") format("woff2");
 }
 
 @font-face {
@@ -51,7 +51,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-bold.woff2") format("woff2");
+  src: local("Iosevka Aile Bold"), url("font/iosevka-aile-bold.woff2") format("woff2");
 }
 
 @font-face {
@@ -59,7 +59,7 @@
   font-weight: 800;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-extrabold.woff2") format("woff2");
+  src: local("Iosevka Aile ExtraBold"), url("font/iosevka-aile-extrabold.woff2") format("woff2");
 }
 
 @font-face {
@@ -67,15 +67,15 @@
   font-weight: 900;
   font-style: normal;
   font-display: auto;
-  src: url("fonts/iosevka-aile/iosevka-aile-heavy.woff2") format("woff2");
+  src: local("Iosevka Aile Heavy"), url("font/iosevka-aile-heavy.woff2") format("woff2");
 }
 
 :root {
   --background: #161616;
   --foreground: #f9f9fa;
 
-  --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo, monospace,
-    "Apple Color Emoji";
+  --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo,
+    monospace, -apple-system, BlinkMacSystemFont;
   --light: 200;
   --normal: 400;
   --heavy: 400;
