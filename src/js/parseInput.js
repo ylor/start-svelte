@@ -9,14 +9,14 @@ export default function parseInput(rawInput) {
   const ipPattern = new RegExp(
     /^(.*?:\/\/)?((localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?$/g
   );
-  const urlPattern = new RegExp(/^.+\.\w\w+(\/.+)?([^\s]+)?$/gi);
-  const uriPattern = new RegExp(
+  //const urlPattern = new RegExp(/^.+\.\w\w+(\/.+)?([^\s]+)?$/gi);
+  const urlPattern = new RegExp(
     /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)$/gi
   );
 
   // begin conditionals for the parser
   // handle ip addresses, localhost, local domains, and urls
-  if (input.match(ipPattern) || input.match(uriPattern)) {
+  if (input.match(ipPattern) || input.match(urlPattern)) {
     let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;
     //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
     return websiteUrl;
@@ -28,6 +28,18 @@ export default function parseInput(rawInput) {
     //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
     return websiteUrl;
   }
+
+    // handle search with a matched key
+    if (input.includes(":") && keysList.includes(input.split(":")[0])) {
+      const key = input.split(":")[0];
+      const query = rawInput.split(":")[1].trimStart().trimEnd();
+
+      if (sites.find((site) => site.keys.includes(key)).search) {
+        return sites
+          .find((site) => site.keys.includes(key))
+          .search.replace("{}", query);
+      }
+    }
 
   // handle shortened reddit paths, not happy with this
   //ex r/mm/new => r/mechmarket/new
@@ -49,21 +61,9 @@ export default function parseInput(rawInput) {
     //path = path.endsWith("/") ? path : path + "/";
 
     let websiteUrl = sites.find((site) => site.keys.includes(key)).url;
-    //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
+    websiteUrl = websiteUrl.endsWith("/") ? websiteUrl.slice(0, -1) : websiteUrl;
 
     return websiteUrl + "/" + path;
-  }
-
-  // handle search with a matched key
-  if (input.includes(":") && keysList.includes(input.split(":")[0])) {
-    const key = input.split(":")[0];
-    const query = rawInput.split(":")[1].trimStart().trimEnd();
-
-    if (sites.find((site) => site.keys.includes(key)).search) {
-      return sites
-        .find((site) => site.keys.includes(key))
-        .search.replace("{}", query);
-    }
   }
 
   // send query to search engine

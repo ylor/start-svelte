@@ -4,7 +4,7 @@
   import Prompt from "./Prompt.svelte";
   import Suggestions from "./Suggestions.svelte";
 
-  import keyHandler from "../js/keyHandler.js";
+  //import keyHandler from "../js/keyHandler.js";
   import parseInput from "../js/parseInput.js";
 
   let search = "";
@@ -16,11 +16,15 @@
     if (query.length === 0) {
       suggestions = [];
     } else {
+      //const googleResponse = await fetchJsonp("https://suggestqueries.google.com/complete/search?client=firefox&q=" + query);
+      //const googleSuggestions = await googleResponse.json();
+      //console.log(googleSuggestions[1]);
       const response = await fetchJsonp(
-        "https://suggestqueries.google.com/complete/search?client=firefox&q=" +
-          query
+        "https://duckduckgo.com/ac/?q=" + query + "&type=list",
+        { jsonpCallbackFunction: "autocompleteCallback" }
       );
       const json = await response.json();
+      //console.log(json[1]);
       suggestions = json[1].slice(0, 6);
     }
   }
@@ -47,7 +51,7 @@
     color: var(--foreground);
     background-color: var(--background);
     border: none;
-    font-weight: var(--normal);
+    /* font-weight: var(--normal); */
   }
 </style>
 
@@ -67,8 +71,8 @@
         type="text"
         id="search-input" />
     </form>
+    {#if search.length > 0}
+      <Suggestions {search} {suggestions} />
+    {/if}
   </Prompt>
-  {#if search.length > 0}
-    <Suggestions {search} {suggestions} />
-  {/if}
 </section>

@@ -7,12 +7,12 @@
   sites = sites.map(p =>
     p.category === undefined ? { ...p, category: "🤷🏽 …" } : p
   );
-  console.log(sites);
+  //console.log(sites);
 
   const categoriesRaw = sites.map(p => p.category);
   const distinctCategories = [...new Set(categoriesRaw)];
   const categories = distinctCategories.concat(distinctCategories.shift());
-  console.log(categories);
+  //console.log(categories);
 </script>
 
 <section>

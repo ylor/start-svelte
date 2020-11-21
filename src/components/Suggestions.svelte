@@ -12,8 +12,8 @@
     {#each suggestions as suggestion}
       <li class="search-suggestion">
         <a
-          href={parseInput(searchInput.value.includes(':') ? searchInput.value.split(':')[0] + ':' + suggestion : suggestion)}
-          on:focus={searchInput.value.includes(':') ? (searchInput.value = searchInput.value.split(':')[0] + ':' + suggestion) : (searchInput.value = suggestion)}
+          href={parseInput(search.includes(':') ? search.split(':')[0] + ':' + suggestion : suggestion)}
+          on:focus={search.includes(':') ? (search = search.split(':')[0] + ':' + suggestion) : (search = suggestion)}
           on:mouseover={event => event.target.addEventListener(
               'mousemove',
               event => event.target.focus()
