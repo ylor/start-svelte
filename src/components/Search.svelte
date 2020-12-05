@@ -16,16 +16,16 @@
     if (query.length === 0) {
       suggestions = [];
     } else {
-      //const googleResponse = await fetchJsonp("https://suggestqueries.google.com/complete/search?client=firefox&q=" + query);
-      //const googleSuggestions = await googleResponse.json();
+      const googleResponse = await fetchJsonp("https://suggestqueries.google.com/complete/search?client=firefox&q=" + query);
+      const googleSuggestions = await googleResponse.json();
       //console.log(googleSuggestions[1]);
-      const response = await fetchJsonp(
-        "https://duckduckgo.com/ac/?q=" + query + "&type=list",
-        { jsonpCallbackFunction: "autocompleteCallback" }
-      );
-      const json = await response.json();
+      // const duckResponse = await fetchJsonp(
+      //   "https://duckduckgo.com/ac/?q=" + query + "&type=list",
+      //   { jsonpCallbackFunction: "autocompleteCallback" }
+      // );
+      // const duckSuggestions = await response.json();
       //console.log(json[1]);
-      suggestions = json[1].slice(0, 6);
+      suggestions = googleSuggestions[1].slice(0, 6);
     }
   }
 
