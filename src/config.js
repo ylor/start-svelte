@@ -427,11 +427,6 @@ export const config = {
       hidden: true,
     },
     {
-      name: "Guess My Word",
-      keys: ["guessmyword", "gmw"],
-      url: "https://hryanjones.com/guess-my-word/",
-    },
-    {
       name: "Hacker News",
       keys: ["hacker news", "hn"],
       url: "https://news.ycombinator.com",
@@ -457,16 +452,6 @@ export const config = {
       name: "Instagram",
       keys: ["instagram", "insta", "ig"],
       url: "https://www.instagram.com",
-    },
-    {
-      name: "JSFiddle",
-      keys: ["jsfiddle", "fiddle"],
-      url: "https://jsfiddle.net",
-    },
-    {
-      name: "Keebtalk",
-      keys: ["keebtalk", "kt"],
-      url: "https://www.keebtalk.com/",
     },
     {
       name: "MyAnimeList",
@@ -495,6 +480,12 @@ export const config = {
       name: "OneDrive",
       keys: ["onedrive", "od"],
       url: "https://onedrive.live.com",
+    },
+    {
+      name: "Pinboard",
+      keys: ["pinboard", "pb"],
+      url: "https://pinboard.in",
+      search: "https://pinboard.in/search/u:rolyreyes?query=asdf",
     },
     {
       name: "Reddit",
@@ -526,6 +517,11 @@ export const config = {
       search: "https://store.steampowered.com/search/?term={}",
     },
     {
+      name: "Tildes",
+      keys: ["tildes","tilde","~"],
+      url: "https://tildes.net/",
+    },
+    {
       name: "Tumblr",
       keys: ["tumblr"],
       url: "https://tumblr.com",
@@ -544,7 +540,7 @@ export const config = {
     },
     {
       name: "Twitter",
-      keys: ["twitter"],
+      keys: ["twitter","t"],
       url: "https://twitter.com",
       search: "https://twitter.com/search?q={}",
     },
