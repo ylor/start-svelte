@@ -1,0 +1,9 @@
+match ip/url = 127.0.0.1:5000, localhost, localhost:5000, nytimes.com
+match alias = gb
+match alias+path = gb/api
+match alias+search = bb:3080
+match r/shortcuts = r/mm/new
+match @ = @bungiehelp
+match ~ = ~tech
+match r/ = r/tildes
+send to search

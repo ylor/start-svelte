@@ -4,72 +4,83 @@ export default function parseInput(rawInput) {
   const { sites } = config;
 
   const input = rawInput.toLowerCase();
-  const keysList = sites.map((site) => site.keys).flat();
+  const aliasList = sites.map((site) => site.aliases).flat();
 
   const ipPattern = new RegExp(
-    /^(.*?:\/\/)?((localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?$/g
+    /^(.*?:\/\/)?((localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?(\/.*)?$/g
   );
-  //const urlPattern = new RegExp(/^.+\.\w\w+(\/.+)?([^\s]+)?$/gi);
   const urlPattern = new RegExp(
     /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)$/gi
   );
 
-  // begin conditionals for the parser
-  // handle ip addresses, localhost, local domains, and urls
-  if (input.match(ipPattern) || input.match(urlPattern)) {
-    let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;
-    //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
+  // BEGIN PARSER
+
+  // handle match to alias
+  if (aliasList.includes(input)) {
+    let websiteUrl = sites.find((site) => site.aliases.includes(input)).url;
     return websiteUrl;
   }
 
-  // handle match to key in config
-  if (keysList.includes(input)) {
-    let websiteUrl = sites.find((v) => v.keys.includes(input)).url;
-    //websiteUrl = websiteUrl.endsWith("/") ? websiteUrl : websiteUrl + "/";
-    return websiteUrl;
-  }
-
-    // handle search with a matched key
-    if (input.includes(":") && keysList.includes(input.split(":")[0])) {
-      const key = input.split(":")[0];
-      const query = rawInput.split(":")[1].trimStart().trimEnd();
-
-      if (sites.find((site) => site.keys.includes(key)).search) {
-        return sites
-          .find((site) => site.keys.includes(key))
-          .search.replace("{}", query);
-      }
-    }
-
-  // handle shortened reddit paths, not happy with this
+  // handle aliased reddit paths, not happy with this
   //ex r/mm/new => r/mechmarket/new
   if (
-    input.match(new RegExp(/^r\/.+/g)) &&
-    keysList.includes(input.split("/").splice(0, 2).join("/"))
+    //input.match(new RegExp(/^r\/.+/g))
+    input.startsWith("r/") &&
+    aliasList.includes(input.split("/").splice(0, 2).join("/"))
   ) {
-    const key = input.split("/").splice(0, 2).join("/");
-    let path = rawInput.split("/").slice(2).join("/");
-    //path = path.endsWith("/") ? path : path + "/";
+    const alias = input.split("/").splice(0, 2).join("/");
+    const path = rawInput.split("/").slice(2).join("/");
 
-    return sites.find((site) => site.keys.includes(key)).url + "/" + path;
+    return sites.find((site) => site.aliases.includes(alias)).url + "/" + path;
   }
 
-  // handle paths with a matched key
-  if (input.includes("/") && keysList.includes(input.split("/")[0])) {
-    const key = input.split("/")[0];
-    let path = rawInput.split("/").slice(1).join("/");
-    //path = path.endsWith("/") ? path : path + "/";
+  // handle match to alias with search
+  if (input.includes(":") && aliasList.includes(input.split(":")[0])) {
+    const alias = input.split(":")[0];
+    const query = rawInput.split(":")[1].trimStart().trimEnd();
 
-    let websiteUrl = sites.find((site) => site.keys.includes(key)).url;
-    websiteUrl = websiteUrl.endsWith("/") ? websiteUrl.slice(0, -1) : websiteUrl;
+    if (sites.find((site) => site.aliases.includes(alias))) {
+      return sites
+        .find((site) => site.aliases.includes(alias))
+        .search.replace("{}", query);
+    }
+  }
+
+  // handle paths with a matched alias
+  if (input.includes("/") && aliasList.includes(input.split("/")[0])) {
+    const alias = input.split("/")[0];
+    let path = rawInput.split("/").slice(1).join("/");
+
+    let websiteUrl = sites.find((site) => site.aliases.includes(alias)).url;
+    websiteUrl = websiteUrl.endsWith("/")
+      ? websiteUrl.slice(0, -1)
+      : websiteUrl;
 
     return websiteUrl + "/" + path;
+  }
+
+  // handle @
+  if (input.startsWith("@") && !input.includes(" ")) {
+    return "https://twitter.com/" + input;
+  }
+
+  // handle ~
+  if (input.startsWith("~") && !input.includes(" ")) {
+    return "https://tildes.net/" + input;
+  }
+
+  // handle localhost/ip addresses/urls with optional ports and/or paths
+  if (input.match(ipPattern) || input.match(urlPattern)) {
+    let websiteUrl = input.startsWith("http://")
+      ? rawInput
+      : "http://" + rawInput;
+    return websiteUrl;
   }
 
   // send query to search engine
   else {
     return sites
-      .find((site) => site.keys.includes("*"))
+      .find((site) => site.aliases.includes("*"))
       .search.replace("{}", encodeURIComponent(rawInput));
   }
 }

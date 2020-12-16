@@ -21,7 +21,7 @@
           {@html suggestion.replace(search
               .substring(search.indexOf(':') + 1)
               .match(
-                /\b.+\b/
+                /\S.+\S/
               ), `<strong>${search
               .substring(search.indexOf(':') + 1)
               .trim()}</strong>`)}

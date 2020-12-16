@@ -33,7 +33,7 @@
                 .filter(
                   site => site.category === category && site.hidden !== true
                 ) as site}
-                <li title={site.keys.toString().replace(',', ', ')}>
+                <li title={site.aliases.toString().replace(',', ', ')}>
                   <a href={site.url}>{site.name}</a>
                 </li>
               {/each}
