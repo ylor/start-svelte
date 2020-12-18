@@ -256,7 +256,7 @@ export const config = {
     {
       category: "📼 Media",
       name: "YouTube",
-      aliases: ["youtube","yt"],
+      aliases: ["youtube","yt","y"],
       url: "https://youtube.com",
       search: "https://youtube.com/results?search_query={}",
     },
