@@ -304,6 +304,12 @@ export const config = {
       aliases: ["todayindestiny","tid"],
       url: "https://www.todayindestiny.com",
     },
+    {
+      category: "🎮 Destiny",
+      name: "Xur",
+      aliases: ["xur.wiki","xur"],
+      url: "https://xur.wiki",
+    },
     // Reddit
     {
       category: "💩 Reddit",
