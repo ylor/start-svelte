@@ -1,6 +1,4 @@
 <script>
-  import fetchJsonp from "fetch-jsonp";
-
   import List from "./components/List.svelte";
   import Search from "./components/Search.svelte";
 

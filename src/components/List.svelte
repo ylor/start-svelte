@@ -6,7 +6,7 @@
 
   sites = sites.map(p =>
     p.category === undefined ? { ...p, category: "🤷🏽 …" } : p
-  );
+  ).filter(p => ! p.category.includes("🤓"));
   //console.log(sites);
 
   const categoriesRaw = sites.map(p => p.category);

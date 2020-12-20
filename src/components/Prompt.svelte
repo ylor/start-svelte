@@ -15,14 +15,11 @@
 </style>
 
 <section>
-  [
-  <span style="color:var(--red);">roly</span>
+  [ <span style="color:var(--cyan);">~/start</span>
   on
   <span style="color:var(--{browser === 'firefox' ? 'firefox' : 'safari'});">
     {browser}
   </span>
-  in
-  <span style="color:var(--cyan);">~/start</span>
   ]
   <br />
   <span style="color:var(--green);">➜</span>

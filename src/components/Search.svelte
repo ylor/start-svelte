@@ -4,7 +4,6 @@
   import Prompt from "./Prompt.svelte";
   import Suggestions from "./Suggestions.svelte";
 
-  //import keyHandler from "../js/keyHandler.js";
   import parseInput from "../js/parseInput.js";
 
   let search = "";
@@ -16,7 +15,10 @@
     if (query.length === 0) {
       suggestions = [];
     } else {
-      const googleResponse = await fetchJsonp("https://suggestqueries.google.com/complete/search?client=firefox&q=" + query);
+      const googleResponse = await fetchJsonp(
+        "https://suggestqueries.google.com/complete/search?client=firefox&q=" +
+          query
+      );
       const googleSuggestions = await googleResponse.json();
       //console.log(googleSuggestions[1]);
       // const duckResponse = await fetchJsonp(
@@ -60,6 +62,7 @@
 <section>
   <Prompt>
     <form
+      id="search-form"
       autocapitalize="none"
       autocomplete="off"
       autocorrect="off"
