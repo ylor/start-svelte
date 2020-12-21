@@ -95,8 +95,8 @@ ul {
 
 li {
   position: relative;
-  max-width: 25ch;
-  word-wrap: break-word;
+  max-width: 21ch;
+  word-wrap: normal;
 }
 
 li::before {
