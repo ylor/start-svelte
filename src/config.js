@@ -492,7 +492,7 @@ export const config = {
       name: "Pinboard",
       aliases: ["pinboard", "pb"],
       url: "https://pinboard.in",
-      search: "https://pinboard.in/search/u:rolyreyes?query=asdf",
+      search: "https://pinboard.in/search/u:rolyreyes?query={}",
     },
     {
       name: "Reddit",

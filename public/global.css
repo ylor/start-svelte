@@ -104,10 +104,6 @@
   --branch: 1px solid #75828a;
 }
 
-::selection {
-  background: rgb(50, 50, 60);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -143,7 +139,6 @@ body {
 }
 
 strong {
-  color: var(--white);
   font-weight: var(--heavy);
 }
 
