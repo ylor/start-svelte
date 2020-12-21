@@ -23,7 +23,7 @@
   //console.log(categories);
 
   const favorites = sites.filter((site) => site.favorite === true);
-  console.log(favorites);
+  //console.log(favorites);
 </script>
 
 <style>
@@ -73,6 +73,9 @@
             </h1>
             <ul>
               {#each sites
+                .filter(
+                  (site) => site.category === category
+                )
                 .sort((a, b) => a.name.localeCompare(b.name)) as site}
                 <li
                   on:mouseover={(e) => e.target.focus()}
