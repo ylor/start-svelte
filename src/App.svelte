@@ -6,8 +6,11 @@
 </script>
 
 <style> @media (min-width: 768px) {
-main {
+/* main {
   margin-top: 3%
+} */
+main {
+  padding: 0;
 }
 }</style>
 

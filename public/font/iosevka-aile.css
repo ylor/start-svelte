@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 100;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile Thin"),
+    url("font/iosevka-aile-thin.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 200;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile ExtraLight"),
+    url("font/iosevka-aile-extralight.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile Light"),
+    url("font/iosevka-aile-light.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile"),
+    url("font/iosevka-aile-regular.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile Medium"),
+    url("font/iosevka-aile-medium.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile SemiBold"),
+    url("font/iosevka-aile-semibold.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile Bold"),
+    url("font/iosevka-aile-bold.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile ExtraBold"),
+    url("font/iosevka-aile-extrabold.subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Aile";
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+  src: local("Iosevka Aile Heavy"),
+    url("font/iosevka-aile-heavy.subset.woff2") format("woff2");
+}

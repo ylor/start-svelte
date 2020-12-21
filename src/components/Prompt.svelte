@@ -6,7 +6,7 @@
 
 <style>
   section {
-    padding: 1.5rem 0 0.3125rem;
+    padding: 1rem 0 0.3125rem;
   }
 
   span {

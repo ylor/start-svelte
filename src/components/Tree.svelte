@@ -5,24 +5,25 @@
   let { sites } = config;
 
   sites = sites
-    .map((site) => (site.category ? site : { ...site, category: "🌌 …" }))
-    .filter((site) => site.hidden === true || !site.category.includes("🤓"));
+   // .map((s) => (s.category ? s : { ...s, category: "🌌 …" }))
+    .filter((s) => s.category !== undefined)
+    .filter((s) => s.hidden !== true);
 
   if (location.hostname.includes("mdc") === false) {
-    sites = sites.filter((site) => !site.category.includes("MDC"));
+    sites = sites.filter((s) => !s.category.includes("MDC"));
   } else {
-    sites = sites.filter((site) => !site.category.includes("Server"));
+    sites = sites.filter((s) => !s.category.includes("Server"));
   }
   console.log(sites);
 
-  const categoriesRaw = sites.map((site) => site.category);
+  const categoriesRaw = sites.map((s) => s.category);
   //console.log(categoriesRaw);
   const uniqueCategories = [...new Set(categoriesRaw)];
   //console.log(uniqueCategories);
-  const categories = uniqueCategories.concat(uniqueCategories.shift());
+  const categories = uniqueCategories//.concat(uniqueCategories.shift());
   //console.log(categories);
 
-  const favorites = sites.filter((site) => site.favorite === true);
+  const favorites = sites.filter((s) => s.favorite === true);
   //console.log(favorites);
 </script>
 
@@ -73,9 +74,7 @@
             </h1>
             <ul>
               {#each sites
-                .filter(
-                  (site) => site.category === category
-                )
+                .filter((s) => s.category === category)
                 .sort((a, b) => a.name.localeCompare(b.name)) as site}
                 <li
                   on:mouseover={(e) => e.target.focus()}

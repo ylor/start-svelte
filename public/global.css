@@ -1,93 +1,12 @@
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 100;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile Thin"),
-    url("font/iosevka-aile-thin.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 200;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile ExtraLight"),
-    url("font/iosevka-aile-extralight.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 300;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile Light"),
-    url("font/iosevka-aile-light.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 400;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile"),
-    url("font/iosevka-aile-regular.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 500;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile Medium"),
-    url("font/iosevka-aile-medium.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 600;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile SemiBold"),
-    url("font/iosevka-aile-semibold.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 700;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile Bold"),
-    url("font/iosevka-aile-bold.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 800;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile ExtraBold"),
-    url("font/iosevka-aile-extrabold.subset.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Iosevka Aile";
-  font-weight: 900;
-  font-style: normal;
-  font-display: auto;
-  src: local("Iosevka Aile Heavy"),
-    url("font/iosevka-aile-heavy.subset.woff2") format("woff2");
-}
-
 :root {
-  --background: #121214;
+  --background: rgb(20, 20, 22);
   --foreground: #e5e4df;
 
   --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo, monospace,
     -apple-system, BlinkMacSystemFont;
   --light: 200;
   --normal: 300;
-  --heavy: 500;
+  --heavy: 400;
 
   --blue: #008afb;
   --cyan: #8be9fd;
@@ -119,6 +38,7 @@ html {
     font-size: 32px;
   }
 }
+
 html::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -133,7 +53,7 @@ body {
   color: var(--foreground);
   font-family: var(--font);
   font-weight: var(--light);
-  /* margin: 0;
+  margin: 0; /*
   width: 100vw;
   min-height: 100vh; */
 }
@@ -154,7 +74,7 @@ a:visited {
 
 a:hover,
 a:focus {
-  color: #0c0c0c;
+  color: var(--background);
   background: var(--green);
   font-weight: var(--normal);
   text-decoration: none;
@@ -162,7 +82,7 @@ a:focus {
 
 ul {
   list-style: none;
-  padding-left: 3ch;
+  padding-left: 2.9ch;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;

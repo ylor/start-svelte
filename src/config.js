@@ -14,46 +14,12 @@ export const config = {
       aliases: ["google", "*"],
       url: "https://google.com",
       search: "https://google.com/search?q={}",
-      hidden: true,
     },
     {
       name: "DuckDuckGo",
       aliases: ["duckduckgo", "duck", "ddg", "d"],
       url: "https://duckduckgo.com",
       search: "https://duckduckgo.com/?q={}",
-      hidden: true,
-    },
-    // Me
-    {
-      category: "🤓 Me",
-      name: "About",
-      aliases: ["about"],
-      url: "https://about.rolyreyes.com",
-    },
-    {
-      category: "🤓 Me",
-      name: "Blog",
-      aliases: ["blog"],
-      url: "https://rolyreyes.com",
-    },
-    {
-      category: "🤓 Me",
-      name: "Dotfiles",
-      aliases: ["dot"],
-      url: "https://github.com/ylor/dotfiles",
-    },
-    {
-      category: "🤓 Me",
-      name: "Github",
-      aliases: ["github", "git"],
-      url: "https://github.com",
-      search: "https://github.com/search?q={}",
-    },
-    {
-      category: "🤓 Me",
-      name: "Start",
-      aliases: ["start"],
-      url: "https://start.rolyreyes.com",
     },
     // Server
     {
@@ -156,7 +122,6 @@ export const config = {
       name: "Miami Dade College",
       aliases: ["mdc"],
       url: "http://www.mdc.edu",
-      hidden: true,
     },
     {
       category: "🎓 MDC",
@@ -171,7 +136,6 @@ export const config = {
       url: "https://mdcwapi.mdc.edu:8001/ntauth_hd",
       search:
         "https://mdcwapi.mdc.edu:8001/ntauth_hd/ManageAccount?domainValue=MDCC&personnelID={}",
-      hidden: true,
     },
     {
       category: "🎓 MDC",
@@ -180,7 +144,6 @@ export const config = {
       url: "https://mdcwapi.mdc.edu:8001/ntauth_hd",
       search:
         "https://mdcwapi.mdc.edu:8001/ntauth_hd/ManageAccount?domainValue=MYMDC&personnelID={}",
-      hidden: true,
     },
     {
       category: "🎓 MDC",
@@ -201,7 +164,6 @@ export const config = {
       aliases: ["cns-old", "sharepoint-old"],
       url:
         "https://sharepoint.mdc.edu/kendall/departments/cns/SitePages/CNS%20Department%20Policies%20and%20Procedures.aspx",
-      hidden: true,
     },
     {
       category: "🎓 MDC",
@@ -304,7 +266,7 @@ export const config = {
     {
       category: "📼 Media",
       name: "Twitch",
-      aliases: ["twitch"],
+      aliases: ["twitch","ttv"],
       url: "https://twitch.tv/directory",
     },
     {
@@ -316,7 +278,7 @@ export const config = {
     },
     // Reddit
     {
-      category: "💬 Reddit",
+      category: "🤖 Reddit",
       name: "/r/Battlestations",
       aliases: ["r/battlestations", "r/bs"],
       url: "https://www.reddit.com/r/battlestations",
@@ -324,7 +286,7 @@ export const config = {
         "https://www.reddit.com/r/battlestations/search?q={}&restrict_sr=1",
     },
     {
-      category: "💬 Reddit",
+      category: "🤖 Reddit",
       name: "/r/DestinyTheGame",
       aliases: ["r/destinythegame", "r/dtg", "dtg"],
       url: "https://www.reddit.com/r/destinythegame",
@@ -332,21 +294,21 @@ export const config = {
         "https://www.reddit.com/r/destinythegame/search?q={}&restrict_sr=1",
     },
     {
-      category: "💬 Reddit",
+      category: "🤖 Reddit",
       name: "/r/RaidSecrets",
       aliases: ["r/raidsecrets", "r/rs", "rs"],
       url: "https://www.reddit.com/r/raidsecrets",
       search: "https://www.reddit.com/r/raidsecrets/search?q={}&restrict_sr=1",
     },
     {
-      category: "💬 Reddit",
+      category: "🤖 Reddit",
       name: "/r/HipHopHeads",
       aliases: ["r/hiphopheads", "r/hhh", "hhh"],
       url: "https://www.reddit.com/r/hiphopheads",
       search: "https://www.reddit.com/r/hiphopheads/search?q={}&restrict_sr=1",
     },
     {
-      category: "💬 Reddit",
+      category: "🤖 Reddit",
       name: "/r/MechanicalKeyboards",
       aliases: ["r/mechanicalkeyboards", "r/mk", "rmk"],
       url: "https://www.reddit.com/r/mechanicalkeyboards",
@@ -354,23 +316,118 @@ export const config = {
         "https://www.reddit.com/r/mechanicalkeyboards/search?q={}&restrict_sr=1",
     },
     {
-      category: "💬 Reddit",
+      category: "🤖 Reddit",
       name: "/r/MechMarket",
       aliases: ["r/mechmarket", "r/mm", "mm"],
       url: "https://www.reddit.com/r/mechmarket",
       search: "https://www.reddit.com/r/mechmarket/search?q={}&restrict_sr=1",
     },
     {
-      category: "💬 Reddit",
+      category: "🤖 Reddit",
       name: "/r/SquaredCircle",
       aliases: ["r/squaredcircle", "r/sc"],
       url: "https://www.reddit.com/r/squaredcircle",
       search:
         "https://www.reddit.com/r/squaredcircle/search?q={}&restrict_sr=1",
     },
-    // Utilities
+    // Socials
     {
-      //category: "🛠️ Utilities",
+      category: "💬 Socials",
+      name: "Discord",
+      aliases: ["discord"],
+      url: "https://discordapp.com/activity",
+    },
+    {
+      category: "💬 Socials",
+      name: "Github",
+      aliases: ["github", "git"],
+      url: "https://github.com",
+      search: "https://github.com/search?q={}",
+    },
+    {
+      category: "💬 Socials",
+      name: "Geekhack",
+      aliases: ["geekhack", "gh"],
+      url: "https://geekhack.org",
+    },
+    {
+      name: "Geekhack - Interest Check",
+      aliases: ["ghic", "ghi"],
+      url: "https://geekhack.org/index.php?board=132.0",
+    },
+    {
+      name: "Geekhack - Group Buys and Preorders",
+      aliases: ["ghgb", "ghb"],
+      url: "https://geekhack.org/index.php?board=70.0",
+    },
+    {
+      category: "💬 Socials",
+      name: "Instagram",
+      aliases: ["instagram", "insta", "ig"],
+      url: "https://www.instagram.com",
+    },
+    {
+      category: "💬 Socials",
+      name: "Hacker News",
+      aliases: ["hacker news", "hn"],
+      url: "https://news.ycombinator.com",
+      search: "https://hn.algolia.com/?&query={}",
+      favorite: true,
+    },
+    {
+      category: "💬 Socials",
+      name: "Reddit",
+      aliases: ["reddit", "r/all"],
+      url: "https://www.reddit.com/r/all",
+      search: "https://www.reddit.com/search?q={}",
+      hidden: true,
+    },
+    {
+      category: "💬 Socials",
+      name: "Reddit Subreddit",
+      aliases: ["r"],
+      url: "https://www.reddit.com/r",
+      search: "https://www.reddit.com/search?q={}",
+      hidden: true,
+    },
+    {
+      category: "💬 Socials",
+      name: "Reddit User",
+      aliases: ["u"],
+      url: "https://www.reddit.com/u",
+      search: "https://www.reddit.com/u/search?q={}",
+      hidden: true,
+    },
+    {
+      category: "💬 Socials",
+      name: "ResetERA",
+      aliases: ["resetera", "reset", "era", "re"],
+      url: "https://www.resetera.com",
+      favorite: true,
+    },
+    {
+      category: "💬 Socials",
+      name: "Tildes",
+      aliases: ["tildes", "tilde", "~"],
+      url: "https://tildes.net",
+      favorite: true,
+    },
+    {
+      category: "💬 Socials",
+      name: "Twitter",
+      aliases: ["twitter", "t"],
+      url: "https://twitter.com",
+      search: "https://twitter.com/search?q={}",
+    },
+    {
+      category: "💬 Socials",
+      name: "WhatsApp",
+      aliases: ["whatsapp", "wa"],
+      url: "https://web.whatsapp.com",
+      hidden: true,
+    },
+    //🛠 Utilities. Should this be its own category?
+    {
       name: "1Password Generator",
       aliases: ["pw"],
       url: "https://1password.com/password-generator",
@@ -379,6 +436,11 @@ export const config = {
       name: "Bitwarden",
       aliases: ["bitwarden", "bw"],
       url: "https://vault.bitwarden.com",
+    },
+    {
+      name: "Dotfiles",
+      aliases: ["dot"],
+      url: "https://github.com/ylor/dotfiles",
     },
     {
       name: "iCloud",
@@ -395,7 +457,7 @@ export const config = {
       aliases: ["simplenote", "sn"],
       url: "https://app.simplenote.com",
     },
-    // Internet
+    // 🔗 Internet
     {
       name: "Audio Science Review",
       aliases: ["audiosciencereview", "asr"],
@@ -408,51 +470,21 @@ export const config = {
       search: "https://comicvine.gamespot.com/search/?i=volume&q={}",
     },
     {
-      name: "Discord",
-      aliases: ["discord"],
-      url: "https://discordapp.com/activity",
+      name: "Daring Fireball",
+      aliases: ["daringfireball", "df"],
+      url: "https://daringfireball.net"
     },
     {
-      name: "Drive",
-      aliases: ["drive", "gdrive"],
+      name: "Google Drive",
+      aliases: ["googledrive","gdrive","drive"],
       url: "https://drive.google.com",
     },
-    {
-      name: "Epic Game Store",
-      aliases: ["epic game store", "egs"],
-      url: "https://www.epicgames.com/store",
-      search: "https://www.epicgames.com/store/store-search/?q={}",
-    },
-    {
-      name: "Geekhack",
-      aliases: ["geekhack", "gh"],
-      url: "https://geekhack.org",
-    },
-    {
-      name: "Geekhack - Interest Check",
-      aliases: ["ghic", "ghi"],
-      url: "https://geekhack.org/index.php?board=132.0",
-      hidden: true,
-    },
-    {
-      name: "Geekhack - Group Buys and Preorders",
-      aliases: ["ghgb", "ghb"],
-      url: "https://geekhack.org/index.php?board=70.0",
-      hidden: true,
-    },
+
     {
       name: "Giphy",
       aliases: ["giphy", "gif"],
       url: "https://giphy.com",
       search: "https://giphy.com/search/{}",
-      hidden: true,
-    },
-    {
-      name: "Hacker News",
-      aliases: ["hacker news", "hn"],
-      url: "https://news.ycombinator.com",
-      search: "https://hn.algolia.com/?&query={}",
-      favorite: true,
     },
     {
       name: "How Long to Beat",
@@ -460,11 +492,7 @@ export const config = {
       url: "https://howlongtobeat.com",
       search: "https://howlongtobeat.com/?q={}",
     },
-    {
-      name: "Instagram",
-      aliases: ["instagram", "insta", "ig"],
-      url: "https://www.instagram.com",
-    },
+
     {
       name: "MyAnimeList",
       aliases: ["myanimelist", "mal"],
@@ -481,8 +509,8 @@ export const config = {
       aliases: ["npm"],
       url: "https://www.npmjs.com",
       search: "https://www.npmjs.com/search?q={}",
+      hidden: true
     },
-
     {
       name: "OneDrive",
       aliases: ["onedrive", "od"],
@@ -493,77 +521,43 @@ export const config = {
       aliases: ["pinboard", "pb"],
       url: "https://pinboard.in",
       search: "https://pinboard.in/search/u:rolyreyes?query={}",
-    },
-    {
-      name: "Reddit",
-      aliases: ["reddit", "r"],
-      url: "https://www.reddit.com/r",
-      search: "https://www.reddit.com/search?q={}",
-      hidden: true,
-    },
-    {
-      name: "Reddit User",
-      aliases: ["u"],
-      url: "https://www.reddit.com/u",
-      search: "https://www.reddit.com/u/search?q={}",
-      hidden: true,
-    },
-    {
-      name: "ResetERA",
-      aliases: ["resetera", "reset", "era", "re"],
-      url: "https://www.resetera.com",
-    },
-    {
-      name: "Tildes",
-      aliases: ["tildes", "tilde", "~"],
-      url: "https://tildes.net",
       favorite: true,
     },
+
     {
-      name: "Tumblr",
-      aliases: ["tumblr"],
-      url: "https://tumblr.com",
+      name: "Wirecutter",
+      aliases: ["wirecutter", "wc"],
+      url: "https://thewirecutter.com",
     },
+
+    // 🔍 Searchin'
     {
       name: "The Movie Database",
       aliases: ["tmdb"],
       url: "https://www.themoviedb.org",
       search: "https://www.themoviedb.org/search?query={}&language=en-US",
+      hidden: true
     },
     {
       name: "The TVDB",
       aliases: ["tvdb"],
       url: "https://thetvdb.com",
       search: "https://thetvdb.com/search?query={}",
-    },
-    {
-      name: "Twitter",
-      aliases: ["twitter", "t"],
-      url: "https://twitter.com",
-      search: "https://twitter.com/search?q={}",
-    },
-    {
-      name: "WhatsApp",
-      aliases: ["whatsapp", "wa"],
-      url: "https://web.whatsapp.com",
-      hidden: true,
-    },
-    {
-      name: "Wirecutter",
-      aliases: ["wirecutter", "wc"],
-      url: "https://thewirecutter.com",
+      hidden: true
     },
     {
       name: "Wikipedia",
       aliases: ["wikipedia", "wiki", "w"],
       url: "https://www.wikipedia.org",
-      url: "https://en.wikipedia.org/wiki/{}",
+      search: "https://en.wikipedia.org/wiki/{}",
+      hidden: true
     },
     {
       name: "Yarn",
       aliases: ["yarn"],
       url: "https://yarnpkg.com",
       search: "https://classic.yarnpkg.com/en/packages?q={}&p=1",
+      hidden: true
     },
     // 💸 Shoppin'
     {
@@ -585,6 +579,12 @@ export const config = {
       search: "https://camelcamelcamel.com/search?sq={}",
     },
     {
+      name: "Epic Game Store",
+      aliases: ["epic game store", "egs"],
+      url: "https://www.epicgames.com/store",
+      search: "https://www.epicgames.com/store/store-search/?q={}",
+    },
+    {
       name: "Steam",
       aliases: ["steam"],
       url: "https://store.steampowered.com",
@@ -596,40 +596,34 @@ export const config = {
       aliases: ["1337x", "1337"],
       url: "https://www.1377x.to",
       search: "https://www.1377x.to/sort-search/{}/seeders/desc/1/",
-      hidden: true,
     },
     {
       name: "Nyaa",
       aliases: ["nyaa"],
       url: "https://nyaa.si",
       search: "https://nyaa.si/?f=0&c=0_0&q={}",
-      hidden: true,
     },
     {
       name: "RARBG",
       aliases: ["rarbg"],
       url: "https://rarbg.to/torrents",
       search: "https://rarbg.to/torrents?search={}",
-      hidden: true,
     },
     // 🗑️ Ugh
     {
       name: "/g/ - Technology",
       aliases: ["g"],
       url: "https://boards.4chan.org/g/catalog",
-      hidden: true,
     },
     {
       name: "/w/ - Wallpapers",
       aliases: ["w"],
       url: "https://boards.4chan.org/w/catalog",
-      hidden: true,
     },
     {
       name: "/wg/ - Wallpapers General",
       aliases: ["wg"],
       url: "https://boards.4chan.org/wg/catalog",
-      hidden: true,
     },
   ],
 };
