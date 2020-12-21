@@ -53,6 +53,7 @@
     color: var(--white);
     font-family: var(--font);
     font-size: 1rem;
+    margin-left: -1px;
     /* font-weight: var(--normal); */
   }
 
