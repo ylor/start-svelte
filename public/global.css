@@ -125,3 +125,13 @@ li:last-child::after {
 li.hideChildren > ul {
   display: none;
 }
+
+aside {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  aside {
+    margin-left: 1.33rem;
+  }
+}

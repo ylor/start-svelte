@@ -40,16 +40,6 @@
   li h1 {
     cursor: pointer;
   }
-
-  aside {
-    margin-left: 1rem;
-  }
-
-  @media (min-width: 768px) {
-    aside {
-      margin-left: 1.33rem;
-    }
-  }
 </style>
 
 <section>
