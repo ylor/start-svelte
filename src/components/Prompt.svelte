@@ -15,8 +15,11 @@
 </style>
 
 <section>
-  [ <span style="color:var(--cyan);">~/start</span>
-  on
+  [
+  <span style="color:var(--red);">root</span>
+  in
+  <span style="color:var(--cyan);">~/start</span>
+  via
   <span style="color:var(--{browser === 'firefox' ? 'firefox' : 'safari'});">
     {browser}
   </span>

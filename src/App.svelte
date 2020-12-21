@@ -1,13 +1,19 @@
 <script>
-  import List from "./components/List.svelte";
+  import Tree from "./components/Tree.svelte";
   import Search from "./components/Search.svelte";
 
   import keyHandler from "./js/keyHandler.js";
 </script>
 
+<style> @media (min-width: 768px) {
+main {
+  margin-top: 3%
+}
+}</style>
+
 <svelte:window on:keydown={keyHandler} />
 
 <main>
-  <List />
+  <Tree />
   <Search />
 </main>

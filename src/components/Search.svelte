@@ -48,11 +48,11 @@
   }
 
   input {
+    background: var(--background);
+    border: none;
+    color: var(--white);
     font-family: var(--font);
     font-size: 1rem;
-    color: var(--foreground);
-    background-color: var(--background);
-    border: none;
     /* font-weight: var(--normal); */
   }
 </style>

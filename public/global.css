@@ -3,7 +3,8 @@
   font-weight: 100;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile Thin"), url("font/iosevka-aile-thin.subset.woff2") format("woff2");
+  src: local("Iosevka Aile Thin"),
+    url("font/iosevka-aile-thin.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -11,7 +12,8 @@
   font-weight: 200;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile ExtraLight"), url("font/iosevka-aile-extralight.subset.woff2") format("woff2");
+  src: local("Iosevka Aile ExtraLight"),
+    url("font/iosevka-aile-extralight.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -19,7 +21,8 @@
   font-weight: 300;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile Light"), url("font/iosevka-aile-light.subset.woff2") format("woff2");
+  src: local("Iosevka Aile Light"),
+    url("font/iosevka-aile-light.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,7 +30,8 @@
   font-weight: 400;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile"), url("font/iosevka-aile-regular.subset.woff2") format("woff2");
+  src: local("Iosevka Aile"),
+    url("font/iosevka-aile-regular.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -35,7 +39,8 @@
   font-weight: 500;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile Medium"), url("font/iosevka-aile-medium.subset.woff2") format("woff2");
+  src: local("Iosevka Aile Medium"),
+    url("font/iosevka-aile-medium.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -43,7 +48,8 @@
   font-weight: 600;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile SemiBold"), url("font/iosevka-aile-semibold.subset.woff2") format("woff2");
+  src: local("Iosevka Aile SemiBold"),
+    url("font/iosevka-aile-semibold.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -51,7 +57,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile Bold"), url("font/iosevka-aile-bold.subset.woff2") format("woff2");
+  src: local("Iosevka Aile Bold"),
+    url("font/iosevka-aile-bold.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -59,7 +66,8 @@
   font-weight: 800;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile ExtraBold"), url("font/iosevka-aile-extrabold.subset.woff2") format("woff2");
+  src: local("Iosevka Aile ExtraBold"),
+    url("font/iosevka-aile-extrabold.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -67,33 +75,37 @@
   font-weight: 900;
   font-style: normal;
   font-display: auto;
-  src: local("Iosevka Aile Heavy"), url("font/iosevka-aile-heavy.subset.woff2") format("woff2");
+  src: local("Iosevka Aile Heavy"),
+    url("font/iosevka-aile-heavy.subset.woff2") format("woff2");
 }
 
 :root {
-  --background: #161616;
-  --foreground: #f9f9fa;
+  --background: #121214;
+  --foreground: #e5e4df;
 
-  --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo,
-    monospace, -apple-system, BlinkMacSystemFont;
+  --font: "Iosevka Aile", "SFMono-Regular", Consolas, Menlo, monospace,
+    -apple-system, BlinkMacSystemFont;
   --light: 200;
-  --normal: 400;
-  --heavy: 400;
+  --normal: 300;
+  --heavy: 500;
 
-  --black: #0c0c0c;
-  --blue: #57c7ff;
-  --cyan: #9aedfe;
+  --blue: #008afb;
+  --cyan: #8be9fd;
   --green: #50fa7b;
-  --magenta: #ff6ac1;
+  --magenta: #5f4b8b;
   --orange: #ff8906;
   --red: #ff5555;
   --white: #f8f8f2;
-  --yellow: #f3f99d;
+  --yellow: #f1fa8c;
 
-  --firefox: #ff9400;
+  --firefox: #ff6611;
   --safari: #399df5;
 
-  --branch: 1px solid #a7a9be;
+  --branch: 1px solid #75828a;
+}
+
+::selection {
+  background: rgb(50, 50, 60);
 }
 
 * {
@@ -103,23 +115,17 @@
 html {
   overflow-x: hidden;
   scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-html,
-body {
   font-size: 24px;
 }
 
 @media only screen and (min-width: 768px) {
-  html,
-  body {
+  html {
     font-size: 32px;
   }
+}
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 body {
@@ -136,21 +142,9 @@ body {
   min-height: 100vh; */
 }
 
-/* main {
-  margin: 2vh 0;
-} */
-
 strong {
+  color: var(--white);
   font-weight: var(--heavy);
-}
-
-h1 {
-  color: var(--red);
-  display: inline;
-  font-family: var(--font);
-  font-size: 1rem;
-  font-weight: var(--heavy);
-  user-select: none;
 }
 
 a,
@@ -165,7 +159,7 @@ a:visited {
 
 a:hover,
 a:focus {
-  color: var(--black);
+  color: #0c0c0c;
   background: var(--green);
   font-weight: var(--normal);
   text-decoration: none;
@@ -190,17 +184,6 @@ li {
   word-wrap: break-word;
 }
 
-li.hideChildren > ul {
-  display: none;
-}
-
-li::before,
-li::after {
-  content: "";
-  position: absolute;
-  left: -1rem;
-}
-
 li::before {
   border-top: var(--branch);
   top: 0.75rem;
@@ -213,10 +196,17 @@ li::after {
   top: 0.25rem;
 }
 
+li::before,
+li::after {
+  content: "";
+  position: absolute;
+  left: -1rem;
+}
+
 li:last-child::after {
   height: 0.5rem;
 }
 
-li h1 {
-  cursor: pointer;
+li.hideChildren > ul {
+  display: none;
 }
