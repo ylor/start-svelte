@@ -5,7 +5,7 @@
   let { sites } = config;
 
   sites = sites
-   // .map((s) => (s.category ? s : { ...s, category: "🌌 …" }))
+    // .map((s) => (s.category ? s : { ...s, category: "🌌 …" }))
     .filter((s) => s.category !== undefined)
     .filter((s) => s.hidden !== true);
 
@@ -20,7 +20,7 @@
   //console.log(categoriesRaw);
   const uniqueCategories = [...new Set(categoriesRaw)];
   //console.log(uniqueCategories);
-  const categories = uniqueCategories//.concat(uniqueCategories.shift());
+  const categories = uniqueCategories; //.concat(uniqueCategories.shift());
   //console.log(categories);
 
   const favorites = sites.filter((s) => s.favorite === true);
@@ -39,6 +39,16 @@
 
   li h1 {
     cursor: pointer;
+  }
+
+  aside {
+    margin-left: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    aside {
+      margin-left: 1.33rem;
+    }
   }
 </style>
 
