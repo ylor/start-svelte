@@ -55,6 +55,13 @@
     font-size: 1rem;
     /* font-weight: var(--normal); */
   }
+
+  @supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    input {
+      margin-left: -10px;
+    }
+  }
 </style>
 
 <svelte:window on:keydown={escHandler} />
