@@ -82,10 +82,10 @@ a:focus {
 
 ul {
   list-style: none;
-  padding-left: 2.9ch;
+  /* padding-left: 2.9ch;
   display: flex;
   justify-content: flex-end;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .tree > ul {
