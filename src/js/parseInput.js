@@ -71,7 +71,7 @@ export default function parseInput(rawInput) {
 
   // handle localhost/ip addresses/urls with optional ports and/or paths
   if (input.match(ipPattern) || input.match(urlPattern)) {
-    let websiteUrl = input.startsWith("http://")
+    let websiteUrl = input.startsWith("http")
       ? rawInput
       : "http://" + rawInput;
     return websiteUrl;
