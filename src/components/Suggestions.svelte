@@ -14,14 +14,14 @@
         <a
           href={parseInput(searchInput.value.includes(':') ? searchInput.value.split(':')[0] + ':' + suggestion : suggestion)}
           on:focus={searchInput.value.includes(':') ? (searchInput.value = searchInput.value.split(':')[0] + ':' + suggestion) : (searchInput.value = suggestion)}
-          on:mouseover={event => event.target.addEventListener(
+          on:mouseover={(event) => event.target.addEventListener(
               'mousemove',
-              event => event.target.focus()
+              (event) => event.target.focus()
             )}>
           {@html suggestion.replace(search
               .substring(search.indexOf(':') + 1)
               .match(
-                /\S.*/
+                /.*\S/
               ), `<strong>${search
               .substring(search.indexOf(':') + 1)
               .trim()}</strong>`)}
