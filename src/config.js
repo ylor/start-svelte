@@ -598,6 +598,11 @@ export const config = {
       search: "https://www.1377x.to/sort-search/{}/seeders/desc/1/",
     },
     {
+      name: "Fitgirl-Rpacks",
+      aliases: ["fitgirl-repacks","fitgirl"],
+      url: "https://fitgirl-repacks.site/",
+      search: "https://fitgirl-repacks.site/?s=asdf",
+    },{
       name: "Nyaa",
       aliases: ["nyaa"],
       url: "https://nyaa.si",
@@ -605,7 +610,7 @@ export const config = {
     },
     {
       name: "RARBG",
-      aliases: ["rarbg"],
+      aliases: ["rarbg","rar"],
       url: "https://rarbg.to/torrents",
       search: "https://rarbg.to/torrents?search={}",
     },
