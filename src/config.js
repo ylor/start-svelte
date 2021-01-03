@@ -266,7 +266,7 @@ export const config = {
     {
       category: "📼 Media",
       name: "Twitch",
-      aliases: ["twitch","ttv"],
+      aliases: ["twitch", "ttv"],
       url: "https://twitch.tv/directory",
     },
     {
@@ -472,11 +472,11 @@ export const config = {
     {
       name: "Daring Fireball",
       aliases: ["daringfireball", "df"],
-      url: "https://daringfireball.net"
+      url: "https://daringfireball.net",
     },
     {
       name: "Google Drive",
-      aliases: ["googledrive","gdrive","drive"],
+      aliases: ["googledrive", "gdrive", "drive"],
       url: "https://drive.google.com",
     },
 
@@ -509,7 +509,7 @@ export const config = {
       aliases: ["npm"],
       url: "https://www.npmjs.com",
       search: "https://www.npmjs.com/search?q={}",
-      hidden: true
+      hidden: true,
     },
     {
       name: "OneDrive",
@@ -536,28 +536,28 @@ export const config = {
       aliases: ["tmdb"],
       url: "https://www.themoviedb.org",
       search: "https://www.themoviedb.org/search?query={}&language=en-US",
-      hidden: true
+      hidden: true,
     },
     {
       name: "The TVDB",
       aliases: ["tvdb"],
       url: "https://thetvdb.com",
       search: "https://thetvdb.com/search?query={}",
-      hidden: true
+      hidden: true,
     },
     {
       name: "Wikipedia",
       aliases: ["wikipedia", "wiki", "w"],
       url: "https://www.wikipedia.org",
       search: "https://en.wikipedia.org/wiki/{}",
-      hidden: true
+      hidden: true,
     },
     {
       name: "Yarn",
       aliases: ["yarn"],
       url: "https://yarnpkg.com",
       search: "https://classic.yarnpkg.com/en/packages?q={}&p=1",
-      hidden: true
+      hidden: true,
     },
     // 💸 Shoppin'
     {
@@ -598,11 +598,18 @@ export const config = {
       search: "https://www.1377x.to/sort-search/{}/seeders/desc/1/",
     },
     {
+      name: "IGG-GAMES",
+      aliases: ["igg-games", "igggames","igg"],
+      url: "https://igg-games.com/",
+      search: "https://igg-games.com/?s={}",
+    },
+    {
       name: "Fitgirl-Rpacks",
-      aliases: ["fitgirl-repacks","fitgirl"],
+      aliases: ["fitgirl-repacks", "fitgirl"],
       url: "https://fitgirl-repacks.site/",
-      search: "https://fitgirl-repacks.site/?s=asdf",
-    },{
+      search: "https://fitgirl-repacks.site/?s={}",
+    },
+    {
       name: "Nyaa",
       aliases: ["nyaa"],
       url: "https://nyaa.si",
@@ -610,7 +617,7 @@ export const config = {
     },
     {
       name: "RARBG",
-      aliases: ["rarbg","rar"],
+      aliases: ["rarbg", "rar"],
       url: "https://rarbg.to/torrents",
       search: "https://rarbg.to/torrents?search={}",
     },
