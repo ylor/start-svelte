@@ -410,6 +410,7 @@ export const config = {
       name: "Tildes",
       aliases: ["tildes", "tilde", "~"],
       url: "https://tildes.net",
+      saerch: "https://tildes.net/search?q={}",
       favorite: true,
     },
     {
@@ -497,7 +498,13 @@ export const config = {
       url: "https://howlongtobeat.com",
       search: "https://howlongtobeat.com/?q={}",
     },
-
+    {
+      name: "Lobsters",
+      aliases: ["lobsters"],
+      url: "https://lobste.rs/",
+      search: "https://lobste.rs/search?q={}",
+      favorite: true
+    },
     {
       name: "MyAnimeList",
       aliases: ["myanimelist", "mal"],
