@@ -479,12 +479,17 @@ export const config = {
       aliases: ["googledrive", "gdrive", "drive"],
       url: "https://drive.google.com",
     },
-
     {
       name: "Giphy",
       aliases: ["giphy", "gif"],
       url: "https://giphy.com",
       search: "https://giphy.com/search/{}",
+    },
+    {
+      name: "Grumpy Website",
+      aliases: ["grumpywebsite", "grumpy", "gw"],
+      url: "https://grumpy.website",
+      favorite: true
     },
     {
       name: "How Long to Beat",
