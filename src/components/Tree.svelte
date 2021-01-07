@@ -4,6 +4,9 @@
   import { config } from "../config.js";
   let { sites } = config;
 
+  const favorites = sites.filter((s) => s.favorite === true);
+  //console.log(favorites);
+
   sites = sites
     // .map((s) => (s.category ? s : { ...s, category: "🌌 …" }))
     .filter((s) => s.category !== undefined)
@@ -23,8 +26,6 @@
   const categories = uniqueCategories; //.concat(uniqueCategories.shift());
   //console.log(categories);
 
-  const favorites = sites.filter((s) => s.favorite === true);
-  //console.log(favorites);
 </script>
 
 <style>
