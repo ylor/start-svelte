@@ -500,7 +500,7 @@ export const config = {
     },
     {
       name: "Lobsters",
-      aliases: ["lobsters"],
+      aliases: ["lobsters","lob"],
       url: "https://lobste.rs/",
       search: "https://lobste.rs/search?q={}",
       favorite: true
