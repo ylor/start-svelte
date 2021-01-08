@@ -122,10 +122,6 @@ li:last-child::after {
   height: 0.5rem;
 }
 
-li.hideChildren > ul {
-  display: none;
-}
-
 aside {
   margin-left: 1rem;
 }

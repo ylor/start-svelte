@@ -309,6 +309,13 @@ export const config = {
     },
     {
       category: "🤖 Reddit",
+      name: "/r/horror",
+      aliases: ["r/horror"],
+      url: "https://www.reddit.com/r/horror",
+      search: "https://www.reddit.com/r/horror/search?q={}&restrict_sr=1",
+    },
+    {
+      category: "🤖 Reddit",
       name: "/r/MechanicalKeyboards",
       aliases: ["r/mechanicalkeyboards", "r/mk", "rmk"],
       url: "https://www.reddit.com/r/mechanicalkeyboards",
@@ -490,7 +497,7 @@ export const config = {
       name: "Grumpy Website",
       aliases: ["grumpywebsite", "grumpy", "gw"],
       url: "https://grumpy.website",
-      favorite: true
+      favorite: true,
     },
     {
       name: "How Long to Beat",
@@ -500,10 +507,10 @@ export const config = {
     },
     {
       name: "Lobsters",
-      aliases: ["lobsters","lob"],
+      aliases: ["lobsters", "lob"],
       url: "https://lobste.rs/",
       search: "https://lobste.rs/search?q={}",
-      favorite: true
+      favorite: true,
     },
     {
       name: "MyAnimeList",
@@ -611,7 +618,7 @@ export const config = {
     },
     {
       name: "IGG-GAMES",
-      aliases: ["igg-games", "igggames","igg"],
+      aliases: ["igg-games", "igggames", "igg"],
       url: "https://igg-games.com/",
       search: "https://igg-games.com/?s={}",
     },

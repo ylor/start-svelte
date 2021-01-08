@@ -1,5 +1,6 @@
 <script>
   import Prompt from "./Prompt.svelte";
+  import List from "./List.svelte";
 
   import { config } from "../config.js";
   let { sites } = config;
@@ -25,7 +26,6 @@
   //console.log(uniqueCategories);
   const categories = uniqueCategories; //.concat(uniqueCategories.shift());
   //console.log(categories);
-
 </script>
 
 <style>
@@ -37,10 +37,14 @@
     font-weight: var(--heavy);
     user-select: none;
   }
-
+/*
   li h1 {
     cursor: pointer;
   }
+
+  details > summary {
+    list-style: none;
+  } */
 </style>
 
 <section>
@@ -48,35 +52,27 @@
     tree
     <aside class="tree">
       <h1>.</h1>
-      <ul class="list">
-        <li class="hideChildren">
-          <h1
-            on:click={(e) => e.target.parentNode.classList.toggle('hideChildren')}>
-            ✨ Favorites
-          </h1>
-          <ul>
-            {#each favorites.sort((a, b) =>
-              a.name.localeCompare(b.name)
-            ) as site}
-              <li
-                on:mouseover={(e) => e.target.focus()}
-                title={site.aliases.toString().replace(',', ', ')}>
-                <a href={site.url}>{site.name}</a>
-              </li>
-            {/each}
-          </ul>
-        </li>
-
+      <ul>
+        <List
+          title="✨ Favorites"
+          sites={favorites.sort((a, b) => a.name.localeCompare(b.name))} />
         {#each categories as category}
-          <li class="hideChildren">
-            <h1
-              on:click={(e) => e.target.parentNode.classList.toggle('hideChildren')}>
-              {category}
-            </h1>
+          <List
+            title={category}
+            sites={sites
+              .filter((s) => s.category === category)
+              .sort((a, b) => a.name.localeCompare(b.name))} />
+        {/each}
+
+        <!-- <li>
+          <details>
+            <summary>
+              <h1>✨ Favorites</h1>
+            </summary>
             <ul>
-              {#each sites
-                .filter((s) => s.category === category)
-                .sort((a, b) => a.name.localeCompare(b.name)) as site}
+              {#each favorites.sort((a, b) =>
+                a.name.localeCompare(b.name)
+              ) as site}
                 <li
                   on:mouseover={(e) => e.target.focus()}
                   title={site.aliases.toString().replace(',', ', ')}>
@@ -84,8 +80,34 @@
                 </li>
               {/each}
             </ul>
+          </details>
+        </li>
+
+        {#each categories as category}
+          <List
+            title={category}
+            childs={sites
+              .filter((s) => s.category === category)
+              .sort((a, b) => a.name.localeCompare(b.name))} />
+          <li>
+            <details>
+              <summary>
+                <h1>{category}</h1>
+              </summary>
+              <ul>
+                {#each sites
+                  .filter((s) => s.category === category)
+                  .sort((a, b) => a.name.localeCompare(b.name)) as site}
+                  <li
+                    on:mouseover={(e) => e.target.focus()}
+                    title={site.aliases.toString().replace(',', ', ')}>
+                    <a href={site.url}>{site.name}</a>
+                  </li>
+                {/each}
+              </ul>
+            </details>
           </li>
-        {/each}
+        {/each} -->
       </ul>
     </aside>
   </Prompt>

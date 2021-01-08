@@ -7,7 +7,7 @@ export default function parseInput(rawInput) {
   const aliasList = sites.map((site) => site.aliases).flat();
 
   const ipPattern = new RegExp(
-    /^(.*?:\/\/)?((localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?(\/.*)?$/g
+    /^(.*?:\/\/)?((dev|localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?(\/.*)?$/g
   );
   const urlPattern = new RegExp(
     /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)$/gi
@@ -15,14 +15,15 @@ export default function parseInput(rawInput) {
 
   // BEGIN PARSER
 
-  // handle match to alias
+  // handle match to aliased site defined in config.js
+  // Ex - gb => https://www.giantbomb.com/
   if (aliasList.includes(input)) {
     let websiteUrl = sites.find((site) => site.aliases.includes(input)).url;
     return websiteUrl;
   }
 
   // handle aliased reddit paths, not happy with this
-  //ex r/mm/new => r/mechmarket/new
+  // Ex - r/mm/new => r/mechmarket/new
   if (
     //input.match(new RegExp(/^r\/.+/g))
     input.startsWith("r/") &&
@@ -35,6 +36,7 @@ export default function parseInput(rawInput) {
   }
 
   // handle match to alias with search
+  // Ex - youtube:when you slip on a banana peel
   if (input.includes(":") && aliasList.includes(input.split(":")[0])) {
     const alias = input.split(":")[0];
     const query = rawInput.split(":")[1].trimStart().trimEnd();
@@ -46,7 +48,8 @@ export default function parseInput(rawInput) {
     }
   }
 
-  // handle paths with a matched alias
+  // handle paths with a matched alias -
+  // Ex - gb/api => https://www.giantbomb.com/api
   if (input.includes("/") && aliasList.includes(input.split("/")[0])) {
     const alias = input.split("/")[0];
     let path = rawInput.split("/").slice(1).join("/");
@@ -59,21 +62,27 @@ export default function parseInput(rawInput) {
     return websiteUrl + "/" + path;
   }
 
-  // handle @
+  // handle @ for Twitter
+  // Ex - @SwiftOnSecurity
   if (input.startsWith("@") && !input.includes(" ")) {
     return "https://twitter.com/" + input;
   }
 
-  // handle ~
+  // handle ~ for Tildes
+  // Ex - ~tech
   if (input.startsWith("~") && !input.includes(" ")) {
     return "https://tildes.net/" + input;
   }
 
   // handle localhost/ip addresses/urls with optional ports and/or paths
+  // Ex: 127.0.1.1/index.html
+  // Ex: localhost:5000
   if (input.match(ipPattern) || input.match(urlPattern)) {
-    let websiteUrl = input.startsWith("http")
-      ? rawInput
-      : "http://" + rawInput;
+    if (rawInput.startsWith("dev")) {
+      rawInput = rawInput.replace("dev", "localhost");
+    }
+
+    let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;
     return websiteUrl;
   }
 
