@@ -566,7 +566,7 @@ export const config = {
     },
     {
       name: "Wikipedia",
-      aliases: ["wikipedia", "wiki", "w"],
+      aliases: ["wikipedia", "wiki"],
       url: "https://www.wikipedia.org",
       search: "https://en.wikipedia.org/wiki/{}",
       hidden: true,
