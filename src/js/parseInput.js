@@ -10,7 +10,7 @@ export default function parseInput(rawInput) {
     /^(.*?:\/\/)?((dev|localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?(\/.*)?$/g
   );
   const urlPattern = new RegExp(
-    /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/\S*)?)$/gi
+    /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/.+)?)$/gi
   );
 
   // BEGIN PARSER
