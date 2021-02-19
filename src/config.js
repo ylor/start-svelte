@@ -437,7 +437,7 @@ export const config = {
     //🛠 Utilities. Should this be its own category?
     {
       name: "1Password Generator",
-      aliases: ["pw"],
+      aliases: ["1pw", "pwg", "pw"],
       url: "https://1password.com/password-generator",
     },
     {
@@ -449,6 +449,12 @@ export const config = {
       name: "Dotfiles",
       aliases: ["dot"],
       url: "https://github.com/ylor/dotfiles",
+    },
+    {
+      name: "Emojipedia",
+      aliases: ["emojipedia","emoji"],
+      url: "https://emojipedia.org/",
+      search: "https://emojipedia.org/search/?q={}"
     },
     {
       name: "iCloud",
@@ -624,7 +630,7 @@ export const config = {
     },
     {
       name: "Fitgirl-Rpacks",
-      aliases: ["fitgirl-repacks", "fitgirl"],
+      aliases: ["fitgirl-repacks", "fitgirl", "fg"],
       url: "https://fitgirl-repacks.site/",
       search: "https://fitgirl-repacks.site/?s={}",
     },

@@ -7,7 +7,7 @@ export default function parseInput(rawInput) {
   const aliasList = sites.map((site) => site.aliases).flat();
 
   const ipPattern = new RegExp(
-    /^(.*?:\/\/)?((dev|localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(\:\d+)?(\/.*)?$/g
+    /^(.*?:\/\/)?((dev|localhost)|((2(?!5?[6-9])|1|(?!0\d))\d\d?\.?\b){4})(:\d+)?(\/.*)?$/g
   );
   const urlPattern = new RegExp(
     /^((https?:\/\/)?[\w-]+(\.[\w-]+)+\.?(:\d+)?(\/.+)?)$/gi
@@ -27,6 +27,7 @@ export default function parseInput(rawInput) {
   if (
     //input.match(new RegExp(/^r\/.+/g))
     input.startsWith("r/") &&
+    !input.includes(" ") &&
     aliasList.includes(input.split("/").splice(0, 2).join("/"))
   ) {
     const alias = input.split("/").splice(0, 2).join("/");
@@ -62,24 +63,31 @@ export default function parseInput(rawInput) {
     return websiteUrl + "/" + path;
   }
 
-  // handle @ for Twitter
-  // Ex - @SwiftOnSecurity
-  if (input.startsWith("@") && !input.includes(" ")) {
-    return "https://twitter.com/" + input;
-  }
-
   // handle ~ for Tildes
   // Ex - ~tech
   if (input.startsWith("~") && !input.includes(" ")) {
     return "https://tildes.net/" + input;
   }
 
+  // handle @ for Twitter
+  // Ex - @SwiftOnSecurity
+  if (input.startsWith("@") && !input.includes(" ")) {
+    return "https://twitter.com/" + input;
+  }
+
+  // handle $ for stocks
+  // Ex - $gme
+  //if (input.startsWith("$") && !input.includes(" ")) {
+  //  return "https://$$$.com/" + input;
+  //}
+
   // handle localhost/ip addresses/urls with optional ports and/or paths
   // Ex: 127.0.1.1/index.html
   // Ex: localhost:5000
   if (input.match(ipPattern) || input.match(urlPattern)) {
-    if (rawInput.startsWith("dev")) {
-      rawInput = rawInput.replace("dev", "localhost");
+    if (rawInput.includes("dev")) {
+      let re = /^dev(\/(.+)?|:\d+)?$/g
+      rawInput = rawInput.replace(re, 'localhost$1');
     }
 
     let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;
