@@ -51,7 +51,7 @@ export default function parseInput(rawInput) {
 
   // handle paths with a matched alias -
   // Ex - gb/api => https://www.giantbomb.com/api
-  if (input.includes("/") && aliasList.includes(input.split("/")[0])) {
+  if (input.includes("/") && !input.includes(" ") && aliasList.includes(input.split("/")[0])) {
     const alias = input.split("/")[0];
     let path = rawInput.split("/").slice(1).join("/");
 
