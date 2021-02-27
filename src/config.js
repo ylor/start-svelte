@@ -182,7 +182,7 @@ export const config = {
       category: "🎮 Destiny",
       name: "D2 Checklist",
       aliases: ["d2checklist", "d2c"],
-      url: "https://www.d2checklist.com",
+      url: "https://www.d2checklist.com/3/4611686018467433733/milestones",
     },
     {
       category: "🎮 Destiny",
