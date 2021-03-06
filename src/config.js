@@ -607,7 +607,7 @@ export const config = {
       name: "Epic Game Store",
       aliases: ["epic game store", "egs"],
       url: "https://www.epicgames.com/store",
-      search: "https://www.epicgames.com/store/store-search/?q={}",
+      search: "https://www.epicgames.com/store/en-US/browse?q={}",
     },
     {
       name: "Steam",
