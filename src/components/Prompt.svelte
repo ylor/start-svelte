@@ -4,16 +4,6 @@
   const browser = identifyBrowser();
 </script>
 
-<style>
-  section {
-    padding: 1rem 0 0.3125rem;
-  }
-
-  span {
-    font-weight: var(--heavy);
-  }
-</style>
-
 <section>
   [
   <span style="color:var(--red);">root</span>
@@ -28,3 +18,13 @@
   <span style="color:var(--green);">➜</span>
   <slot>command</slot>
 </section>
+
+<style>
+  section {
+    padding: 1rem 0 0.3125rem;
+  }
+
+  span {
+    font-weight: var(--heavy);
+  }
+</style>

@@ -6,14 +6,15 @@
 
   import parseInput from "../js/parseInput.js";
 
-  let search = "";
-  let suggestions = [];
+  // let search = "";
+  // let suggestions = [];
+  import { search, suggestions } from "../stores.js";
 
   async function fetchSuggestions() {
-    const query = search.includes(":") ? search.split(":")[1] : search;
+    const query = $search.includes(":") ? $search.split(":")[1] : $search;
 
-    if (query.length === 0) {
-      suggestions = [];
+    if (query.length < 1) {
+      suggestions.set([]);
     } else {
       const googleResponse = await fetchJsonp(
         "https://suggestqueries.google.com/complete/search?client=firefox&q=" +
@@ -27,7 +28,7 @@
       // );
       // const duckSuggestions = await response.json();
       //console.log(json[1]);
-      suggestions = googleSuggestions[1].slice(0, 6);
+      suggestions.set(googleSuggestions[1].slice(0, 6));
     }
   }
 
@@ -35,12 +36,40 @@
     // Listen for esc
     if (event.key === "Escape") {
       // If search-input is focused and has a value, zero it out
-      if (search.length > 0) {
-        search = "";
+      if ($search.length > 0) {
+        search.set("");
+      } else {
+        document.getElementById("search-input").blur();
       }
     }
   }
 </script>
+
+<svelte:window on:keydown={escHandler} />
+
+<section>
+  <Prompt>
+    <form
+      id="search-form"
+      autocapitalize="none"
+      autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
+      on:submit|preventDefault={() =>
+        (window.location.href = parseInput($search))}
+    >
+      <input
+        bind:value={$search}
+        on:input={fetchSuggestions}
+        type="text"
+        id="search-input"
+      />
+    </form>
+    {#if $search.length > 0}
+      <Suggestions />
+    {/if}
+  </Prompt>
+</section>
 
 <style>
   form {
@@ -64,26 +93,3 @@
     }
   }
 </style>
-
-<svelte:window on:keydown={escHandler} />
-
-<section>
-  <Prompt>
-    <form
-      id="search-form"
-      autocapitalize="none"
-      autocomplete="off"
-      autocorrect="off"
-      spellcheck="false"
-      on:submit|preventDefault={() => (window.location.href = parseInput(search))}>
-      <input
-        bind:value={search}
-        on:input={fetchSuggestions}
-        type="text"
-        id="search-input" />
-    </form>
-    {#if search.length > 0}
-      <Suggestions {search} {suggestions} />
-    {/if}
-  </Prompt>
-</section>

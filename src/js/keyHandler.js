@@ -45,6 +45,7 @@ export default function keyHandler(event) {
 
   // Allow tabbing but anything else focuses search
   else if (
+    event.key !== "Escape" &&
     event.key !== "Enter" &&
     event.key !== "Shift" &&
     event.key !== "Tab"
