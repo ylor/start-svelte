@@ -1,6 +1,5 @@
 <script>
   import identifyBrowser from "../js/identifyBrowser.js";
-
   const browser = identifyBrowser();
 </script>
 

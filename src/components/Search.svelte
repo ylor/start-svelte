@@ -1,51 +1,11 @@
 <script>
-  import fetchJsonp from "fetch-jsonp";
-
   import Prompt from "./Prompt.svelte";
   import Suggestions from "./Suggestions.svelte";
 
+  import { search } from "../stores.js";
+  import fetchSuggestions from "../js/fetchDuckSuggestions.js";
   import parseInput from "../js/parseInput.js";
-
-  // let search = "";
-  // let suggestions = [];
-  import { search, suggestions } from "../stores.js";
-
-  async function fetchSuggestions() {
-    const query = $search.includes(":") ? $search.split(":")[1] : $search;
-
-    if (query.length < 1) {
-      suggestions.set([]);
-    } else {
-      const googleResponse = await fetchJsonp(
-        "https://suggestqueries.google.com/complete/search?client=firefox&q=" +
-          query
-      );
-      const googleSuggestions = await googleResponse.json();
-      //console.log(googleSuggestions[1]);
-      // const duckResponse = await fetchJsonp(
-      //   "https://duckduckgo.com/ac/?q=" + query + "&type=list",
-      //   { jsonpCallbackFunction: "autocompleteCallback" }
-      // );
-      // const duckSuggestions = await response.json();
-      //console.log(json[1]);
-      suggestions.set(googleSuggestions[1].slice(0, 6));
-    }
-  }
-
-  function escHandler(event) {
-    // Listen for esc
-    if (event.key === "Escape") {
-      // If search-input is focused and has a value, zero it out
-      if ($search.length > 0) {
-        search.set("");
-      } else {
-        document.getElementById("search-input").blur();
-      }
-    }
-  }
 </script>
-
-<svelte:window on:keydown={escHandler} />
 
 <section>
   <Prompt>
@@ -60,7 +20,7 @@
     >
       <input
         bind:value={$search}
-        on:input={fetchSuggestions}
+        on:input={fetchSuggestions($search)}
         type="text"
         id="search-input"
       />

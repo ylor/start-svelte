@@ -4,7 +4,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv --host 0.0.0.0 public"
+    "start": "sirv public"
   },
   "dependencies": {
     "fetch-jsonp": "^1.1.3",
@@ -13,7 +13,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
-    "rollup": "^2.41.1",
+    "rollup": "^2.41.2",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.1.0",

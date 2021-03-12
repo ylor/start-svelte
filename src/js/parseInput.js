@@ -51,7 +51,11 @@ export default function parseInput(rawInput) {
 
   // handle paths with a matched alias -
   // Ex - gb/api => https://www.giantbomb.com/api
-  if (input.includes("/") && !input.includes(" ") && aliasList.includes(input.split("/")[0])) {
+  if (
+    input.includes("/") &&
+    !input.includes(" ") &&
+    aliasList.includes(input.split("/")[0])
+  ) {
     const alias = input.split("/")[0];
     let path = rawInput.split("/").slice(1).join("/");
 
@@ -86,8 +90,8 @@ export default function parseInput(rawInput) {
   // Ex: localhost:5000
   if (input.match(ipPattern) || input.match(urlPattern)) {
     if (rawInput.includes("dev")) {
-      let re = /^dev(\/(.+)?|:\d+)?$/g
-      rawInput = rawInput.replace(re, 'localhost$1');
+      let re = /^dev(\/(.+)?|:\d+)?$/g;
+      rawInput = rawInput.replace(re, "localhost$1");
     }
 
     let websiteUrl = input.startsWith("http") ? rawInput : "http://" + rawInput;

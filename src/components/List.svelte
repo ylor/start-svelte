@@ -1,7 +1,7 @@
 <script>
-  export let title = "💩 title"; // String
+  export let title = "💩 Example"; // String
   export let sites = [
-    { name: "name", aliases: ["site", "aliases"], url: "http://web.site/" },
+    { name: "Example Website", aliases: ["Example", "aliases"], url: "http://example.com/" },
   ]; // Array of objects
 </script>
 
@@ -11,7 +11,7 @@
       <h1>{title}</h1>
     </summary>
     <ul>
-      {#each sites as site}
+      {#each sites.sort((a, b) => a.name.localeCompare(b.name)) as site}
         <li
           on:mouseover={(e) => e.target.focus()}
           title={site.aliases.toString().replace(",", ", ")}

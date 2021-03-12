@@ -1,32 +1,48 @@
 <script>
+  import { config } from "../config.js";
+  //let { sites } = config;
   import Prompt from "./Prompt.svelte";
   import List from "./List.svelte";
 
-  import { config } from "../config.js";
-  let { sites } = config;
-
-  const favorites = sites.filter((s) => s.favorite === true);
-  //console.log(favorites);
-
-  sites = sites
+  let sites = config.sites
     // .map((s) => (s.category ? s : { ...s, category: "🌌 …" }))
-    .filter((s) => s.category !== undefined)
-    .filter((s) => s.hidden !== true);
+    .filter((s) => s.category !== undefined && s.hidden !== true);
+  //.filter((s) => s.hidden !== true);
 
-  if (location.hostname.includes("mdc") === false) {
-    sites = sites.filter((s) => !s.category.includes("MDC"));
-  } else {
+  if (location.hostname.includes("mdc")) {
     sites = sites.filter((s) => !s.category.includes("Server"));
+  } else {
+    sites = sites.filter((s) => !s.category.includes("MDC"));
   }
-  console.log(sites);
+  //console.log(sites);
 
-  const categoriesRaw = sites.map((s) => s.category);
+  //const categoriesRaw = sites.map((s) => s.category);
   //console.log(categoriesRaw);
-  const uniqueCategories = [...new Set(categoriesRaw)];
+  const uniqueCategories = [...new Set(sites.map((s) => s.category))];
   //console.log(uniqueCategories);
   const categories = uniqueCategories; //.concat(uniqueCategories.shift());
   //console.log(categories);
+  const favorites = config.sites.filter((s) => s.favorite === true);
+  //console.log(favorites);
 </script>
+
+<section>
+  <Prompt>
+    tree
+    <aside class="tree">
+      <h1>.</h1>
+      <ul>
+        <List title="✨ Favorites" sites={favorites} />
+        {#each categories as category}
+          <List
+            title={category}
+            sites={sites.filter((s) => s.category === category)}
+          />
+        {/each}
+      </ul>
+    </aside>
+  </Prompt>
+</section>
 
 <style>
   h1 {
@@ -37,7 +53,7 @@
     font-weight: var(--heavy);
     user-select: none;
   }
-/*
+  /*
   li h1 {
     cursor: pointer;
   }
@@ -46,69 +62,3 @@
     list-style: none;
   } */
 </style>
-
-<section>
-  <Prompt>
-    tree
-    <aside class="tree">
-      <h1>.</h1>
-      <ul>
-        <List
-          title="✨ Favorites"
-          sites={favorites.sort((a, b) => a.name.localeCompare(b.name))} />
-        {#each categories as category}
-          <List
-            title={category}
-            sites={sites
-              .filter((s) => s.category === category)
-              .sort((a, b) => a.name.localeCompare(b.name))} />
-        {/each}
-
-        <!-- <li>
-          <details>
-            <summary>
-              <h1>✨ Favorites</h1>
-            </summary>
-            <ul>
-              {#each favorites.sort((a, b) =>
-                a.name.localeCompare(b.name)
-              ) as site}
-                <li
-                  on:mouseover={(e) => e.target.focus()}
-                  title={site.aliases.toString().replace(',', ', ')}>
-                  <a href={site.url}>{site.name}</a>
-                </li>
-              {/each}
-            </ul>
-          </details>
-        </li>
-
-        {#each categories as category}
-          <List
-            title={category}
-            childs={sites
-              .filter((s) => s.category === category)
-              .sort((a, b) => a.name.localeCompare(b.name))} />
-          <li>
-            <details>
-              <summary>
-                <h1>{category}</h1>
-              </summary>
-              <ul>
-                {#each sites
-                  .filter((s) => s.category === category)
-                  .sort((a, b) => a.name.localeCompare(b.name)) as site}
-                  <li
-                    on:mouseover={(e) => e.target.focus()}
-                    title={site.aliases.toString().replace(',', ', ')}>
-                    <a href={site.url}>{site.name}</a>
-                  </li>
-                {/each}
-              </ul>
-            </details>
-          </li>
-        {/each} -->
-      </ul>
-    </aside>
-  </Prompt>
-</section>
