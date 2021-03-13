@@ -1,7 +1,7 @@
 import { config } from "../config.js";
+const { sites } = config;
 
 export default function parseInput(rawInput) {
-  const { sites } = config;
 
   const input = rawInput.toLowerCase();
   const aliasList = sites.map((site) => site.aliases).flat();

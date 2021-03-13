@@ -1,7 +1,8 @@
-export default function identifyBrowser() {
-  const test = function (regexp) {
-    return regexp.test(navigator.userAgent);
-  };
+export function test(regexp) {
+  return regexp.test(navigator.userAgent);
+}
+
+export function identifyBrowser() {
   switch (true) {
     case test(/edg/i):
       return "edge";

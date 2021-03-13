@@ -3,7 +3,7 @@
   import Suggestions from "./Suggestions.svelte";
 
   import { search } from "../stores.js";
-  import fetchSuggestions from "../js/fetchDuckSuggestions.js";
+  import { fetchGoogleSuggestions as fetchSuggestions } from "../js/fetchSuggestions.js";
   import parseInput from "../js/parseInput.js";
 </script>
 

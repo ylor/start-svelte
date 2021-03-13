@@ -18,9 +18,9 @@
 
   //const categoriesRaw = sites.map((s) => s.category);
   //console.log(categoriesRaw);
-  const uniqueCategories = [...new Set(sites.map((s) => s.category))];
+  const categories = [...new Set(sites.map((s) => s.category))];
   //console.log(uniqueCategories);
-  const categories = uniqueCategories; //.concat(uniqueCategories.shift());
+  //const categories = uniqueCategories; //.concat(uniqueCategories.shift());
   //console.log(categories);
   const favorites = config.sites.filter((s) => s.favorite === true);
   //console.log(favorites);
