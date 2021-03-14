@@ -245,6 +245,12 @@ export const config = {
     },
     {
       category: "📼 Media",
+      name: "Overcast",
+      aliases: ["overcast", "oc"],
+      url: "https://overcast.fm/",
+    },
+    {
+      category: "📼 Media",
       name: "Netflix",
       aliases: ["netflix", "nf"],
       url: "https://www.netflix.com",
@@ -452,9 +458,9 @@ export const config = {
     },
     {
       name: "Emojipedia",
-      aliases: ["emojipedia","emoji"],
+      aliases: ["emojipedia", "emoji"],
       url: "https://emojipedia.org/",
-      search: "https://emojipedia.org/search/?q={}"
+      search: "https://emojipedia.org/search/?q={}",
     },
     {
       name: "iCloud",
