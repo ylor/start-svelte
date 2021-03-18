@@ -1,5 +1,5 @@
 import fetchJsonp from "fetch-jsonp";
-import { suggestions } from "../stores.js";
+import { suggestions } from "../../stores.js";
 
 export async function fetchDuckSuggestions(search) {
   const query = search.includes(":") ? search.split(":")[1] : search;

@@ -1,8 +1,12 @@
 <script>
-  import Tree from "./components/Tree.svelte";
-  import Search from "./components/Search.svelte";
+  import Tree from "./lib/components/Tree.svelte";
+  import Search from "./lib/components/Search.svelte";
 
-  import keyHandler from "./js/keyHandler.js";
+  import keyHandler from "./lib/js/keyHandler.js";
+
+  import "./assets/global.css";
+  import "./assets/font/iosevka-aile.css"
+
 </script>
 
 <svelte:window on:keydown={keyHandler} />

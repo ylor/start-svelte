@@ -1,5 +1,5 @@
 <script>
-  import { config } from "../config.js";
+  import { config } from "../../config.js";
   //let { sites } = config;
   import Prompt from "./Prompt.svelte";
   import List from "./List.svelte";

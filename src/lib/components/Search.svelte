@@ -2,7 +2,7 @@
   import Prompt from "./Prompt.svelte";
   import Suggestions from "./Suggestions.svelte";
 
-  import { search } from "../stores.js";
+  import { search } from "../../stores.js";
   import { fetchGoogleSuggestions as fetchSuggestions } from "../js/fetchSuggestions.js";
   import parseInput from "../js/parseInput.js";
 </script>

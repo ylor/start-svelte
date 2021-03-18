@@ -1,5 +1,5 @@
 <script>
-  import { search, suggestions } from "../stores.js";
+  import { search, suggestions } from "../../stores.js";
   import parseInput from "../js/parseInput.js";
 </script>
 

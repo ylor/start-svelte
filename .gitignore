@@ -1,5 +1,4 @@
 /node_modules/
-/public/build/
-
+/dist/
+/.vscode/
 .DS_Store
-package-lock.json
