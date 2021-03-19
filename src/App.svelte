@@ -1,11 +1,11 @@
 <script>
-  import Tree from "./lib/components/Tree.svelte";
-  import Search from "./lib/components/Search.svelte";
+  import Tree from "$lib/Tree.svelte";
+  import Search from "$lib/Search.svelte";
 
-  import keyHandler from "./lib/js/keyHandler.js";
+  import keyHandler from "$lib/js/keyHandler.js";
 
-  import "./assets/global.css";
-  import "./assets/font/iosevka-aile.css"
+  import "$assets/global.css";
+  import "$assets/font/iosevka-aile.css"
 
 </script>
 

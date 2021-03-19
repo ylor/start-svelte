@@ -1,4 +1,4 @@
-import { config } from "../../config.js";
+import { config } from "$assets/config.js";
 const { sites } = config;
 
 export default function parseInput(rawInput) {

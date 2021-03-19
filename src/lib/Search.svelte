@@ -1,10 +1,10 @@
 <script>
-  import Prompt from "./Prompt.svelte";
-  import Suggestions from "./Suggestions.svelte";
+  import Prompt from "$lib/Prompt.svelte";
+  import Suggestions from "$lib/Suggestions.svelte";
 
-  import { search } from "../../stores.js";
-  import { fetchGoogleSuggestions as fetchSuggestions } from "../js/fetchSuggestions.js";
-  import parseInput from "../js/parseInput.js";
+  import { search } from "$lib/js/stores.js";
+  import { fetchGoogleSuggestions as fetchSuggestions } from "$lib/js/fetchSuggestions.js";
+  import parseInput from "$lib/js/parseInput.js";
 </script>
 
 <section>

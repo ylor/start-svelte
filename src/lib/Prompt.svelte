@@ -1,5 +1,5 @@
 <script>
-  import { identifyBrowser } from "../js/util.js";
+  import { identifyBrowser } from "$lib/js/util.js";
   const browser = identifyBrowser();
 </script>
 

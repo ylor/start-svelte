@@ -1,8 +1,8 @@
 <script>
-  import { config } from "../../config.js";
+  import { config } from "$assets/config.js";
   //let { sites } = config;
-  import Prompt from "./Prompt.svelte";
-  import List from "./List.svelte";
+  import Prompt from "$lib/Prompt.svelte";
+  import List from "$lib/List.svelte";
 
   let sites = config.sites
     // .map((s) => (s.category ? s : { ...s, category: "🌌 …" }))

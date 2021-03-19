@@ -1,6 +1,6 @@
 <script>
-  import { search, suggestions } from "../../stores.js";
-  import parseInput from "../js/parseInput.js";
+  import { search, suggestions } from "$lib/js/stores.js";
+  import parseInput from "$lib/js/parseInput.js";
 </script>
 
 <aside class="tree">
