@@ -70,7 +70,7 @@ export const config = {
       category: "👨🏽‍💻 Server",
       name: "UniFi Controller",
       aliases: ["unifi"],
-      url: "http://docker.lan:8080",
+      url: "http://server.lan:8080",
     },
     //Work
     {
