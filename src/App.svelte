@@ -6,7 +6,6 @@
 
   import "$assets/global.css";
   import "$assets/font/iosevka-aile.css"
-
 </script>
 
 <svelte:window on:keydown={keyHandler} />
