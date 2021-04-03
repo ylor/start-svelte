@@ -13,8 +13,8 @@
               ? $search.split(":")[0] + ":" + suggestion
               : suggestion
           )}
-          on:focus={(e) => e.target.text.includes(":")
-            ? search.set(e.target.text.split(":")[0] + ":" + suggestion)
+          on:focus={$search.includes(":")
+            ? search.set($search.split(":")[0] + ":" + suggestion)
             : search.set(suggestion)}
           on:mouseover={(event) =>
             event.target.addEventListener("mousemove", (event) =>
