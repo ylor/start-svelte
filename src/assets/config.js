@@ -272,7 +272,7 @@ export const config = {
     {
       category: "📼 Media",
       name: "Twitch",
-      aliases: ["twitch", "ttv"],
+      aliases: ["twitch", "ttv", "t"],
       url: "https://twitch.tv/",
     },
     {
