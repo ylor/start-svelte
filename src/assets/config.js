@@ -273,7 +273,7 @@ export const config = {
       category: "📼 Media",
       name: "Twitch",
       aliases: ["twitch", "ttv"],
-      url: "https://twitch.tv/directory",
+      url: "https://twitch.tv/",
     },
     {
       category: "📼 Media",
@@ -429,7 +429,7 @@ export const config = {
     {
       category: "💬 Socials",
       name: "Twitter",
-      aliases: ["twitter", "t"],
+      aliases: ["twitter"],
       url: "https://twitter.com",
       search: "https://twitter.com/search?q={}",
     },
