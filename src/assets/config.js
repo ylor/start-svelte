@@ -277,6 +277,13 @@ export const config = {
     },
     {
       category: "📼 Media",
+      name: "Hasan",
+      aliases: ["hasanabi", "hasan", "azan", "ajan"],
+      url: "https://twitch.tv/hasanabi",
+      hidden: true
+    },
+    {
+      category: "📼 Media",
       name: "YouTube",
       aliases: ["youtube", "yt", "y"],
       url: "https://youtube.com",
