@@ -218,8 +218,8 @@ export const config = {
     {
       category: "🎮 Destiny",
       name: "Xur",
-      aliases: ["xur.wiki", "xur"],
-      url: "https://xur.wiki",
+      aliases: ["xur"],
+      url: "https://braytech.org/xur",
     },
     // Media
     {
