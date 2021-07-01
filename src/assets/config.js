@@ -103,7 +103,7 @@ export const config = {
       category: "🎓 MDC",
       name: "Fusion",
       aliases: ["fusion", "kfusion"],
-      url: "http://kfusion1.kendall.mdcc.edu",
+      url: "http://kfusion/fusion/WebClient/",
     },
     {
       category: "🎓 MDC",
@@ -148,7 +148,7 @@ export const config = {
     {
       category: "🎓 MDC",
       name: "Service Requests",
-      aliases: ["kloadbal", "loadbal", "sr"],
+      aliases: ["kloadbal", "loadbal", "klb", "sr"],
       url: "http://kloadbal.kendall.mdcc.edu",
     },
     {

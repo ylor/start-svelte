@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "next",
-    "svelte": "^3.38.2",
-    "vite": "^2.3.7"
+    "svelte": "^3.38.3",
+    "vite": "^2.3.8"
   },
   "dependencies": {
     "fetch-jsonp": "^1.1.3"
